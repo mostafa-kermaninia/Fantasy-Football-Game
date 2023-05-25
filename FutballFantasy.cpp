@@ -1,30 +1,30 @@
-#include "Game.hpp"
+#include "FutballFantasy.hpp"
 
-Game::Game(string weeks_folder_path, int count_of_weeks, string info_file_path)
+FutballFantasy::FutballFantasy(string weeks_folder_path, int count_of_weeks, string info_file_path)
 {
     read_weeks_folder(weeks_folder_path,count_of_weeks);
     read_info_file(info_file_path);
 }
 
-Game::~Game()
+FutballFantasy::~FutballFantasy()
 {
 }
 
-void Game::run()
+void FutballFantasy::run()
 {
     handle_commands();
 }
 
-void Game::read_weeks_folder(string folder_path, int files_count)
+void FutballFantasy::read_weeks_folder(string folder_path, int files_count)
 {
 }
 
-void Game::read_info_file(string file_path)
+void FutballFantasy::read_info_file(string file_path)
 {
     
 }
 
-void Game::handle_commands()
+void FutballFantasy::handle_commands()
 {
     string command;
     int a, b;
@@ -85,7 +85,7 @@ void Game::handle_commands()
     }
 }
 
-vector<string> Game::string_splitter(string text, char splitter)
+vector<string> FutballFantasy::string_splitter(string text, char splitter)
 {
     string word = "";
     vector<string> words;
@@ -102,7 +102,7 @@ vector<string> Game::string_splitter(string text, char splitter)
     return words;
 }
 
-vector<string> Game::read_file(string filePath)
+vector<string> FutballFantasy::read_file(string filePath)
 {
     vector<string> readFile;
     ifstream inputFile(filePath);
