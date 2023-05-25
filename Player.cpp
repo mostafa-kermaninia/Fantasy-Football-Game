@@ -1,17 +1,13 @@
 #include "Player.hpp"
 
-Player::Player(/* args */)
+Player::Player(string _name, ROLE _role)
 {
-}
-
-Player::Player(const Player &p)
-{
-    name = p.name;
-    role = p.role;
-    score = p.score;
-    when_injured = p.when_injured;
-    yellow_cards_num = p.yellow_cards_num;
-    red_cards_num = p.red_cards_num;
+    name = _name;
+    role = _role;
+    score = 0;
+    when_injured = 0;
+    yellow_cards_num = 0;
+    red_cards_num = 0;
 }
 
 Player::~Player()

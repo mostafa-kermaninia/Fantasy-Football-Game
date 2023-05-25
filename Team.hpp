@@ -5,7 +5,7 @@ class Team
 {
 
 public:
-    Team(/* args */);
+    Team(string name, vector<Player *> players);
     ~Team();
 
 private:
