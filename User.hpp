@@ -11,9 +11,10 @@ public:
 private:
     string name;
     int sell_limit;
-    int buy_limit; //maybe ziadie
+    int buy_limit; // maybe ziadie
     Team *team;
     string password;
     double point;
     bool complete_team;
+    bool is_in_account;
 };
