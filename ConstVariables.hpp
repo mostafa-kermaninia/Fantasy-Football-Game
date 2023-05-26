@@ -15,7 +15,6 @@ enum ROLE
     NO_ROLE
 };
 
-
 const string OUTPUT_DELIMITER = " | ";
 const string BAD_REQUEST_ER = "Bad Request";
 const string PERMISSION_ER = "Permission Denied";

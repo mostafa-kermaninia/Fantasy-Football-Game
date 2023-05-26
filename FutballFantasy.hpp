@@ -21,8 +21,10 @@ public:
 
     void run();
     void handle_commands();
-    void print_week_team(int week_number = THIS_WEEK);
-    void print_week_matches(int week_number = THIS_WEEK);
+    void print_league_info();
+    void print_week_team(int week_number);
+    void print_week_matches(int week_number);
+    void print_team_players();
 
 private:
     vector<User *> users;
@@ -38,10 +40,16 @@ private:
     Player *find_player_by_name(string name);
     Team *find_team_by_name(string name);
     User *find_logged_in_user();
+    ROLE find_role(string target_role);
     void update_winner_and_loser_team_info(Team *team1, int team1_goals, Team *team2, int team2_goals);
 
     vector<string> string_splitter(string text, char splitter);
     vector<string> read_file(string file_path);
+
+    void sort_teams();
+    bool is_better_team(Team *team1, Team *team2);
+
+    string edit_entry_team_name(string name);
 
     void update_matches_vec(string team_names, string result);
     void update_teams_vec(string team_names, string result);
@@ -57,7 +65,6 @@ private:
 
     vector<Player *> find_bests(ROLE r);
     bool better_than_chosen_players(vector<Player *> choosen_players, Player *new_player);
-    vector<Player *> sort_by_score(vector<Player *> not_sorted_players);
 
     void build_objects(vector<string> file_elements);
 
