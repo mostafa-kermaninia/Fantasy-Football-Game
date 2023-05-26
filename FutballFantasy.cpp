@@ -140,7 +140,8 @@ void FutballFantasy::signup(string name, string password)
             throw runtime_error(BAD_REQUEST_ER);
         }
     }
-    users.push_back(new User(name, password));
+    cur_user = new User(name, password);
+    users.push_back(cur_user);
     cout << SUCCESSFUL_RESPONSE;
 }
 
@@ -178,11 +179,9 @@ void FutballFantasy::register_admin(string admin_name, string password)
 
 void FutballFantasy::sell_player(string player_name)
 {
-    // cur_user->
-    // for (size_t i = 0; i < count; i++)
-    // {
-    //     /* code */
-    // }
+    if (!available_transter)
+        throw runtime_error(PERMISSION_ER);
+    cur_user->delete_player(player_name);
 }
 
 void FutballFantasy::pass_week()
@@ -228,7 +227,7 @@ void FutballFantasy::handle_get_requests()
         print_team_players();
     else
     {
-        throw runtime_error("Bad Request");
+        throw runtime_error(BAD_REQUEST_ER+"4");
     }
 }
 
@@ -252,7 +251,7 @@ void FutballFantasy::handle_post_requests()
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER);
+            throw runtime_error(BAD_REQUEST_ER+"6");
         }
     }
     else if (cur_user)
@@ -268,12 +267,12 @@ void FutballFantasy::handle_post_requests()
             getline(cin, player_name);
             if (cin.fail() || question_mark != QUESTION_MARK ||
                 name_sign != NAME)
-                throw runtime_error(BAD_REQUEST_ER);
+                throw runtime_error(BAD_REQUEST_ER+"2");
             sell_player(player_name);
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER);
+            throw runtime_error(BAD_REQUEST_ER+"3");
         }
     }
     else
@@ -304,7 +303,7 @@ void FutballFantasy::handle_post_requests()
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER);
+            throw runtime_error(BAD_REQUEST_ER+"8");
         }
     }
 }

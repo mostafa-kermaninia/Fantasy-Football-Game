@@ -14,10 +14,11 @@ public:
     void log_in() { is_in_account = true; }
     void log_out();
     Player* find_player_in_team(string player_name);
+    void delete_player(string player_name);
 
 private:
     string name;
-    int sell_limit;
+    int sell_coupons;
     int buy_limit; // maybe ziadie
     Team *team;
     string password;
