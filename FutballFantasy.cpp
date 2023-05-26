@@ -33,9 +33,12 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
     for (int i = 0; i < cur_week_info.size() / WEEK_FILE_HEADERS_COUNT; i++)
     {
         update_matches_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        cout << cur_week_info.size() << endl;
         update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        cout << cur_week_info.size() << endl;
         update_players_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 2], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 3],
                            cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
+        cout << cur_week_info.size() << endl;
     }
 }
 
@@ -62,6 +65,9 @@ void FutballFantasy::build_objects(vector<string> elements)
             team_players.push_back(new Player(player_name, FW));
 
         teams.push_back(new Team(team_name, team_players));
+
+        for (int i = 0; i < team_players.size(); i++)
+            players.push_back(team_players[i]);
     }
 }
 
@@ -142,17 +148,15 @@ void FutballFantasy::pass_week()
 
 void FutballFantasy::handle_commands()
 {
-    for (auto t : teams)
-        t->print_team(NO_ROLE);
-    cout << teams.size() << endl;
     string request_type, command;
+    int a, b;
     while (cin >> request_type)
     {
         try
         {
             check_request_type(request_type);
             cin >> command;
-            if (!admin->is_logged_in())
+            if (admin->is_logged_in())
             {
                 if (command == "pass_week")
                 {
@@ -166,9 +170,7 @@ void FutballFantasy::handle_commands()
                     // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
                 }
                 else
-                {
                     throw runtime_error("Bad Request");
-                }
             }
             else
             {
@@ -323,19 +325,27 @@ void FutballFantasy::update_teams_vec(string team_names, string result)
 void FutballFantasy::update_players_vec(string injureds, string yellow_cards, string red_cards, string scores)
 {
     vector<string> injured_players = string_splitter(injureds, ';');
+    cout << injured_players.size() << endl;
     vector<string> yellow_card_reciever_players = string_splitter(yellow_cards, ';');
+    cout << yellow_card_reciever_players.size() << endl;
     vector<string> red_card_reciever_players = string_splitter(red_cards, ';');
-    vector<string> score_of_players = string_splitter(red_cards, ';');
+    cout << red_card_reciever_players.size() << endl;
+    vector<string> score_of_players = string_splitter(scores, ';');
+    cout << score_of_players.size() << endl;
 
     for (int i = 0; i < injured_players.size(); i++)
-        find_player_by_name(injured_players[i])->set_when_injured(week_num);
+        if (Player *selected_player = find_player_by_name(injured_players[i]))
+            selected_player->set_when_injured(week_num);
     for (int i = 0; i < yellow_card_reciever_players.size(); i++)
-        find_player_by_name(yellow_card_reciever_players[i])->add_to_yellow_cards();
+        if (Player *selected_player = find_player_by_name(yellow_card_reciever_players[i]))
+            selected_player->add_to_yellow_cards();
     for (int i = 0; i < red_card_reciever_players.size(); i++)
-        find_player_by_name(red_card_reciever_players[i])->add_to_red_cards();
+        if (Player *selected_player = find_player_by_name(red_card_reciever_players[i]))
+            selected_player->add_to_red_cards();
     for (int i = 0; i < score_of_players.size(); i++)
     {
-        vector<string> name_and_score;
-        find_player_by_name((name_and_score[0]))->add_to_score(stoi(name_and_score[1]));
+        vector<string> name_and_score = string_splitter(score_of_players[i], ':');
+        if (Player *selected_player = find_player_by_name(name_and_score[0]))
+            selected_player->add_to_score(stod(name_and_score[1]));
     }
 }
