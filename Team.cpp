@@ -5,6 +5,15 @@ Team::Team(vector<Player *> p)
     team_players = p;
 }
 
+Team::Team(string name, vector<Player *> players)
+{
+    team_name = name;
+    team_players = players;
+    goals_for = 0;
+    goals_against = 0;
+    total_score = 0;
+}
+
 Team::~Team()
 {
 }
@@ -24,10 +33,14 @@ void Team::print_team(ROLE r, bool show_sorted)
         showing_players = sort_by_score(showing_players);
     for (auto p : showing_players)
     {
-        cout << player_num << ". name: " << p->get_name() << OUTPUT_DELIMITER <<
-             "role: " << ROLES[p->get_role()] << OUTPUT_DELIMITER << "score: " << p->get_score() << endl;
+        cout << player_num << ". name: " << p->get_name() << OUTPUT_DELIMITER << "role: " << ROLES[p->get_role()] << OUTPUT_DELIMITER << "score: " << p->get_score() << endl;
         player_num++;
     }
+}
+
+void Team::print_team_info()
+{
+    cout << team_name << ": " << total_score << OUTPUT_DELIMITER << "GF: " << goals_for << OUTPUT_DELIMITER << "GA: " << goals_against << endl;
 }
 
 double Team::calculate_total_players_score()
@@ -53,9 +66,11 @@ vector<Player *> Team::sort_by_score(vector<Player *> not_sorted_players)
 {
     for (int i = 0; i < not_sorted_players.size() - 1; i++)
     {
-        for (int j = i + 1; j < i < not_sorted_players.size(); j++)
+        for (int j = i + 1; j < not_sorted_players.size(); j++)
         {
-            if (not_sorted_players[i]->get_score() > not_sorted_players[j]->get_score())
+            if (not_sorted_players[i]->get_score() < not_sorted_players[j]->get_score() ||
+                (not_sorted_players[i]->get_score() == not_sorted_players[j]->get_score() &&
+                 not_sorted_players[i]->get_name() > not_sorted_players[j]->get_name()))
             {
                 Player *swaped_player = not_sorted_players[i];
                 not_sorted_players[i] = not_sorted_players[j];
