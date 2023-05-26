@@ -1,7 +1,8 @@
 #include "FutballFantasy.hpp"
 
-main(int argc, char *argv[])
+int main()
 {
-    FutballFantasy Futball_Fantasy(argv[LEAGUE_FILE_PATH_INDEX]);
+    FutballFantasy Futball_Fantasy(LEAGUE_INFO_FILE_PATH);
     Futball_Fantasy.run();
+    return 0;
 }

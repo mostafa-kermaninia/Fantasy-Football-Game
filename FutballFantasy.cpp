@@ -142,6 +142,9 @@ void FutballFantasy::pass_week()
 
 void FutballFantasy::handle_commands()
 {
+    for (auto t : teams)
+        t->print_team(NO_ROLE);
+    cout << teams.size() << endl;
     string request_type, command;
     while (cin >> request_type)
     {
@@ -149,7 +152,7 @@ void FutballFantasy::handle_commands()
         {
             check_request_type(request_type);
             cin >> command;
-            if (admin->is_logged_in())
+            if (!admin->is_logged_in())
             {
                 if (command == "pass_week")
                 {
@@ -243,7 +246,7 @@ void FutballFantasy::update_winner_and_loser_team_info(Team *team1, int team1_go
         team1->add_to_total_score(WINNER_SCORE_INCREMENT);
         team2->add_to_total_score(LOSER_SCORE_INCREMENT);
     }
-    else if (team1_goals = team2_goals)
+    else if (team1_goals == team2_goals)
     {
         team1->add_to_total_score(EQUALIZED_SCORE_INCREMENT);
         team2->add_to_total_score(EQUALIZED_SCORE_INCREMENT);
