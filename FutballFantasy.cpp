@@ -28,9 +28,13 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
 {
     string cur_week_file_path = folder_path + "week_" + to_string(cur_week_num) + ".csv";
     vector<string> cur_week_info = read_file(cur_week_file_path);
-    update_matches_vec(cur_week_info);
-    update_teams_vec();
-    update_players_vec();
+    for (int i = 0; i < cur_week_info.size() / WEEK_FILE_HEADERS_COUNT; i++)
+    {
+        update_matches_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        update_players_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 2], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 3],
+                           cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
+    }
 }
 
 void FutballFantasy::read_league_file(string file_path)
@@ -130,6 +134,45 @@ void FutballFantasy::handle_commands()
     }
 }
 
+Player *FutballFantasy::find_player_by_name(string name)
+{
+    for (int i = 0; i < players.size(); i++)
+        if (players[i]->get_name() == name)
+            return players[i];
+    return nullptr;
+}
+
+Team *FutballFantasy::find_team_by_name(string name)
+{
+    for (int i = 0; i < teams.size(); i++)
+        if (teams[i]->get_name() == name)
+            return teams[i];
+    return nullptr;
+}
+
+void FutballFantasy::update_winner_and_loser_team_info(Team *team1, int team1_goals, Team *team2, int team2_goals)
+{
+    if (team1_goals > team2_goals)
+    {
+        team1->add_to_total_score(WINNER_SCORE_INCREMENT);
+        team2->add_to_total_score(LOSER_SCORE_INCREMENT);
+    }
+    else if (team1_goals = team2_goals)
+    {
+        team1->add_to_total_score(EQUALIZED_SCORE_INCREMENT);
+        team2->add_to_total_score(EQUALIZED_SCORE_INCREMENT);
+    }
+    else if (team1_goals < team2_goals)
+    {
+        team1->add_to_total_score(LOSER_SCORE_INCREMENT);
+        team2->add_to_total_score(WINNER_SCORE_INCREMENT);
+    }
+    team1->add_to_goals_for(team1_goals);
+    team2->add_to_goals_for(team2_goals);
+    team1->add_to_goals_against(team2_goals);
+    team2->add_to_goals_against(team1_goals);
+}
+
 vector<string> FutballFantasy::string_splitter(string text, char splitter)
 {
     string word = "";
@@ -166,15 +209,6 @@ vector<string> FutballFantasy::read_file(string filePath)
     return readFile;
 }
 
-void FutballFantasy::update_objects(vector<string> elements)
-{
-    for (int i = 0; i < elements.size() / WEEK_FILE_HEADERS_COUNT; i++)
-    {
-        update_matches_vec(elements[WEEK_FILE_HEADERS_COUNT * i], elements[WEEK_FILE_HEADERS_COUNT * i + 1]);
-        update_teams_vec(elements[WEEK_FILE_HEADERS_COUNT * i], elements[WEEK_FILE_HEADERS_COUNT * i + 1])
-    }
-}
-
 void FutballFantasy::update_matches_vec(string team_names, string result)
 {
     vector<string> teams_names = string_splitter(team_names, ':');
@@ -188,10 +222,31 @@ void FutballFantasy::update_matches_vec(string team_names, string result)
 
 void FutballFantasy::update_teams_vec(string team_names, string result)
 {
-    vector<string> teams_names = string_splitter(team_names, ':');
-    string team1_name = teams_names[0];
-    string team2_name = teams_names[1];
-    vector<string> teams_goals = string_splitter(result, ':');
-    int team1_goals = stoi(teams_goals[0]);
-    int team2_goals = stoi(teams_goals[1]);
+    string team1_name = string_splitter(team_names, ':')[0];
+    string team2_name = string_splitter(team_names, ':')[1];
+    Team *team1 = find_team_by_name(team1_name);
+    Team *team2 = find_team_by_name(team2_name);
+    int team1_goals = stoi(string_splitter(result, ':')[0]);
+    int team2_goals = stoi(string_splitter(result, ':')[1]);
+    update_winner_and_loser_team_info(team1, team1_goals, team2, team2_goals);
+}
+
+void FutballFantasy::update_players_vec(string injureds, string yellow_cards, string red_cards, string scores)
+{
+    vector<string> injured_players = string_splitter(injureds, ';');
+    vector<string> yellow_card_reciever_players = string_splitter(yellow_cards, ';');
+    vector<string> red_card_reciever_players = string_splitter(red_cards, ';');
+    vector<string> score_of_players = string_splitter(red_cards, ';');
+
+    for (int i = 0; i < injured_players.size(); i++)
+        find_player_by_name(injured_players[i])->set_when_injured(week_num);
+    for (int i = 0; i < yellow_card_reciever_players.size(); i++)
+        find_player_by_name(yellow_card_reciever_players[i])->add_to_yellow_cards();
+    for (int i = 0; i < red_card_reciever_players.size(); i++)
+        find_player_by_name(red_card_reciever_players[i])->add_to_red_cards();
+    for (int i = 0; i < score_of_players.size(); i++)
+    {
+        vector<string> name_and_score;
+        find_player_by_name((name_and_score[0]))->add_to_score(stoi(name_and_score[1]));
+    }
 }

@@ -18,6 +18,11 @@ public:
     ~Player();
 
     bool is_available();
+    string get_name() { return name; }
+    void set_when_injured(int week_num) { when_injured = week_num; }
+    void add_to_yellow_cards() { yellow_cards_num += 1; }
+    void add_to_red_cards() { red_cards_num += 1; }
+    void add_to_score(int num) { score += num; }
 
 private:
     string name;
