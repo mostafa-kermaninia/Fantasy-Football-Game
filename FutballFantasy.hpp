@@ -36,6 +36,7 @@ private:
 
     Player *find_player_by_name(string name);
     Team *find_team_by_name(string name);
+    User *find_logged_in_user();
     void update_winner_and_loser_team_info(Team *team1, int team1_goals, Team *team2, int team2_goals);
 
     vector<string> string_splitter(string text, char splitter);
@@ -48,16 +49,20 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-    void handle_get_requests(string command);
-    void handle_post_requests(string command);
-    void handle_put_requests(string command);
-    void handle_delete_requests(string command);
+    void handle_get_requests();
+    void handle_post_requests();
+    void handle_put_requests();
+    void handle_delete_requests();
 
     vector<Player *> find_bests(ROLE r);
     bool better_than_chosen_players(vector<Player *> choosen_players, Player *new_player);
     vector<Player *> sort_by_score(vector<Player *> not_sorted_players);
 
     void build_objects(vector<string> file_elements);
+
+    void signup(string name, string password);
+    void login(string name, string password);
+    void register_admin(string admin_name, string password);
 
     void pass_week();
 };

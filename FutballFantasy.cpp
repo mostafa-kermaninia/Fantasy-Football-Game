@@ -90,111 +90,6 @@ void FutballFantasy::add_week_team()
     week_teams.push_back(new_week_team);
 }
 
-void FutballFantasy::handle_get_requests(string command)
-{
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error("Bad Request");
-    }
-}
-
-void FutballFantasy::handle_post_requests(string command)
-{
-    if (admin->is_logged_in())
-    {
-        if (command == "pass_week")
-            pass_week();
-        else if (command == "add_distance_mission")
-        {
-            // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-            // if (cin.fail())
-            //     throw runtime_error("INVALID_ARGUMENTS");
-            // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-        }
-        else
-            throw runtime_error("Bad Request");
-    }
-    else
-    {
-        if (command == "add_time_mission")
-        {
-            // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-            // if (cin.fail())
-            //     throw runtime_error("INVALID_ARGUMENTS");
-            // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-        }
-        else if (command == "add_distance_mission")
-        {
-            // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-            // if (cin.fail())
-            //     throw runtime_error("INVALID_ARGUMENTS");
-            // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-        }
-        else
-        {
-            throw runtime_error("Bad Request");
-        }
-    }
-}
-
-void FutballFantasy::handle_put_requests(string command)
-{
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error("Bad Request");
-    }
-}
-
-void FutballFantasy::handle_delete_requests(string command)
-{
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error("Bad Request");
-    }
-}
-
 vector<Player *> FutballFantasy::find_bests(ROLE r)
 {
     vector<Player *> chosen_players;
@@ -237,6 +132,51 @@ bool FutballFantasy::better_than_chosen_players(vector<Player *> choosen_players
     return false;
 }
 
+void FutballFantasy::signup(string name, string password)
+{
+    for (User *user : users)
+    {
+        if (user->is_logged_in() || user->get_name() == name)
+        {
+            throw runtime_error("Bad Request10");
+        }
+    }
+    users.push_back(new User(name, password));
+    cout << SUCCESSFUL_RESPONSE;
+}
+
+void FutballFantasy::login(string name, string password)
+{
+    for (User *user : users)
+    {
+        if (user->get_name() == name)
+        {
+            if (user->check_password_validity(password))
+            {
+                user->log_in();
+                cout << SUCCESSFUL_RESPONSE;
+                return;
+            }
+            else
+            {
+                throw runtime_error(PERMISSION_ER);
+            }
+        }
+    }
+    throw runtime_error(NOT_FOUND_ER);
+}
+
+void FutballFantasy::register_admin(string admin_name, string password)
+{
+    if (admin->check_info_validity(admin_name, password))
+    {
+        admin->log_in();
+        cout << SUCCESSFUL_RESPONSE;
+        return;
+    }
+    throw runtime_error(BAD_REQUEST_ER);
+}
+
 void FutballFantasy::pass_week()
 {
     week_num++;
@@ -246,25 +186,177 @@ void FutballFantasy::pass_week()
     cout << SUCCESSFUL_RESPONSE;
 }
 
+void FutballFantasy::handle_get_requests()
+{
+    string command;
+    cin >> command;
+    if (command == "add_time_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
+    }
+    else if (command == "add_distance_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
+    }
+    else
+    {
+        cin.clear();
+        throw runtime_error("Bad Request11");
+    }
+}
+
+void FutballFantasy::handle_post_requests()
+{
+    string command;
+    cin >> command;
+    char question_mark;
+    string team_name_sign, password_sign, username_sign, user_team_name, admin_name, password;
+    if (admin->is_logged_in())
+    {
+        if (command == "pass_week")
+        {
+            pass_week();
+        }
+        else if (command == "logout")
+        {
+            admin->log_out();
+        }
+        else
+        {
+            cin.clear();
+            throw runtime_error("Bad Request4");
+        }
+    }
+    else if (User *cur_user = find_logged_in_user())
+    {
+        if (command == "logout")
+        {
+            cur_user->log_out();
+        }
+        else if (command == "kkhg")
+        {
+            // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
+            // if (cin.fail())
+            //     throw runtime_error("INVALID_ARGUMENTS");
+            // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
+        }
+        else
+        {
+            cin.clear();
+            throw runtime_error("Bad Request1");
+        }
+    }
+    else
+    {
+        if (command == "signup")
+        {
+            cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+                throw runtime_error("Bad Request2");
+            signup(user_team_name, password);
+        }
+        else if (command == "login")
+        {
+            cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+                throw runtime_error("Bad Request8");
+            login(user_team_name, password);
+        }
+        else if (command == "register_admin")
+        {
+            cin >> question_mark >> username_sign >> admin_name >> password_sign >> password;
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                username_sign != USERNAME || password_sign != PASSWORD)
+                throw runtime_error("Bad Request6");
+            register_admin(admin_name, password);
+        }
+        else
+        {
+            cin.clear();
+            throw runtime_error("Bad Request3");
+        }
+    }
+}
+
+void FutballFantasy::handle_put_requests()
+{
+    string command;
+    cin >> command;
+    if (command == "add_time_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
+    }
+    else if (command == "add_distance_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
+    }
+    else
+    {
+        cin.clear();
+        throw runtime_error("Bad Request5");
+    }
+}
+
+void FutballFantasy::handle_delete_requests()
+{
+    string command;
+    cin >> command;
+    if (command == "add_time_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
+    }
+    else if (command == "add_distance_mission")
+    {
+        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
+        // if (cin.fail())
+        //     throw runtime_error("INVALID_ARGUMENTS");
+        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
+    }
+    else
+    {
+        cin.clear();
+        throw runtime_error("Bad Request7");
+    }
+}
+
 void FutballFantasy::handle_commands()
 {
-    string request_type, command;
-    int a, b;
+    string request_type;
     while (cin >> request_type)
     {
         try
         {
-            cin >> command;
             if (request_type == "GET")
-                handle_get_requests(command);
+                handle_get_requests();
             else if (request_type == "POST")
-                handle_post_requests(command);
+                handle_post_requests();
             else if (request_type == "PUT")
-                handle_put_requests(command);
+                handle_put_requests();
             else if (request_type == "DELETE")
-                handle_delete_requests(command);
+                handle_delete_requests();
             else
-                throw runtime_error("Bad Request");
+            {
+                cout<<request_type;
+                cin.clear();
+                throw runtime_error("Bad Request9");
+            }
         }
         catch (const std::runtime_error &e)
         {
@@ -310,6 +402,14 @@ Team *FutballFantasy::find_team_by_name(string name)
     for (int i = 0; i < teams.size(); i++)
         if (teams[i]->get_name() == name)
             return teams[i];
+    return nullptr;
+}
+
+User *FutballFantasy::find_logged_in_user()
+{
+    for (int i = 0; i < users.size(); i++)
+        if (users[i]->is_logged_in())
+            return users[i];
     return nullptr;
 }
 

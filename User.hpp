@@ -5,8 +5,14 @@
 class User
 {
 public:
-    User(/* args */);
+    User(string name, string password);
     ~User();
+
+    string get_name() { return name; }
+    bool check_password_validity(string input_pass) { return password == input_pass; }
+    bool is_logged_in();
+    void log_in() { is_in_account = true; }
+    void log_out();
 
 private:
     string name;
