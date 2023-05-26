@@ -3,6 +3,7 @@
 FutballFantasy::FutballFantasy(string league_file_path)
 {
     read_league_file(league_file_path);
+    cur_user = nullptr;
     admin = new Admin("admin", "123456");
     week_num = 0;
 }
@@ -138,7 +139,7 @@ void FutballFantasy::signup(string name, string password)
     {
         if (user->is_logged_in() || user->get_name() == name)
         {
-            throw runtime_error("Bad Request10");
+            throw runtime_error(BAD_REQUEST_ER);
         }
     }
     users.push_back(new User(name, password));
@@ -154,6 +155,7 @@ void FutballFantasy::login(string name, string password)
             if (user->check_password_validity(password))
             {
                 user->log_in();
+                cur_user = user;
                 cout << SUCCESSFUL_RESPONSE;
                 return;
             }
@@ -171,10 +173,18 @@ void FutballFantasy::register_admin(string admin_name, string password)
     if (admin->check_info_validity(admin_name, password))
     {
         admin->log_in();
-        cout << SUCCESSFUL_RESPONSE;
         return;
     }
     throw runtime_error(BAD_REQUEST_ER);
+}
+
+void FutballFantasy::sell_player(string player_name)
+{
+    // cur_user->
+    // for (size_t i = 0; i < count; i++)
+    // {
+    //     /* code */
+    // }
 }
 
 void FutballFantasy::pass_week()
@@ -206,8 +216,8 @@ void FutballFantasy::handle_get_requests()
     }
     else
     {
-        cin.clear();
-        throw runtime_error("Bad Request11");
+        // cin.clear();
+        throw runtime_error(BAD_REQUEST_ER);
     }
 }
 
@@ -216,7 +226,8 @@ void FutballFantasy::handle_post_requests()
     string command;
     cin >> command;
     char question_mark;
-    string team_name_sign, password_sign, username_sign, user_team_name, admin_name, password;
+    string team_name_sign, password_sign, username_sign,
+        user_team_name, admin_name, password, name_sign, player_name;
     if (admin->is_logged_in())
     {
         if (command == "pass_week")
@@ -229,27 +240,28 @@ void FutballFantasy::handle_post_requests()
         }
         else
         {
-            cin.clear();
-            throw runtime_error("Bad Request4");
+            throw runtime_error(BAD_REQUEST_ER);
         }
     }
-    else if (User *cur_user = find_logged_in_user())
+    else if (cur_user)
     {
         if (command == "logout")
         {
+            cur_user = nullptr;
             cur_user->log_out();
         }
-        else if (command == "kkhg")
+        else if (command == "sell_player")
         {
-            // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-            // if (cin.fail())
-            //     throw runtime_error("INVALID_ARGUMENTS");
-            // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
+            cin >> question_mark >> name_sign;
+            getline(cin, player_name);
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                name_sign != NAME)
+                throw runtime_error(BAD_REQUEST_ER);
+            sell_player(player_name);
         }
         else
         {
-            cin.clear();
-            throw runtime_error("Bad Request1");
+            throw runtime_error(BAD_REQUEST_ER);
         }
     }
     else
@@ -259,7 +271,7 @@ void FutballFantasy::handle_post_requests()
             cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
             if (cin.fail() || question_mark != QUESTION_MARK ||
                 team_name_sign != TEAM_NAME || password_sign != PASSWORD)
-                throw runtime_error("Bad Request2");
+                throw runtime_error(BAD_REQUEST_ER);
             signup(user_team_name, password);
         }
         else if (command == "login")
@@ -267,7 +279,7 @@ void FutballFantasy::handle_post_requests()
             cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
             if (cin.fail() || question_mark != QUESTION_MARK ||
                 team_name_sign != TEAM_NAME || password_sign != PASSWORD)
-                throw runtime_error("Bad Request8");
+                throw runtime_error(BAD_REQUEST_ER);
             login(user_team_name, password);
         }
         else if (command == "register_admin")
@@ -275,13 +287,12 @@ void FutballFantasy::handle_post_requests()
             cin >> question_mark >> username_sign >> admin_name >> password_sign >> password;
             if (cin.fail() || question_mark != QUESTION_MARK ||
                 username_sign != USERNAME || password_sign != PASSWORD)
-                throw runtime_error("Bad Request6");
+                throw runtime_error(BAD_REQUEST_ER);
             register_admin(admin_name, password);
         }
         else
         {
-            cin.clear();
-            throw runtime_error("Bad Request3");
+            throw runtime_error(BAD_REQUEST_ER);
         }
     }
 }
@@ -306,8 +317,7 @@ void FutballFantasy::handle_put_requests()
     }
     else
     {
-        cin.clear();
-        throw runtime_error("Bad Request5");
+        throw runtime_error(BAD_REQUEST_ER);
     }
 }
 
@@ -331,8 +341,7 @@ void FutballFantasy::handle_delete_requests()
     }
     else
     {
-        cin.clear();
-        throw runtime_error("Bad Request7");
+        throw runtime_error(BAD_REQUEST_ER);
     }
 }
 
@@ -353,16 +362,15 @@ void FutballFantasy::handle_commands()
                 handle_delete_requests();
             else
             {
-                cout<<request_type;
-                cin.clear();
-                throw runtime_error("Bad Request9");
+                cout << request_type;
+                throw runtime_error(BAD_REQUEST_ER);
             }
         }
         catch (const std::runtime_error &e)
         {
             cout << e.what() << endl;
+            fflush(stdin);
         }
-        cin.clear();
     }
 }
 

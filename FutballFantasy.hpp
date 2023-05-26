@@ -31,6 +31,7 @@ private:
     vector<Team *> teams;
     vector<Team *> week_teams;
     Admin *admin;
+    User *cur_user;
     int week_num;
     bool available_transter;
 
@@ -63,6 +64,7 @@ private:
     void signup(string name, string password);
     void login(string name, string password);
     void register_admin(string admin_name, string password);
+    void sell_player(string player_name);
 
     void pass_week();
 };

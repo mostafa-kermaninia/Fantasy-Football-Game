@@ -25,3 +25,12 @@ void User::log_out()
     is_in_account = false;
     cout << SUCCESSFUL_RESPONSE;
 }
+
+Player *User::find_player_in_team(string player_name)
+{
+    for (Player* player:team->get_players())
+    {
+        /* code */
+    }
+    
+}

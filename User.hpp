@@ -13,6 +13,7 @@ public:
     bool is_logged_in();
     void log_in() { is_in_account = true; }
     void log_out();
+    Player* find_player_in_team(string player_name);
 
 private:
     string name;
