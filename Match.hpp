@@ -6,7 +6,7 @@ class Match
 {
 
 public:
-    Match(/* args */);
+    Match(int _week_num, string _team1_name, int _team1_goals, string _team2_name, int _team2_goals);
     ~Match();
 
 private:

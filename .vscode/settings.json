@@ -4,6 +4,7 @@
         "*.c": "c",
         "makefile": "makefile",
         "*.csv": "excel",
-        "new": "cpp"
+        "new": "cpp",
+        "*.tcc": "cpp"
     }
 }

@@ -29,6 +29,8 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
     string cur_week_file_path = folder_path + "week_" + to_string(cur_week_num) + ".csv";
     vector<string> cur_week_info = read_file(cur_week_file_path);
     update_matches_vec(cur_week_info);
+    update_teams_vec();
+    update_players_vec();
 }
 
 void FutballFantasy::read_league_file(string file_path)
@@ -66,6 +68,8 @@ void FutballFantasy::check_request_type(string request_type)
 void FutballFantasy::pass_week()
 {
     week_num++;
+    if (week_num > COUNT_OF_WEEKS)
+        throw runtime_error("out of timmmmmmme");
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
 }
 
@@ -162,19 +166,32 @@ vector<string> FutballFantasy::read_file(string filePath)
     return readFile;
 }
 
-void FutballFantasy::update_matches_vec(vector<string> file_elements)
+void FutballFantasy::update_objects(vector<string> elements)
 {
-    // level,base_salary,salary_per_hour,salary_per_extra_hour,official_working_hours,tax_percentage
-    // vector<SalaryConfig *> salConfigs;
-    // for (int i = 0; i < readFile.size() / SAL_CONFIGS_ATTR_COUNT; i++)
-    // {
-    //     string level = readFile[SAL_CONFIGS_ATTR_COUNT * i];
-    //     int base_salary = stoi(readFile[SAL_CONFIGS_ATTR_COUNT * i + 1]);
-    //     int salary_per_hour = stoi(readFile[SAL_CONFIGS_ATTR_COUNT * i + 2]);
-    //     int salary_per_extra_hour = stoi(readFile[SAL_CONFIGS_ATTR_COUNT * i + 3]);
-    //     int official_working_hours = stoi(readFile[SAL_CONFIGS_ATTR_COUNT * i + 4]);
-    //     int tax_percentage = stoi(readFile[SAL_CONFIGS_ATTR_COUNT * i + 5]);
-    //     salConfigs.push_back(new SalaryConfig(level, base_salary, salary_per_hour, salary_per_extra_hour, official_working_hours, tax_percentage));
-    // }
-    // return salConfigs;
+    for (int i = 0; i < elements.size() / WEEK_FILE_HEADERS_COUNT; i++)
+    {
+        update_matches_vec(elements[WEEK_FILE_HEADERS_COUNT * i], elements[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        update_teams_vec(elements[WEEK_FILE_HEADERS_COUNT * i], elements[WEEK_FILE_HEADERS_COUNT * i + 1])
+    }
+}
+
+void FutballFantasy::update_matches_vec(string team_names, string result)
+{
+    vector<string> teams_names = string_splitter(team_names, ':');
+    string team1_name = teams_names[0];
+    string team2_name = teams_names[1];
+    vector<string> teams_goals = string_splitter(result, ':');
+    int team1_goals = stoi(teams_goals[0]);
+    int team2_goals = stoi(teams_goals[1]);
+    matches.push_back(new Match(week_num, team1_name, team1_goals, team2_name, team2_goals));
+}
+
+void FutballFantasy::update_teams_vec(string team_names, string result)
+{
+    vector<string> teams_names = string_splitter(team_names, ':');
+    string team1_name = teams_names[0];
+    string team2_name = teams_names[1];
+    vector<string> teams_goals = string_splitter(result, ':');
+    int team1_goals = stoi(teams_goals[0]);
+    int team2_goals = stoi(teams_goals[1]);
 }
