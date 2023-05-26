@@ -1,5 +1,7 @@
 #pragma once
+
 #include <string>
+#include "ConstVariables.hpp"
 
 using namespace std;
 

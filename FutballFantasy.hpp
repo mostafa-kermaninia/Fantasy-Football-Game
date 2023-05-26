@@ -10,18 +10,7 @@ using namespace std;
 #include "Player.hpp"
 #include "Team.hpp"
 #include "Admin.hpp"
-
-const int LEAGUE_FILE_PATH_INDEX = 1;
-const int LEAGUE_FILE_HEADERS_COUNT = 5;
-const string WEEKS_FOLDER_PATH = "./weeks_state/";
-const int COUNT_OF_WEEKS = 19;
-const int WEEK_FILE_HEADERS_COUNT = 6;
-
-const int WINNER_SCORE_INCREMENT = 3;
-const int EQUALIZED_SCORE_INCREMENT = 1;
-const int LOSER_SCORE_INCREMENT = 0;
-
-
+#include "ConstVariables.hpp"
 
 class FutballFantasy
 {
@@ -32,12 +21,15 @@ public:
 
     void run();
     void handle_commands();
+    void print_week_team(int week_number = THIS_WEEK);
+    void print_week_matches(int week_number = THIS_WEEK);
 
 private:
     vector<User *> users;
     vector<Match *> matches;
     vector<Player *> players;
     vector<Team *> teams;
+    vector<Team *> week_teams;
     Admin *admin;
     int week_num;
     bool available_transter;
@@ -55,6 +47,11 @@ private:
     void update_players_vec(string injured_players, string yellow_card_recievers, string red_card_recievers,string scores);
     void read_cur_week_file(string folder_path, int cur_week_num);
     void read_league_file(string file_path);
+    void add_week_team();
+    vector<Player *> find_bests(ROLE r);
+    bool better_than_chosen_players(vector<Player *> choosen_players, Player* new_player);
+    vector<Player *> sort_by_score(vector<Player *> not_sorted_players);
+
     void build_objects(vector<string> file_elements);
     void check_request_type(string request_type);
 
