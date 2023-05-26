@@ -1,5 +1,7 @@
 #pragma once
 #include "Team.hpp"
+#include "ConstVariables.hpp"
+
 class User
 {
 public:
@@ -12,6 +14,6 @@ private:
     int buy_limit; //maybe ziadie
     Team *team;
     string password;
-    int point;
+    double point;
     bool complete_team;
 };
