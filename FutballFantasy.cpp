@@ -190,7 +190,20 @@ void FutballFantasy::pass_week()
     if (week_num > COUNT_OF_WEEKS)
         throw runtime_error("out of timmmmmmme");
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
+    add_week_team();
     cout << SUCCESSFUL_RESPONSE;
+}
+
+void FutballFantasy::open_transfer_window()
+{
+    available_transter = true;
+    cout << SUCCESSFUL_RESPONSE;
+}
+
+void FutballFantasy::close_transfer_window()
+{
+    available_transter = false;
+    cout << SUCCESSFUL_RESPONSE; 
 }
 
 void FutballFantasy::handle_get_requests()
@@ -227,7 +240,7 @@ void FutballFantasy::handle_get_requests()
         print_team_players();
     else
     {
-        throw runtime_error(BAD_REQUEST_ER+"4");
+        throw runtime_error(BAD_REQUEST_ER + "4");
     }
 }
 
@@ -243,7 +256,14 @@ void FutballFantasy::handle_post_requests()
         if (command == "pass_week")
         {
             pass_week();
-            add_week_team();
+        }
+        else if (command == "open_transfer_window")
+        {
+            open_transfer_window();
+        }
+        else if (command == "close_transfer_window")
+        {
+            close_transfer_window();
         }
         else if (command == "logout")
         {
@@ -251,7 +271,7 @@ void FutballFantasy::handle_post_requests()
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER+"6");
+            throw runtime_error(BAD_REQUEST_ER + "6");
         }
     }
     else if (cur_user)
@@ -267,12 +287,12 @@ void FutballFantasy::handle_post_requests()
             getline(cin, player_name);
             if (cin.fail() || question_mark != QUESTION_MARK ||
                 name_sign != NAME)
-                throw runtime_error(BAD_REQUEST_ER+"2");
+                throw runtime_error(BAD_REQUEST_ER + "2");
             sell_player(player_name);
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER+"3");
+            throw runtime_error(BAD_REQUEST_ER + "3");
         }
     }
     else
@@ -303,7 +323,7 @@ void FutballFantasy::handle_post_requests()
         }
         else
         {
-            throw runtime_error(BAD_REQUEST_ER+"8");
+            throw runtime_error(BAD_REQUEST_ER + "8");
         }
     }
 }
@@ -312,48 +332,14 @@ void FutballFantasy::handle_put_requests()
 {
     string command;
     cin >> command;
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error(BAD_REQUEST_ER);
-    }
+    throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::handle_delete_requests()
 {
     string command;
     cin >> command;
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error(BAD_REQUEST_ER);
-    }
+    throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::handle_commands()
@@ -372,10 +358,7 @@ void FutballFantasy::handle_commands()
             else if (request_type == "DELETE")
                 handle_delete_requests();
             else
-            {
-                cout << request_type;
                 throw runtime_error(BAD_REQUEST_ER);
-            }
         }
         catch (const std::runtime_error &e)
         {

@@ -74,4 +74,6 @@ private:
     void sell_player(string player_name);
 
     void pass_week();
+    void open_transfer_window();
+    void close_transfer_window();
 };
