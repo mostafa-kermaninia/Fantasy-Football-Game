@@ -13,7 +13,10 @@ public:
     bool is_logged_in();
     void log_in() { is_in_account = true; }
     void log_out();
-    Player* find_player_in_team(string player_name);
+    Player *find_player_in_team(string player_name);
+    bool is_player_buyable(Player *selected_player);
+    void add_player_to_team(Player *selected_player);
+
     void delete_player(string player_name);
 
 private:

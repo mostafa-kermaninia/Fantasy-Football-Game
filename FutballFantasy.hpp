@@ -72,6 +72,7 @@ private:
     void login(string name, string password);
     void register_admin(string admin_name, string password);
     void sell_player(string player_name);
+    void buy_player(string player_name);
 
     void pass_week();
     void open_transfer_window();

@@ -39,6 +39,16 @@ Player *User::find_player_in_team(string player_name)
     return nullptr;
 }
 
+bool User::is_player_buyable(Player *selected_player)
+{
+    return false;
+}
+
+void User::add_player_to_team(Player *selected_player)
+{
+    team->add_new_player(selected_player);
+}
+
 void User::delete_player(string player_name)
 {
     if (Player *selected_player = find_player_in_team(player_name))

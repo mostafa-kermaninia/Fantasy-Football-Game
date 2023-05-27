@@ -23,6 +23,11 @@ vector<Player *> Team::get_players()
     return team_players;
 }
 
+void Team::add_new_player(Player *new_player)
+{
+    team_players.push_back(new_player);
+}
+
 void Team::print_team(ROLE r, bool show_sorted)
 {
     vector<Player *> showing_players = team_players;

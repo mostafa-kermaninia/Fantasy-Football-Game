@@ -12,6 +12,7 @@ public:
     ~Team();
 
     vector<Player *> get_players();
+    void add_new_player(Player*new_player);
 
     void print_team(ROLE r, bool show_sorted = false);
     void print_team_info();

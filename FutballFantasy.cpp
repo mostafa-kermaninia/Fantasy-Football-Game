@@ -184,6 +184,21 @@ void FutballFantasy::sell_player(string player_name)
     cur_user->delete_player(player_name);
 }
 
+void FutballFantasy::buy_player(string player_name)
+{
+    if (!available_transter)
+        throw runtime_error(PERMISSION_ER);
+    if (Player *selected_player = find_player_by_name(player_name))
+    {
+        if (cur_user->is_player_buyable(selected_player))
+        {
+            cur_user->add_player_to_team(selected_player);
+        }
+    }
+    else
+        throw runtime_error(NOT_FOUND_ER);
+}
+
 void FutballFantasy::pass_week()
 {
     week_num++;
@@ -203,7 +218,7 @@ void FutballFantasy::open_transfer_window()
 void FutballFantasy::close_transfer_window()
 {
     available_transter = false;
-    cout << SUCCESSFUL_RESPONSE; 
+    cout << SUCCESSFUL_RESPONSE;
 }
 
 void FutballFantasy::handle_get_requests()
@@ -289,6 +304,15 @@ void FutballFantasy::handle_post_requests()
                 name_sign != NAME)
                 throw runtime_error(BAD_REQUEST_ER + "2");
             sell_player(player_name);
+        }
+        else if (command == "buy_player")
+        {
+            cin >> question_mark >> name_sign;
+            getline(cin, player_name);
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                name_sign != NAME)
+                throw runtime_error(BAD_REQUEST_ER + "9");
+            buy_player(player_name);
         }
         else
         {
