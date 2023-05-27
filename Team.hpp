@@ -2,6 +2,7 @@
 #include "Player.hpp"
 #include "ConstVariables.hpp"
 
+
 class Team
 {
 
@@ -23,6 +24,7 @@ public:
     void add_to_goals_for(int num) { goals_for += num; }
     void add_to_goals_against(int num) { goals_against += num; }
     void add_to_total_score(int num) { total_score += num; }
+    void delete_player(string player_name);
 
 private:
     string team_name;

@@ -51,6 +51,17 @@ double Team::calculate_total_players_score()
     return total_score;
 }
 
+void Team::delete_player(string player_name)
+{
+    for (int i = 0; i < team_players.size(); i++)
+    {
+        if (team_players[i]->get_name() == player_name)
+        {
+            team_players.erase(team_players.begin() + i);
+        }
+    }
+}
+
 vector<Player *> Team::find_players_by_role(ROLE r, vector<Player *> players)
 {
     for (int i = 0; i < players.size(); i++)
@@ -70,7 +81,7 @@ vector<Player *> Team::sort_by_score(vector<Player *> not_sorted_players)
         {
             if (not_sorted_players[i]->get_score() < not_sorted_players[j]->get_score() ||
                 (not_sorted_players[i]->get_score() == not_sorted_players[j]->get_score() &&
-                 not_sorted_players[i]->get_name() > not_sorted_players[j]->get_name()))
+                 not_sorted_players[i]->get_name() < not_sorted_players[j]->get_name()))
             {
                 Player *swaped_player = not_sorted_players[i];
                 not_sorted_players[i] = not_sorted_players[j];
