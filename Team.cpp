@@ -86,7 +86,7 @@ vector<Player *> Team::sort_by_score(vector<Player *> not_sorted_players)
         {
             if (not_sorted_players[i]->get_score() < not_sorted_players[j]->get_score() ||
                 (not_sorted_players[i]->get_score() == not_sorted_players[j]->get_score() &&
-                 not_sorted_players[i]->get_name() > not_sorted_players[j]->get_name()))
+                 not_sorted_players[i]->get_name() < not_sorted_players[j]->get_name()))
             {
                 Player *swaped_player = not_sorted_players[i];
                 not_sorted_players[i] = not_sorted_players[j];

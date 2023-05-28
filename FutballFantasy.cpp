@@ -6,6 +6,7 @@ FutballFantasy::FutballFantasy(string league_file_path)
     cur_user = nullptr;
     admin = new Admin("admin", "123456");
     week_num = 0;
+    available_transter = true;
 }
 
 FutballFantasy::~FutballFantasy()
@@ -147,24 +148,19 @@ void FutballFantasy::signup(string name, string password)
 
 void FutballFantasy::login(string name, string password)
 {
-    for (User *user : users)
+    if (User *selected_user = find_user_by_name(name))
     {
-        if (user->get_name() == name)
+        if (selected_user->check_password_validity(password))
         {
-            if (user->check_password_validity(password))
-            {
-                user->log_in();
-                cur_user = user;
-                cout << SUCCESSFUL_RESPONSE;
-                return;
-            }
-            else
-            {
-                throw runtime_error(PERMISSION_ER);
-            }
+            selected_user->log_in();
+            cur_user = selected_user;
+            cout << SUCCESSFUL_RESPONSE;
         }
+        else
+            throw runtime_error(PERMISSION_ER);
     }
-    throw runtime_error(NOT_FOUND_ER);
+    else
+        throw runtime_error(NOT_FOUND_ER);
 }
 
 void FutballFantasy::register_admin(string admin_name, string password)
@@ -182,21 +178,6 @@ void FutballFantasy::sell_player(string player_name)
     if (!available_transter)
         throw runtime_error(PERMISSION_ER);
     cur_user->delete_player(player_name);
-}
-
-void FutballFantasy::buy_player(string player_name)
-{
-    if (!available_transter)
-        throw runtime_error(PERMISSION_ER);
-    if (Player *selected_player = find_player_by_name(player_name))
-    {
-        if (cur_user->is_player_buyable(selected_player))
-        {
-            cur_user->add_player_to_team(selected_player);
-        }
-    }
-    else
-        throw runtime_error(NOT_FOUND_ER);
 }
 
 void FutballFantasy::pass_week()
@@ -220,7 +201,6 @@ void FutballFantasy::close_transfer_window()
     available_transter = false;
     cout << SUCCESSFUL_RESPONSE;
 }
-
 void FutballFantasy::handle_get_requests()
 {
     string question_mark, line, command;
@@ -253,6 +233,15 @@ void FutballFantasy::handle_get_requests()
         print_league_info();
     else if (command == "players")
         print_team_players();
+    else if (command == "users_ranking")
+        print_users();
+    else if (command == "squad")
+    {
+        if (cur_user)
+            print_squad();
+        else
+            throw runtime_error(PERMISSION_ER);
+    }
     else
     {
         throw runtime_error(BAD_REQUEST_ER + "4");
@@ -366,6 +355,7 @@ void FutballFantasy::handle_delete_requests()
     throw runtime_error(BAD_REQUEST_ER);
 }
 
+
 void FutballFantasy::handle_commands()
 {
     string request_type;
@@ -439,7 +429,6 @@ void FutballFantasy::print_team_players()
     cin >> question_mark >> team_name_sign >> team_name;
     team_name = edit_entry_team_name(team_name);
     Team *printing_team = find_team_by_name(team_name);
-    cout << team_name << endl;
     if (team_name_sign != "team")
         throw runtime_error(BAD_REQUEST_ER);
     getline(cin, line);
@@ -456,6 +445,36 @@ void FutballFantasy::print_team_players()
     if (printing_team == nullptr)
         throw runtime_error(NOT_FOUND_ER);
     printing_team->print_team(r, extra_info.size() > 0 && extra_info.back() == "ranks");
+}
+
+void FutballFantasy::print_users()
+{
+    int rank = 1;
+    for (auto u : users)
+    {
+        cout << rank << ". ";
+        u->print_fantasy_team();
+        rank++;
+    }
+}
+
+void FutballFantasy::print_squad()
+{
+    vector<string> extra_info;
+    string line, question_mark;
+    User *printing_user = cur_user;
+    cin >> question_mark;
+    getline(cin, line);
+    if (line != "")
+    {
+        extra_info = string_splitter(line, ' ');
+        if (extra_info[1] != "fantasy_team" || extra_info.size() != 3)
+            throw runtime_error(BAD_REQUEST_ER);
+        printing_user = find_user_by_name(extra_info[2]);
+        if (printing_user == nullptr)
+            throw runtime_error(NOT_FOUND_ER);
+    }
+    printing_user->print_team_info();
 }
 
 Player *FutballFantasy::find_player_by_name(string name)
@@ -518,6 +537,18 @@ User *FutballFantasy::find_logged_in_user()
     return nullptr;
 }
 
+User *FutballFantasy::find_user_by_name(string name)
+{
+    for (User *user : users)
+    {
+        if (user->get_name() == name)
+        {
+            return user;
+        }
+    }
+    return nullptr;
+}
+
 vector<string> FutballFantasy::string_splitter(string text, char splitter)
 {
     string word = "";
@@ -566,6 +597,22 @@ void FutballFantasy::sort_teams()
             }
 }
 
+void FutballFantasy::sort_users()
+{
+    for (int i = 0; i < users.size() - 1; i++)
+        for (int j = i + 1; j < users.size(); j++)
+        {
+            if (users[i]->get_point() < users[j]->get_point() ||
+                (users[i]->get_point() == users[j]->get_point() &&
+                 users[i]->get_name() < users[j]->get_name()))
+            {
+                User *swaping_user = users[i];
+                users[i] = users[j];
+                users[j] = swaping_user;
+            }
+        }
+}
+
 bool FutballFantasy::is_better_team(Team *team1, Team *team2)
 {
     if (team1->get_total_score() > team2->get_total_score())
@@ -579,7 +626,7 @@ bool FutballFantasy::is_better_team(Team *team1, Team *team2)
         return false;
     else if (team1->get_total_score() == team2->get_total_score() &&
              team1->calculate_goal_difrence() == team2->calculate_goal_difrence() &&
-             team1->get_goals_for() == team2->get_goals_for() && team1->get_name() < team2->get_name())
+             team1->get_goals_for() == team2->get_goals_for() && team1->get_name() > team2->get_name())
         return false;
     return true;
 }
@@ -590,6 +637,18 @@ string FutballFantasy::edit_entry_team_name(string name)
         if (name[i] == '_')
             name[i] = ' ';
     return name;
+}
+
+void FutballFantasy::reset_players_score()
+{
+    for (int i = 0; i < players.size(); i++)
+        players[i]->reset_for_new_week();
+}
+
+void FutballFantasy::update_users_score()
+{
+    for (int i = 0; i < users.size(); i++)
+        users[i]->update_score();
 }
 
 void FutballFantasy::update_matches_vec(string team_names, string result)
