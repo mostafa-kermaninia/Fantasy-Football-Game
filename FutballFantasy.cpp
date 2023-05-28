@@ -180,6 +180,21 @@ void FutballFantasy::sell_player(string player_name)
     cur_user->delete_player(player_name);
 }
 
+void FutballFantasy::buy_player(string player_name)
+{
+    if (!available_transter)
+        throw runtime_error(PERMISSION_ER);
+    if (Player *selected_player = find_player_by_name(player_name))
+    {
+        if (cur_user->is_player_buyable(selected_player))
+        {
+            cur_user->add_player_to_team(selected_player);
+        }
+    }
+    else
+        throw runtime_error(NOT_FOUND_ER);
+}
+
 void FutballFantasy::pass_week()
 {
     week_num++;
@@ -354,7 +369,6 @@ void FutballFantasy::handle_delete_requests()
     cin >> command;
     throw runtime_error(BAD_REQUEST_ER);
 }
-
 
 void FutballFantasy::handle_commands()
 {
