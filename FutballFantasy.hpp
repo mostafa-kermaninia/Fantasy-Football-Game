@@ -42,7 +42,7 @@ private:
     Player *find_player_by_name(string name);
     Team *find_team_by_name(string name);
     User *find_logged_in_user();
-    User*find_user_by_name(string name);
+    User *find_user_by_name(string name);
     ROLE find_role(string target_role);
     void update_winner_and_loser_team_info(Team *team1, int team1_goals, Team *team2, int team2_goals);
 
@@ -64,10 +64,19 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-    void handle_get_requests();
-    void handle_post_requests();
-    void handle_put_requests();
-    void handle_delete_requests();
+    void public_get_req(string command);
+    void handle_get_requests(string command);
+
+    void admin_post_req(string command);
+    void user_post_req(string command);
+    void public_post_req(string command);
+    void handle_post_requests(string command);
+    
+    void public_put_req(string command);
+    void handle_put_requests(string command);
+    
+    void public_delete_req(string command);
+    void handle_delete_requests(string command);
 
     vector<Player *> find_bests(ROLE r);
     bool better_than_chosen_players(vector<Player *> choosen_players, Player *new_player);

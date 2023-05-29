@@ -59,12 +59,8 @@ double Team::calculate_total_players_score()
 void Team::delete_player(string player_name)
 {
     for (int i = 0; i < team_players.size(); i++)
-    {
         if (team_players[i]->get_name() == player_name)
-        {
             team_players.erase(team_players.begin() + i);
-        }
-    }
 }
 
 vector<Player *> Team::find_players_by_role(ROLE r, vector<Player *> players)

@@ -16,9 +16,7 @@ public:
     void log_out();
     Player *find_player_in_team(string player_name);
     void delete_player(string player_name);
-
-    bool is_player_buyable(Player *selected_player);
-    void add_player_to_team(Player *selected_player);
+    void add_player(Player *selected_player);
 
     void update_score();
     void print_fantasy_team();
@@ -27,7 +25,7 @@ public:
 private:
     string name;
     int sell_coupons;
-    int buy_limit; // maybe ziadie
+    int buy_coupons; 
     Team *team;
     string password;
     double point;
@@ -36,4 +34,5 @@ private:
 
     vector<Player *> find_players_by_role(ROLE r);
     vector<Player *> sort_players_by_name(vector<Player *> players);
+    bool is_player_buyable(Player *selected_player);
 };
