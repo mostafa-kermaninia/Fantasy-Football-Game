@@ -11,6 +11,7 @@ public:
     string get_name() { return name; }
     double get_point() { return point; }
     int get_buy_copouns() { return buy_coupons; }
+    bool is_team_completed() { return complete_team; }
 
     bool check_password_validity(string input_pass) { return password == input_pass; }
     bool is_logged_in();

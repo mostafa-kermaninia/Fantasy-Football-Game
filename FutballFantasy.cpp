@@ -196,7 +196,7 @@ void FutballFantasy::sell_player(string player_name)
 
 void FutballFantasy::buy_player(string player_name)
 {
-    if (!available_transter|| !cur_user->get_buy_copouns())
+    if (!available_transter|| (cur_user->get_buy_copouns()==0 && cur_user->is_team_completed()))
         throw runtime_error(PERMISSION_ER);
     if (Player *selected_player = find_player_by_name(player_name))
     {
@@ -271,7 +271,7 @@ void FutballFantasy::public_get_req(string command)
     }
     else
     {
-        throw runtime_error(BAD_REQUEST_ER + "4");
+        throw runtime_error(BAD_REQUEST_ER );
     }
 }
 
@@ -312,7 +312,7 @@ void FutballFantasy::admin_post_req(string command)
     else if (command == "buy_player" || command == "sell_player")
         throw runtime_error(PERMISSION_ER);
     else
-        throw runtime_error(BAD_REQUEST_ER + "6");
+        throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::user_post_req(string command)
@@ -331,7 +331,7 @@ void FutballFantasy::user_post_req(string command)
         getline(cin, player_name);
         if (cin.fail() || question_mark != QUESTION_MARK ||
             name_sign != NAME)
-            throw runtime_error(BAD_REQUEST_ER + "2");
+            throw runtime_error(BAD_REQUEST_ER );
         sell_player(player_name);
     }
     else if (command == "buy_player")
@@ -340,13 +340,13 @@ void FutballFantasy::user_post_req(string command)
         getline(cin, player_name);
         if (cin.fail() || question_mark != QUESTION_MARK ||
             name_sign != NAME)
-            throw runtime_error(BAD_REQUEST_ER + "9");
+            throw runtime_error(BAD_REQUEST_ER );
         buy_player(player_name);
     }
     else if (command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
         throw runtime_error(PERMISSION_ER);
     else
-        throw runtime_error(BAD_REQUEST_ER + "3");
+        throw runtime_error(BAD_REQUEST_ER );
 }
 
 void FutballFantasy::public_post_req(string command)
@@ -367,7 +367,7 @@ void FutballFantasy::public_post_req(string command)
         cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
         if (cin.fail() || question_mark != QUESTION_MARK ||
             team_name_sign != TEAM_NAME || password_sign != PASSWORD)
-            throw runtime_error(BAD_REQUEST_ER + "85");
+            throw runtime_error(BAD_REQUEST_ER );
         login(user_team_name, password);
     }
     else if (command == "register_admin")
@@ -382,7 +382,7 @@ void FutballFantasy::public_post_req(string command)
              command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
         throw runtime_error(PERMISSION_ER);
     else
-        throw runtime_error(BAD_REQUEST_ER + "8");
+        throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::public_put_req(string command)
