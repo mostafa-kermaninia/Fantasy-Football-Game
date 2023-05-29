@@ -14,22 +14,23 @@ public:
 
     string get_name() { return name; }
     ROLE get_role() { return role; }
-    double get_score() { return score; }
+    double get_score() { return scores.back(); }
 
     Player *clone();
+    double calculate_avarage_score();
     void reset_for_new_week();
-    void set_when_injured(int week_num) { when_injured = week_num; }
+    void set_when_injured() { injured_weeks = 3; }
     bool is_available() { return available; }
     void add_to_yellow_cards() { yellow_cards_num += 1; }
     void add_to_red_cards() { red_cards_num += 1; }
-    void add_to_score(double num) { score = num; }
+    void add_to_score(double num) { scores.back() = num; }
 
 private:
     string name;
     ROLE role;
-    double score;
+    vector<double> scores;
     bool available;
-    int when_injured = 0;
+    int injured_weeks = 0;
     int yellow_cards_num;
     int red_cards_num;
 };

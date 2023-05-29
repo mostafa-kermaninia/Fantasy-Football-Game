@@ -1,7 +1,8 @@
 #pragma once
+#include <cmath>
+#include <iomanip>
 #include "Player.hpp"
 #include "ConstVariables.hpp"
-
 
 class Team
 {
@@ -12,6 +13,7 @@ public:
     ~Team();
 
     vector<Player *> get_players();
+    void add_new_player(Player *new_player);
 
     void print_team(ROLE r, bool show_sorted = false);
     void print_team_info();
@@ -33,6 +35,9 @@ private:
     int goals_against;
     int total_score;
 
-    vector<Player *> find_players_by_role(ROLE r, vector<Player *> players);
-    vector<Player *> sort_by_score(vector<Player *> not_sorted_players);
+    void find_players_by_role(ROLE r, vector<Player *> &players);
+    void sort_by_score(vector<Player *> &not_sorted_players);
+    void sort_by_name(vector<Player *> &not_sorted_players);
+
+    double round_to(double pre, double value);
 };

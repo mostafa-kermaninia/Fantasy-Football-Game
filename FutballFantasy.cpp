@@ -118,7 +118,20 @@ vector<Player *> FutballFantasy::find_bests(ROLE r)
             chosen_players[1] = swaped_player;
         }
     }
+    sort_by_name(chosen_players);
     return chosen_players;
+}
+
+void FutballFantasy::sort_by_name(vector<Player *> &choosen_players)
+{
+    for (int i = 0; i < choosen_players.size() - 1; i++)
+        for (int j = i + 1; j < choosen_players.size(); j++)
+            if (choosen_players[i]->get_name() > choosen_players[j]->get_name())
+            {
+                Player *swaping_player = choosen_players[i];
+                choosen_players[i] = choosen_players[j];
+                choosen_players[j] = swaping_player;
+            }
 }
 
 bool FutballFantasy::better_than_chosen_players(vector<Player *> choosen_players, Player *new_player)
@@ -180,12 +193,39 @@ void FutballFantasy::sell_player(string player_name)
     cur_user->delete_player(player_name);
 }
 
+void FutballFantasy::buy_player(string player_name)
+{
+    if (!available_transter)
+        throw runtime_error(PERMISSION_ER);
+    if (Player *selected_player = find_player_by_name(player_name))
+    {
+        if (cur_user->is_player_buyable(selected_player))
+        {
+            cur_user->add_player_to_team(selected_player);
+        }
+    }
+    else
+        throw runtime_error(NOT_FOUND_ER);
+}
+
 void FutballFantasy::pass_week()
 {
     week_num++;
     if (week_num > COUNT_OF_WEEKS)
         throw runtime_error("out of timmmmmmme");
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
+    cout << SUCCESSFUL_RESPONSE;
+}
+
+void FutballFantasy::open_transfer_window()
+{
+    available_transter = true;
+    cout << SUCCESSFUL_RESPONSE;
+}
+
+void FutballFantasy::close_transfer_window()
+{
+    available_transter = false;
     cout << SUCCESSFUL_RESPONSE;
 }
 
@@ -203,19 +243,13 @@ void FutballFantasy::handle_get_requests()
         {
             extra_info = string_splitter(line, ' ');
             showing_week = stoi(extra_info[2]);
-        }
-        if (command == "matches_result_league")
-        {
             if (extra_info[1] != "week_num")
                 throw runtime_error(BAD_REQUEST_ER);
+        }
+        if (command == "matches_result_league")
             print_week_matches(showing_week);
-        }
         else
-        {
-            if (extra_info[1] != "week")
-                throw runtime_error(BAD_REQUEST_ER);
             print_week_team(showing_week);
-        }
     }
     else if (command == "league_standings")
         print_league_info();
@@ -248,10 +282,19 @@ void FutballFantasy::handle_post_requests()
         if (command == "pass_week")
         {
             reset_players_score();
+            reset_users_coupons();
             pass_week();
             update_users_score();
             add_week_team();
-            sort_users(); // nemidunam jash inja bashe ya hrvaqt ke mikhaym useraro namayesh bedim
+            sort_users();
+        }
+        else if (command == "open_transfer_window")
+        {
+            open_transfer_window();
+        }
+        else if (command == "close_transfer_window")
+        {
+            close_transfer_window();
         }
         else if (command == "logout")
         {
@@ -277,6 +320,15 @@ void FutballFantasy::handle_post_requests()
                 name_sign != NAME)
                 throw runtime_error(BAD_REQUEST_ER + "2");
             sell_player(player_name);
+        }
+        else if (command == "buy_player")
+        {
+            cin >> question_mark >> name_sign;
+            getline(cin, player_name);
+            if (cin.fail() || question_mark != QUESTION_MARK ||
+                name_sign != NAME)
+                throw runtime_error(BAD_REQUEST_ER + "9");
+            buy_player(player_name);
         }
         else
         {
@@ -320,48 +372,14 @@ void FutballFantasy::handle_put_requests()
 {
     string command;
     cin >> command;
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error(BAD_REQUEST_ER);
-    }
+    throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::handle_delete_requests()
 {
     string command;
     cin >> command;
-    if (command == "add_time_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetTimeInMinutes >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addTimeMission(missionId, startTimestamp, endTimestamp, targetTimeInMinutes, rewardAmount);
-    }
-    else if (command == "add_distance_mission")
-    {
-        // cin >> missionId >> startTimestamp >> endTimestamp >> targetDistanceInMeters >> rewardAmount;
-        // if (cin.fail())
-        //     throw runtime_error("INVALID_ARGUMENTS");
-        // addDistanceMission(missionId, startTimestamp, endTimestamp, targetDistanceInMeters, rewardAmount);
-    }
-    else
-    {
-        throw runtime_error(BAD_REQUEST_ER);
-    }
+    throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::handle_commands()
@@ -380,10 +398,7 @@ void FutballFantasy::handle_commands()
             else if (request_type == "DELETE")
                 handle_delete_requests();
             else
-            {
-                cout << request_type;
                 throw runtime_error(BAD_REQUEST_ER);
-            }
         }
         catch (const std::runtime_error &e)
         {
@@ -410,11 +425,12 @@ void FutballFantasy::print_week_team(int week_number)
     if (week_number <= 0 || week_number > week_num)
         throw runtime_error(BAD_REQUEST_ER);
     vector<Player *> week_team_players = week_teams[week_number - 1]->get_players();
-    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[0]->get_score() << endl;
-    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[1]->get_score() << endl;
-    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[2]->get_score() << endl;
-    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[3]->get_score() << endl;
-    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[4]->get_score() << endl;
+    cout << fixed;
+    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
+    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[1]->get_score() << endl;
+    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[2]->get_score() << endl;
+    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[3]->get_score() << endl;
+    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[4]->get_score() << endl;
 }
 
 void FutballFantasy::print_week_matches(int week_number)
@@ -610,12 +626,14 @@ void FutballFantasy::sort_teams()
 
 void FutballFantasy::sort_users()
 {
+    if (users.size() <= 1)
+        return;
     for (int i = 0; i < users.size() - 1; i++)
         for (int j = i + 1; j < users.size(); j++)
         {
             if (users[i]->get_point() < users[j]->get_point() ||
                 (users[i]->get_point() == users[j]->get_point() &&
-                 users[i]->get_name() < users[j]->get_name()))
+                 users[i]->get_name() > users[j]->get_name()))
             {
                 User *swaping_user = users[i];
                 users[i] = users[j];
@@ -656,6 +674,14 @@ void FutballFantasy::reset_players_score()
         players[i]->reset_for_new_week();
 }
 
+void FutballFantasy::reset_users_coupons()
+{
+    if (users.size() <= 0)
+        return;
+    for (int i = 0; i < users.size(); i++)
+        users[i]->reset_coupons();
+}
+
 void FutballFantasy::update_users_score()
 {
     for (int i = 0; i < users.size(); i++)
@@ -693,7 +719,7 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
 
     for (int i = 0; i < injured_players.size(); i++)
         if (Player *selected_player = find_player_by_name(injured_players[i]))
-            selected_player->set_when_injured(week_num);
+            selected_player->set_when_injured();
     for (int i = 0; i < yellow_card_reciever_players.size(); i++)
         if (Player *selected_player = find_player_by_name(yellow_card_reciever_players[i]))
             selected_player->add_to_yellow_cards();

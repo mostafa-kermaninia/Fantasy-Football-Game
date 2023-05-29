@@ -42,7 +42,7 @@ private:
     Player *find_player_by_name(string name);
     Team *find_team_by_name(string name);
     User *find_logged_in_user();
-    User*find_user_by_name(string name);
+    User *find_user_by_name(string name);
     ROLE find_role(string target_role);
     void update_winner_and_loser_team_info(Team *team1, int team1_goals, Team *team2, int team2_goals);
 
@@ -56,6 +56,7 @@ private:
     string edit_entry_team_name(string name);
 
     void reset_players_score();
+    void reset_users_coupons();
     void update_users_score();
     void update_matches_vec(string team_names, string result);
     void update_teams_vec(string team_names, string result);
@@ -70,6 +71,7 @@ private:
     void handle_delete_requests();
 
     vector<Player *> find_bests(ROLE r);
+    void sort_by_name(vector<Player *> &choosen_players);
     bool better_than_chosen_players(vector<Player *> choosen_players, Player *new_player);
 
     void build_objects(vector<string> file_elements);
@@ -78,6 +80,9 @@ private:
     void login(string name, string password);
     void register_admin(string admin_name, string password);
     void sell_player(string player_name);
+    void buy_player(string player_name);
 
     void pass_week();
+    void open_transfer_window();
+    void close_transfer_window();
 };

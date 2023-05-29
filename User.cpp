@@ -5,7 +5,7 @@ User::User(string _name, string _password)
     name = _name;
     password = _password;
     sell_coupons = 2;
-    buy_limit = 2;
+    buy_coupons = 2;
     point = 0;
     complete_team = false;
     is_in_account = true;
@@ -54,6 +54,22 @@ void User::delete_player(string player_name)
         throw runtime_error(NOT_FOUND_ER);
 }
 
+bool User::is_player_buyable(Player *selected_player)
+{
+    return false;
+}
+
+void User::add_player_to_team(Player *selected_player)
+{
+    team->add_new_player(selected_player);
+}
+
+void User::reset_coupons()
+{
+    sell_coupons = 2;
+    buy_coupons = 2;
+}
+
 void User::update_score()
 {
     if (team->get_players().size() == 5)
@@ -62,7 +78,8 @@ void User::update_score()
 
 void User::print_fantasy_team()
 {
-    cout << "team_name: " << name << OUTPUT_DELIMITER << "point: " << point << endl;
+    cout << fixed;
+    cout << "team_name: " << name << OUTPUT_DELIMITER << "point: " << setprecision(1) << point << endl;
 }
 
 void User::print_team_info()

@@ -16,6 +16,11 @@ public:
     void log_out();
     Player *find_player_in_team(string player_name);
     void delete_player(string player_name);
+
+    bool is_player_buyable(Player *selected_player);
+    void add_player_to_team(Player *selected_player);
+
+    void reset_coupons();
     void update_score();
     void print_fantasy_team();
     void print_team_info();
@@ -23,7 +28,7 @@ public:
 private:
     string name;
     int sell_coupons;
-    int buy_limit; // maybe ziadie
+    int buy_coupons; // maybe ziadie
     Team *team;
     string password;
     double point;

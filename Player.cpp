@@ -4,8 +4,7 @@ Player::Player(string _name, ROLE _role)
 {
     name = _name;
     role = _role;
-    score = 0;
-    when_injured = 0;
+    injured_weeks = 0;
     yellow_cards_num = 0;
     red_cards_num = 0;
     available = true;
@@ -20,17 +19,33 @@ Player *Player::clone()
     return new Player(*this);
 }
 
+double Player::calculate_avarage_score()
+{
+    double score_sum = 0;
+    int played_match_num = 0;
+    for (auto s : scores)
+    {
+        if (s > 0)
+        {
+            score_sum += s;
+            played_match_num++;
+        }
+    }
+    return score_sum / played_match_num;
+}
+
 void Player::reset_for_new_week()
 {
-    score = 0;
+    scores.push_back(0);
     if (red_cards_num == 1)
     {
         red_cards_num = 0;
+        yellow_cards_num = 0;
         available = false;
     }
-    else if (when_injured > 0)
+    else if (injured_weeks > 0)
     {
-        when_injured--;
+        injured_weeks--;
         available = false;
     }
     else if (yellow_cards_num == 3)
