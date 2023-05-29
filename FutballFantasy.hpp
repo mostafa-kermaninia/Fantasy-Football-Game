@@ -56,6 +56,7 @@ private:
     string edit_entry_team_name(string name);
 
     void reset_players_score();
+    void reset_users_coupons();
     void update_users_score();
     void update_matches_vec(string team_names, string result);
     void update_teams_vec(string team_names, string result);
@@ -64,21 +65,22 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-    void public_get_req(string command);
+void public_get_req(string command);
     void handle_get_requests(string command);
 
     void admin_post_req(string command);
     void user_post_req(string command);
     void public_post_req(string command);
     void handle_post_requests(string command);
-    
+
     void public_put_req(string command);
     void handle_put_requests(string command);
-    
+
     void public_delete_req(string command);
     void handle_delete_requests(string command);
 
     vector<Player *> find_bests(ROLE r);
+    void sort_by_name(vector<Player *> &choosen_players);
     bool better_than_chosen_players(vector<Player *> choosen_players, Player *new_player);
 
     void build_objects(vector<string> file_elements);

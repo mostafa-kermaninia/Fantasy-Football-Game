@@ -118,7 +118,20 @@ vector<Player *> FutballFantasy::find_bests(ROLE r)
             chosen_players[1] = swaped_player;
         }
     }
+    sort_by_name(chosen_players);
     return chosen_players;
+}
+
+void FutballFantasy::sort_by_name(vector<Player *> &choosen_players)
+{
+    for (int i = 0; i < choosen_players.size() - 1; i++)
+        for (int j = i + 1; j < choosen_players.size(); j++)
+            if (choosen_players[i]->get_name() > choosen_players[j]->get_name())
+            {
+                Player *swaping_player = choosen_players[i];
+                choosen_players[i] = choosen_players[j];
+                choosen_players[j] = swaping_player;
+            }
 }
 
 bool FutballFantasy::better_than_chosen_players(vector<Player *> choosen_players, Player *new_player)
@@ -183,21 +196,28 @@ void FutballFantasy::sell_player(string player_name)
 
 void FutballFantasy::buy_player(string player_name)
 {
-    if (!available_transter || !cur_user->get_buy_copouns())
+    if (!available_transter|| !cur_user->get_buy_copouns())
         throw runtime_error(PERMISSION_ER);
     if (Player *selected_player = find_player_by_name(player_name))
+    {
         cur_user->add_player(selected_player);
+    }
     else
         throw runtime_error(NOT_FOUND_ER);
 }
 
 void FutballFantasy::pass_week()
 {
+    reset_players_score();
+    reset_users_coupons();
+
     week_num++;
     if (week_num > COUNT_OF_WEEKS)
         throw runtime_error(BAD_REQUEST_ER);
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
+    update_users_score();
     add_week_team();
+    sort_users();
 }
 
 void FutballFantasy::open_transfer_window()
@@ -228,19 +248,13 @@ void FutballFantasy::public_get_req(string command)
         {
             extra_info = string_splitter(line, ' ');
             showing_week = stoi(extra_info[2]);
-        }
-        if (command == "matches_result_league")
-        {
             if (extra_info[1] != "week_num")
                 throw runtime_error(BAD_REQUEST_ER);
+        }
+        if (command == "matches_result_league")
             print_week_matches(showing_week);
-        }
         else
-        {
-            if (extra_info[1] != "week")
-                throw runtime_error(BAD_REQUEST_ER);
             print_week_team(showing_week);
-        }
     }
     else if (command == "league_standings")
         print_league_info();
@@ -438,11 +452,12 @@ void FutballFantasy::print_week_team(int week_number)
     if (week_number <= 0 || week_number > week_num)
         throw runtime_error(BAD_REQUEST_ER);
     vector<Player *> week_team_players = week_teams[week_number - 1]->get_players();
-    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[0]->get_score() << endl;
-    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[1]->get_score() << endl;
-    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[2]->get_score() << endl;
-    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[3]->get_score() << endl;
-    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << week_team_players[4]->get_score() << endl;
+    cout << fixed;
+    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
+    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[1]->get_score() << endl;
+    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[2]->get_score() << endl;
+    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[3]->get_score() << endl;
+    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[4]->get_score() << endl;
 }
 
 void FutballFantasy::print_week_matches(int week_number)
@@ -468,7 +483,7 @@ void FutballFantasy::print_team_players()
     cin >> question_mark >> team_name_sign >> team_name;
     team_name = edit_entry_team_name(team_name);
     Team *printing_team = find_team_by_name(team_name);
-    if (team_name_sign != "team")
+    if (team_name_sign != "team_name")
         throw runtime_error(BAD_REQUEST_ER);
     getline(cin, line);
     if (line != "")
@@ -638,12 +653,14 @@ void FutballFantasy::sort_teams()
 
 void FutballFantasy::sort_users()
 {
+    if (users.size() <= 1)
+        return;
     for (int i = 0; i < users.size() - 1; i++)
         for (int j = i + 1; j < users.size(); j++)
         {
             if (users[i]->get_point() < users[j]->get_point() ||
                 (users[i]->get_point() == users[j]->get_point() &&
-                 users[i]->get_name() < users[j]->get_name()))
+                 users[i]->get_name() > users[j]->get_name()))
             {
                 User *swaping_user = users[i];
                 users[i] = users[j];
@@ -684,6 +701,14 @@ void FutballFantasy::reset_players_score()
         players[i]->reset_for_new_week();
 }
 
+void FutballFantasy::reset_users_coupons()
+{
+    if (users.size() <= 0)
+        return;
+    for (int i = 0; i < users.size(); i++)
+        users[i]->reset_coupons();
+}
+
 void FutballFantasy::update_users_score()
 {
     for (int i = 0; i < users.size(); i++)
@@ -721,7 +746,7 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
 
     for (int i = 0; i < injured_players.size(); i++)
         if (Player *selected_player = find_player_by_name(injured_players[i]))
-            selected_player->set_when_injured(week_num);
+            selected_player->set_when_injured();
     for (int i = 0; i < yellow_card_reciever_players.size(); i++)
         if (Player *selected_player = find_player_by_name(yellow_card_reciever_players[i]))
             selected_player->add_to_yellow_cards();

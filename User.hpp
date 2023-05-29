@@ -10,18 +10,21 @@ public:
 
     string get_name() { return name; }
     double get_point() { return point; }
+    int get_buy_copouns() { return buy_coupons; }
+
     bool check_password_validity(string input_pass) { return password == input_pass; }
     bool is_logged_in();
     void log_in() { is_in_account = true; }
     void log_out();
     Player *find_player_in_team(string player_name);
     void delete_player(string player_name);
+
     void add_player(Player *selected_player);
 
+    void reset_coupons();
     void update_score();
     void print_fantasy_team();
     void print_team_info();
-    int get_buy_copouns() { return buy_coupons; }
 
 private:
     string name;
@@ -35,5 +38,5 @@ private:
 
     bool player_post_is_not_full(Player *selected_player);
     vector<Player *> find_players_by_role(ROLE r);
-    vector<Player *> sort_players_by_name(vector<Player *> players);
+    void sort_players_by_name(vector<Player *> &players);
 };

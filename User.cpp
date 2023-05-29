@@ -69,6 +69,12 @@ void User::add_player(Player *selected_player)
         cout << "This player is not available for next week" << endl;
 }
 
+void User::reset_coupons()
+{
+    sell_coupons = 2;
+    buy_coupons = 0;
+}
+
 void User::update_score()
 {
     if (team->get_players().size() == 5)
@@ -77,7 +83,8 @@ void User::update_score()
 
 void User::print_fantasy_team()
 {
-    cout << "team_name: " << name << OUTPUT_DELIMITER << "point: " << point << endl;
+    cout << fixed;
+    cout << "team_name: " << name << OUTPUT_DELIMITER << "point: " << setprecision(1) << point << endl;
 }
 
 void User::print_team_info()
@@ -110,11 +117,11 @@ vector<Player *> User::find_players_by_role(ROLE r)
     for (auto sp : sorce_players)
         if (sp->get_role() == r)
             target_players.push_back(sp);
-    target_players = sort_players_by_name(target_players);
+    sort_players_by_name(target_players);
     return target_players;
 }
 
-vector<Player *> User::sort_players_by_name(vector<Player *> players)
+void User::sort_players_by_name(vector<Player *> &players)
 {
     for (int i = 0; i < players.size() - 1; i++)
         for (int j = i + 1; j < players.size(); j++)
@@ -124,5 +131,4 @@ vector<Player *> User::sort_players_by_name(vector<Player *> players)
                 players[i] = players[j];
                 players[j] = swaping_player;
             }
-    return players;
 }
