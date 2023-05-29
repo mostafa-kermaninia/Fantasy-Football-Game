@@ -25,9 +25,9 @@ public:
     void print_league_info();
     void print_week_team(int week_number);
     void print_week_matches(int week_number);
-    void print_team_players();
+    void print_team_players(vector<string> &command_words);
     void print_users();
-    void print_squad();
+    void print_squad(vector<string> &command_words);
 
 private:
     vector<User *> users;
@@ -66,19 +66,19 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-    void public_get_req(string command);
-    void handle_get_requests(string command);
+    void public_get_req(vector<string> &command_words);
+    void handle_get_requests(vector<string> &command_words);
 
-    void admin_post_req(string command);
-    void user_post_req(string command);
-    void public_post_req(string command);
-    void handle_post_requests(string command);
+    void admin_post_req(vector<string> &command_words);
+    void user_post_req(vector<string> &command_words);
+    void public_post_req(vector<string> &command_words);
+    void handle_post_requests(vector<string> &command_words);
 
-    void public_put_req(string command);
-    void handle_put_requests(string command);
+    void public_put_req(vector<string> &command_words);
+    void handle_put_requests(vector<string> &command_words);
 
-    void public_delete_req(string command);
-    void handle_delete_requests(string command);
+    void public_delete_req(vector<string> &command_words);
+    void handle_delete_requests(vector<string> &command_words);
 
     vector<Player *> find_bests(ROLE r);
     void sort_by_name(vector<Player *> &choosen_players);
