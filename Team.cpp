@@ -63,6 +63,15 @@ void Team::delete_player(string player_name)
             team_players.erase(team_players.begin() + i);
 }
 
+int Team::count_of_players_in_selected_post(ROLE role)
+{
+    int counter = 0;
+    for (Player *player : team_players)
+        if (player->get_role() ==role)
+            counter++;
+    return counter;
+}
+
 vector<Player *> Team::find_players_by_role(ROLE r, vector<Player *> players)
 {
     for (int i = 0; i < players.size(); i++)

@@ -21,18 +21,19 @@ public:
     void update_score();
     void print_fantasy_team();
     void print_team_info();
+    int get_buy_copouns() { return buy_coupons; }
 
 private:
     string name;
     int sell_coupons;
-    int buy_coupons; 
+    int buy_coupons;
     Team *team;
     string password;
     double point;
     bool complete_team;
     bool is_in_account;
 
+    bool player_post_is_not_full(Player *selected_player);
     vector<Player *> find_players_by_role(ROLE r);
     vector<Player *> sort_players_by_name(vector<Player *> players);
-    bool is_player_buyable(Player *selected_player);
 };

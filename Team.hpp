@@ -26,6 +26,7 @@ public:
     void add_to_goals_against(int num) { goals_against += num; }
     void add_to_total_score(int num) { total_score += num; }
     void delete_player(string player_name);
+    int count_of_players_in_selected_post(ROLE role);
 
 private:
     string team_name;

@@ -47,6 +47,7 @@ void User::delete_player(string player_name)
             if (sell_coupons == 0)
                 throw runtime_error(PERMISSION_ER);
             sell_coupons--;
+            buy_coupons++;
         }
         team->delete_player(player_name);
     }
@@ -56,16 +57,16 @@ void User::delete_player(string player_name)
 
 void User::add_player(Player *selected_player)
 {
-    if (is_player_buyable(selected_player))
-        team->add_new_player(selected_player);
-    else
-        throw runtime_error(PERMISSION_ER);
-}
+    if (!player_post_is_not_full(selected_player))
+        throw runtime_error(BAD_REQUEST_ER);
 
-bool User::is_player_buyable(Player *selected_player)
-{
-    
-    return false;
+    if (selected_player->is_available())
+    {
+        team->add_new_player(selected_player);
+        buy_coupons--;
+    }
+    else
+        cout << "This player is not available for next week" << endl;
 }
 
 void User::update_score()
@@ -94,6 +95,13 @@ void User::print_team_info()
     cout << "Midfielder: " << midfielder[0]->get_name() << endl;
     cout << "Striker: " << striker[0]->get_name() << endl;
     cout << "Total Points: " << point << endl;
+}
+
+bool User::player_post_is_not_full(Player *selected_player)
+{
+    ROLE role = selected_player->get_role();
+    return (role == MD && team->count_of_players_in_selected_post(role) < 2) ||
+           (role != MD && team->count_of_players_in_selected_post(role) < 1);
 }
 
 vector<Player *> User::find_players_by_role(ROLE r)

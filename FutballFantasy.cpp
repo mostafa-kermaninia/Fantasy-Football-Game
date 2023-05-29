@@ -183,7 +183,7 @@ void FutballFantasy::sell_player(string player_name)
 
 void FutballFantasy::buy_player(string player_name)
 {
-    if (!available_transter)
+    if (!available_transter || !cur_user->get_buy_copouns())
         throw runtime_error(PERMISSION_ER);
     if (Player *selected_player = find_player_by_name(player_name))
         cur_user->add_player(selected_player);
