@@ -14,13 +14,11 @@ bool Admin::is_logged_in()
 void Admin::log_in()
 {
     is_in_account = true;
-    cout << SUCCESSFUL_RESPONSE;
 }
 
 void Admin::log_out()
 {
     is_in_account = false;
-    cout << SUCCESSFUL_RESPONSE;
 }
 
 bool Admin::check_info_validity(string input_username, string input_password)

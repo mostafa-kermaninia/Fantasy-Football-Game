@@ -65,10 +65,19 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-    void handle_get_requests();
-    void handle_post_requests();
-    void handle_put_requests();
-    void handle_delete_requests();
+void public_get_req(string command);
+    void handle_get_requests(string command);
+
+    void admin_post_req(string command);
+    void user_post_req(string command);
+    void public_post_req(string command);
+    void handle_post_requests(string command);
+
+    void public_put_req(string command);
+    void handle_put_requests(string command);
+
+    void public_delete_req(string command);
+    void handle_delete_requests(string command);
 
     vector<Player *> find_bests(ROLE r);
     void sort_by_name(vector<Player *> &choosen_players);

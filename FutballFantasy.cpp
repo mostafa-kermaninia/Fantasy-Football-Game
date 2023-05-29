@@ -181,6 +181,7 @@ void FutballFantasy::register_admin(string admin_name, string password)
     if (admin->check_info_validity(admin_name, password))
     {
         admin->log_in();
+        cout << SUCCESSFUL_RESPONSE;
         return;
     }
     throw runtime_error(BAD_REQUEST_ER);
@@ -199,10 +200,7 @@ void FutballFantasy::buy_player(string player_name)
         throw runtime_error(PERMISSION_ER);
     if (Player *selected_player = find_player_by_name(player_name))
     {
-        if (cur_user->is_player_buyable(selected_player))
-        {
-            cur_user->add_player_to_team(selected_player);
-        }
+        cur_user->add_player(selected_player);
     }
     else
         throw runtime_error(NOT_FOUND_ER);
@@ -210,30 +208,37 @@ void FutballFantasy::buy_player(string player_name)
 
 void FutballFantasy::pass_week()
 {
+    reset_players_score();
+    reset_users_coupons();
+
     week_num++;
     if (week_num > COUNT_OF_WEEKS)
-        throw runtime_error("out of timmmmmmme");
+        throw runtime_error(BAD_REQUEST_ER);
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
-    cout << SUCCESSFUL_RESPONSE;
+    update_users_score();
+    add_week_team();
+    sort_users();
 }
 
 void FutballFantasy::open_transfer_window()
 {
     available_transter = true;
-    cout << SUCCESSFUL_RESPONSE;
 }
 
 void FutballFantasy::close_transfer_window()
 {
     available_transter = false;
-    cout << SUCCESSFUL_RESPONSE;
 }
 
-void FutballFantasy::handle_get_requests()
+void FutballFantasy::handle_get_requests(string command)
 {
-    string question_mark, line, command;
+    public_get_req(command);
+}
+
+void FutballFantasy::public_get_req(string command)
+{
+    string question_mark, line;
     vector<string> extra_info;
-    cin >> command;
     if (command == "matches_result_league" || command == "team_of_the_week")
     {
         int showing_week = week_num;
@@ -270,116 +275,134 @@ void FutballFantasy::handle_get_requests()
     }
 }
 
-void FutballFantasy::handle_post_requests()
+void FutballFantasy::handle_post_requests(string command)
 {
-    string command;
-    cin >> command;
+
+    if (admin->is_logged_in())
+        admin_post_req(command);
+    else if (cur_user)
+        user_post_req(command);
+    else
+        public_post_req(command);
+}
+
+void FutballFantasy::admin_post_req(string command)
+{
+    if (command == "pass_week")
+    {
+        pass_week();
+        cout << SUCCESSFUL_RESPONSE;
+    }
+    else if (command == "open_transfer_window")
+    {
+        open_transfer_window();
+        cout << SUCCESSFUL_RESPONSE;
+    }
+    else if (command == "close_transfer_window")
+    {
+        close_transfer_window();
+        cout << SUCCESSFUL_RESPONSE;
+    }
+    else if (command == "logout")
+    {
+        admin->log_out();
+        cout << SUCCESSFUL_RESPONSE;
+    }
+
+    else if (command == "buy_player" || command == "sell_player")
+        throw runtime_error(PERMISSION_ER);
+    else
+        throw runtime_error(BAD_REQUEST_ER + "6");
+}
+
+void FutballFantasy::user_post_req(string command)
+{
+    char question_mark;
+    string name_sign, player_name;
+
+    if (command == "logout")
+    {
+        cur_user->log_out();
+        cur_user = nullptr;
+    }
+    else if (command == "sell_player")
+    {
+        cin >> question_mark >> name_sign;
+        getline(cin, player_name);
+        if (cin.fail() || question_mark != QUESTION_MARK ||
+            name_sign != NAME)
+            throw runtime_error(BAD_REQUEST_ER + "2");
+        sell_player(player_name);
+    }
+    else if (command == "buy_player")
+    {
+        cin >> question_mark >> name_sign;
+        getline(cin, player_name);
+        if (cin.fail() || question_mark != QUESTION_MARK ||
+            name_sign != NAME)
+            throw runtime_error(BAD_REQUEST_ER + "9");
+        buy_player(player_name);
+    }
+    else if (command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
+        throw runtime_error(PERMISSION_ER);
+    else
+        throw runtime_error(BAD_REQUEST_ER + "3");
+}
+
+void FutballFantasy::public_post_req(string command)
+{
     char question_mark;
     string team_name_sign, password_sign, username_sign,
-        user_team_name, admin_name, password, name_sign, player_name;
-    if (admin->is_logged_in())
+        user_team_name, admin_name, password;
+    if (command == "signup")
     {
-        if (command == "pass_week")
-        {
-            reset_players_score();
-            reset_users_coupons();
-            pass_week();
-            update_users_score();
-            add_week_team();
-            sort_users();
-        }
-        else if (command == "open_transfer_window")
-        {
-            open_transfer_window();
-        }
-        else if (command == "close_transfer_window")
-        {
-            close_transfer_window();
-        }
-        else if (command == "logout")
-        {
-            admin->log_out();
-        }
-        else
-        {
-            throw runtime_error(BAD_REQUEST_ER + "6");
-        }
+        cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
+        if (cin.fail() || question_mark != QUESTION_MARK ||
+            team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+            throw runtime_error(BAD_REQUEST_ER);
+        signup(user_team_name, password);
     }
-    else if (cur_user)
+    else if (command == "login")
     {
-        if (command == "logout")
-        {
-            cur_user = nullptr;
-            cur_user->log_out();
-        }
-        else if (command == "sell_player")
-        {
-            cin >> question_mark >> name_sign;
-            getline(cin, player_name);
-            if (cin.fail() || question_mark != QUESTION_MARK ||
-                name_sign != NAME)
-                throw runtime_error(BAD_REQUEST_ER + "2");
-            sell_player(player_name);
-        }
-        else if (command == "buy_player")
-        {
-            cin >> question_mark >> name_sign;
-            getline(cin, player_name);
-            if (cin.fail() || question_mark != QUESTION_MARK ||
-                name_sign != NAME)
-                throw runtime_error(BAD_REQUEST_ER + "9");
-            buy_player(player_name);
-        }
-        else
-        {
-            throw runtime_error(BAD_REQUEST_ER + "3");
-        }
+        cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
+        if (cin.fail() || question_mark != QUESTION_MARK ||
+            team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+            throw runtime_error(BAD_REQUEST_ER + "85");
+        login(user_team_name, password);
     }
+    else if (command == "register_admin")
+    {
+        cin >> question_mark >> username_sign >> admin_name >> password_sign >> password;
+        if (cin.fail() || question_mark != QUESTION_MARK ||
+            username_sign != USERNAME || password_sign != PASSWORD)
+            throw runtime_error(BAD_REQUEST_ER);
+        register_admin(admin_name, password);
+    }
+    else if (command == "buy_player" || command == "sell_player" || command == "logout" ||
+             command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
+        throw runtime_error(PERMISSION_ER);
     else
-    {
-        if (command == "signup")
-        {
-            cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
-            if (cin.fail() || question_mark != QUESTION_MARK ||
-                team_name_sign != TEAM_NAME || password_sign != PASSWORD)
-                throw runtime_error(BAD_REQUEST_ER);
-            signup(user_team_name, password);
-        }
-        else if (command == "login")
-        {
-            cin >> question_mark >> team_name_sign >> user_team_name >> password_sign >> password;
-            if (cin.fail() || question_mark != QUESTION_MARK ||
-                team_name_sign != TEAM_NAME || password_sign != PASSWORD)
-                throw runtime_error(BAD_REQUEST_ER);
-            login(user_team_name, password);
-        }
-        else if (command == "register_admin")
-        {
-            cin >> question_mark >> username_sign >> admin_name >> password_sign >> password;
-            if (cin.fail() || question_mark != QUESTION_MARK ||
-                username_sign != USERNAME || password_sign != PASSWORD)
-                throw runtime_error(BAD_REQUEST_ER);
-            register_admin(admin_name, password);
-        }
-        else
-        {
-            throw runtime_error(BAD_REQUEST_ER + "8");
-        }
-    }
+        throw runtime_error(BAD_REQUEST_ER + "8");
 }
 
-void FutballFantasy::handle_put_requests()
+void FutballFantasy::public_put_req(string command)
 {
-    string command;
-    cin >> command;
     throw runtime_error(BAD_REQUEST_ER);
 }
 
-void FutballFantasy::handle_delete_requests()
+void FutballFantasy::handle_put_requests(string command)
 {
-    string command;
-    cin >> command;
+    public_put_req(command);
+}
+
+void FutballFantasy::public_delete_req(string command)
+{
     throw runtime_error(BAD_REQUEST_ER);
+}
+
+void FutballFantasy::handle_delete_requests(string command)
+{
+    public_delete_req(command);
 }
 
 void FutballFantasy::handle_commands()
@@ -389,16 +412,20 @@ void FutballFantasy::handle_commands()
     {
         try
         {
-            if (request_type == "GET")
-                handle_get_requests();
-            else if (request_type == "POST")
-                handle_post_requests();
-            else if (request_type == "PUT")
-                handle_put_requests();
-            else if (request_type == "DELETE")
-                handle_delete_requests();
-            else
+            if (request_type != "GET" && request_type != "POST" &&
+                request_type != "PUT" && request_type != "DELETE")
                 throw runtime_error(BAD_REQUEST_ER);
+
+            string command;
+            cin >> command;
+            if (request_type == "GET")
+                handle_get_requests(command);
+            else if (request_type == "POST")
+                handle_post_requests(command);
+            else if (request_type == "PUT")
+                handle_put_requests(command);
+            else if (request_type == "DELETE")
+                handle_delete_requests(command);
         }
         catch (const std::runtime_error &e)
         {
@@ -456,7 +483,7 @@ void FutballFantasy::print_team_players()
     cin >> question_mark >> team_name_sign >> team_name;
     team_name = edit_entry_team_name(team_name);
     Team *printing_team = find_team_by_name(team_name);
-    if (team_name_sign != "team")
+    if (team_name_sign != "team_name")
         throw runtime_error(BAD_REQUEST_ER);
     getline(cin, line);
     if (line != "")

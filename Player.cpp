@@ -31,6 +31,8 @@ double Player::calculate_avarage_score()
             played_match_num++;
         }
     }
+    if (played_match_num == 0)
+        return 0;
     return score_sum / played_match_num;
 }
 

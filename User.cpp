@@ -5,7 +5,7 @@ User::User(string _name, string _password)
     name = _name;
     password = _password;
     sell_coupons = 2;
-    buy_coupons = 2;
+    buy_coupons = 0;
     point = 0;
     complete_team = false;
     is_in_account = true;
@@ -54,20 +54,24 @@ void User::delete_player(string player_name)
         throw runtime_error(NOT_FOUND_ER);
 }
 
-bool User::is_player_buyable(Player *selected_player)
+void User::add_player(Player *selected_player)
 {
-    return false;
+    if (is_player_buyable(selected_player))
+        team->add_new_player(selected_player);
+    else
+        throw runtime_error(PERMISSION_ER);
 }
 
-void User::add_player_to_team(Player *selected_player)
+bool User::is_player_buyable(Player *selected_player)
 {
-    team->add_new_player(selected_player);
+
+    return false;
 }
 
 void User::reset_coupons()
 {
     sell_coupons = 2;
-    buy_coupons = 2;
+    buy_coupons = 0;
 }
 
 void User::update_score()
@@ -105,11 +109,11 @@ vector<Player *> User::find_players_by_role(ROLE r)
     for (auto sp : sorce_players)
         if (sp->get_role() == r)
             target_players.push_back(sp);
-    target_players = sort_players_by_name(target_players);
+    sort_players_by_name(target_players);
     return target_players;
 }
 
-vector<Player *> User::sort_players_by_name(vector<Player *> players)
+void User::sort_players_by_name(vector<Player *> &players)
 {
     for (int i = 0; i < players.size() - 1; i++)
         for (int j = i + 1; j < players.size(); j++)
@@ -119,5 +123,4 @@ vector<Player *> User::sort_players_by_name(vector<Player *> players)
                 players[i] = players[j];
                 players[j] = swaping_player;
             }
-    return players;
 }
