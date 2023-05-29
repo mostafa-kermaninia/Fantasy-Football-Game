@@ -1,0 +1,15 @@
+POST register_admin ? username admin password 123456
+POST pass_week
+POST pass_week
+POST pass_week
+POST logout
+POST signup ? team_name amir password 1234
+POST buy_player ? name I. Zabarnyi
+POST buy_player ? name O. Zinchenko
+POST buy_player ? name F. Stevens
+POST logout
+POST login team_name amir password 355
+POST pass_week
+POST login team_name boz password 355
+POST register_admin ? username admin password 123456
+POST buy_player ? name S. Aurier

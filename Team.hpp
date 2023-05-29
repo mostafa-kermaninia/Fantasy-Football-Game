@@ -8,6 +8,7 @@ class Team
 {
 
 public:
+    Team() {}
     Team(vector<Player *> p);
     Team(string name, vector<Player *> players);
     ~Team();

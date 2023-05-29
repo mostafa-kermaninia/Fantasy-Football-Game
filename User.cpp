@@ -2,6 +2,7 @@
 
 User::User(string _name, string _password)
 {
+    team = new Team();
     name = _name;
     password = _password;
     sell_coupons = 2;
@@ -23,7 +24,7 @@ bool User::is_logged_in()
 void User::log_out()
 {
     is_in_account = false;
-    cout << SUCCESSFUL_RESPONSE;
+    cout << SUCCESSFUL_RESPONSE << endl;
 }
 
 Player *User::find_player_in_team(string player_name)
@@ -71,6 +72,8 @@ void User::add_player(Player *selected_player)
 
 void User::reset_coupons()
 {
+    if (!complete_team && team->get_players().size() == 5)
+        complete_team = true;
     sell_coupons = 2;
     buy_coupons = 0;
 }
@@ -107,8 +110,8 @@ void User::print_team_info()
 bool User::player_post_is_not_full(Player *selected_player)
 {
     ROLE role = selected_player->get_role();
-    return (role == MD && team->count_of_players_in_selected_post(role) < 2) ||
-           (role != MD && team->count_of_players_in_selected_post(role) < 1);
+    return ((role == DF && team->count_of_players_in_selected_post(role) < 2) ||
+            (role != DF && team->count_of_players_in_selected_post(role) < 1));
 }
 
 vector<Player *> User::find_players_by_role(ROLE r)

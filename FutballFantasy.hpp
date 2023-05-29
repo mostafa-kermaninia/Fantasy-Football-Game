@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <limits>
 using namespace std;
 
 #include "User.hpp"
@@ -65,7 +66,7 @@ private:
     void read_league_file(string file_path);
     void add_week_team();
 
-void public_get_req(string command);
+    void public_get_req(string command);
     void handle_get_requests(string command);
 
     void admin_post_req(string command);
