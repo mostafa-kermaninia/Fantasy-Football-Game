@@ -4,7 +4,7 @@ Admin::Admin(string un, string pw)
 {
     username = un;
     password = pw;
-    is_in_account=false;
+    is_in_account = false;
 }
 
 bool Admin::is_logged_in()

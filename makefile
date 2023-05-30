@@ -16,6 +16,3 @@ main: FutballFantasy.hpp FutballFantasy.o Match.hpp Match.o User.hpp User.o Admi
 	g++ -c --std=c++11 main.cpp -o main.o
 result: main.o  FutballFantasy.hpp FutballFantasy.o Match.hpp Match.o User.hpp User.o Admin.hpp Admin.o ConstVariables.hpp
 	g++ --std=c++11 main.o FutballFantasy.o Admin.o Match.o User.o Team.o Player.o  -o futballFantasy.out 
-
-run: 
-	./futballFantasy.out
