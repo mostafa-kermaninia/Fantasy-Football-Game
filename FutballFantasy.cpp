@@ -361,16 +361,17 @@ void FutballFantasy::user_post_req(vector<string> &command_words)
 
 void FutballFantasy::public_post_req(vector<string> &command_words)
 {
-    string team_name_sign = command_words[3], password_sign = command_words[5], username_sign = command_words[3],
-           question_mark = command_words[2], user_team_name = command_words[4], admin_name = command_words[4],
-           password = command_words[6], command = command_words[1];
-
+    string command = command_words[1];
     if (command == "close_transfer_window" || command == "open_transfer_window" ||
         command == "pass_week" || command == "buy_player" || command == "sell_player" ||
         command == "logout")
         throw runtime_error(PERMISSION_ER);
 
     check_command_words_count(7, command_words);
+    string team_name_sign = command_words[3], password_sign = command_words[5], username_sign = command_words[3],
+           question_mark = command_words[2], user_team_name = command_words[4], admin_name = command_words[4],
+           password = command_words[6];
+
     if (question_mark != QUESTION_MARK || password_sign != PASSWORD)
         throw runtime_error(BAD_REQUEST_ER);
 
@@ -438,6 +439,11 @@ void FutballFantasy::handle_commands()
         }
         catch (const std::runtime_error &e)
         {
+            if (e.what() == BAD_REQUEST_ER + "758")
+            {
+                cout << "polllll" + command_words[0] + command_words[1] + command_words[2] + command_words[3] + command_words[4] + command_words[5] + command_words[6] + "polpol" + to_string(command_words.size());
+            }
+
             cout << e.what() << endl;
         }
     }
