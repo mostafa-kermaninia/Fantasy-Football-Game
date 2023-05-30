@@ -21,7 +21,6 @@ public:
     void delete_player(string player_name);
 
     void add_player(Player *selected_player);
-
     void reset_coupons();
     void update_score();
     void print_fantasy_team();
@@ -32,6 +31,7 @@ private:
     int sell_coupons;
     int buy_coupons;
     Team *team;
+    Team *last_week_team;
     string password;
     double point;
     bool complete_team;

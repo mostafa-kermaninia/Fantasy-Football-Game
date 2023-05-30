@@ -11,7 +11,6 @@ public:
     Team() {}
     Team(vector<Player *> p);
     Team(string name, vector<Player *> players);
-    ~Team();
 
     vector<Player *> get_players();
     void add_new_player(Player *new_player);
@@ -40,6 +39,5 @@ private:
     void find_players_by_role(ROLE r, vector<Player *> &players);
     void sort_by_score(vector<Player *> &not_sorted_players);
     void sort_by_name(vector<Player *> &not_sorted_players);
-
     double round_to(double pre, double value);
 };

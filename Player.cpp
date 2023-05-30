@@ -10,10 +10,6 @@ Player::Player(string _name, ROLE _role)
     available = true;
 }
 
-Player::~Player()
-{
-}
-
 Player *Player::clone()
 {
     return new Player(*this);

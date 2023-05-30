@@ -2,7 +2,9 @@
 
 FutballFantasy::FutballFantasy(string league_file_path)
 {
-    read_league_file(league_file_path);
+    vector<string> file_info = read_file(league_file_path);
+    build_objects(file_info);
+
     cur_user = nullptr;
     admin = new Admin("admin", "123456");
     week_num = 0;
@@ -21,6 +23,7 @@ FutballFantasy::~FutballFantasy()
         delete team;
     for (Team *week_team : week_teams)
         delete week_team;
+    delete admin;
 }
 
 void FutballFantasy::run()
@@ -41,18 +44,11 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
     }
 }
 
-void FutballFantasy::read_league_file(string file_path)
-{
-    vector<string> file_info = read_file(file_path);
-    build_objects(file_info);
-}
-
 void FutballFantasy::build_objects(vector<string> elements)
 {
     for (int i = 0; i < elements.size() / LEAGUE_FILE_HEADERS_COUNT; i++)
     {
         string team_name = elements[LEAGUE_FILE_HEADERS_COUNT * i];
-
         vector<Player *> team_players;
         for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 1], ';'))
             team_players.push_back(new Player(player_name, GK));
@@ -62,9 +58,7 @@ void FutballFantasy::build_objects(vector<string> elements)
             team_players.push_back(new Player(player_name, MD));
         for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 4], ';'))
             team_players.push_back(new Player(player_name, FW));
-
         teams.push_back(new Team(team_name, team_players));
-
         for (int i = 0; i < team_players.size(); i++)
             players.push_back(team_players[i]);
     }
@@ -137,23 +131,17 @@ void FutballFantasy::sort_by_name(vector<Player *> &choosen_players)
 bool FutballFantasy::better_than_chosen_players(vector<Player *> choosen_players, Player *new_player)
 {
     for (auto p : choosen_players)
-    {
         if (p->get_score() < new_player->get_score() ||
             (p->get_score() == new_player->get_score() && p->get_name() < new_player->get_name()))
             return true;
-    }
     return false;
 }
 
 void FutballFantasy::signup(string name, string password)
 {
     for (User *user : users)
-    {
         if (user->is_logged_in() || user->get_name() == name)
-        {
-            throw runtime_error(BAD_REQUEST_ER);
-        }
-    }
+            throw runtime_error(BAD_REQUEST_ER + "78");
     cur_user = new User(name, password);
     users.push_back(cur_user);
     cout << SUCCESSFUL_RESPONSE << endl;
@@ -184,7 +172,7 @@ void FutballFantasy::register_admin(string admin_name, string password)
         cout << SUCCESSFUL_RESPONSE << endl;
         return;
     }
-    throw runtime_error(BAD_REQUEST_ER);
+    throw runtime_error(BAD_REQUEST_ER + "55");
 }
 
 void FutballFantasy::sell_player(string player_name)
@@ -210,7 +198,7 @@ void FutballFantasy::pass_week()
     reset_users_coupons();
     week_num++;
     if (week_num > COUNT_OF_WEEKS)
-        throw runtime_error(BAD_REQUEST_ER);
+        throw runtime_error(BAD_REQUEST_ER + "788");
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
     update_users_score();
     add_week_team();
@@ -227,9 +215,45 @@ void FutballFantasy::close_transfer_window()
     available_transter = false;
 }
 
+void FutballFantasy::check_request_validity(string request, vector<string> command_words)
+{
+    if (command_words.size() < 2)
+        throw runtime_error(BAD_REQUEST_ER + "44");
+
+    if (request != "GET" && request != "POST" &&
+        request != "PUT" && request != "DELETE")
+        throw runtime_error(BAD_REQUEST_ER + "45");
+}
+
+void FutballFantasy::check_buysell_request_validity(string &player_name, vector<string> command_words)
+{
+    string question_mark, name_sign;
+    if (command_words.size() < 5)
+        throw runtime_error(BAD_REQUEST_ER + "2");
+    question_mark = command_words[2];
+    name_sign = command_words[3];
+    for (int i = 4; i < command_words.size(); i++)
+    {
+        if (i != 4)
+            player_name += " ";
+        player_name += command_words[i];
+    }
+    if (question_mark != QUESTION_MARK || name_sign != NAME)
+        throw runtime_error(BAD_REQUEST_ER + "2");
+}
+
+void FutballFantasy::check_command_words_count(int words_count, vector<string> command_words)
+{
+    if (command_words.size() != words_count)
+        throw runtime_error(BAD_REQUEST_ER + "758");
+}
+
 void FutballFantasy::handle_get_requests(vector<string> &command_words)
 {
-    public_get_req(command_words);
+    if (cur_user)
+        user_get_req(command_words);
+    else
+        public_get_req(command_words);
 }
 
 void FutballFantasy::public_get_req(vector<string> &command_words)
@@ -239,7 +263,7 @@ void FutballFantasy::public_get_req(vector<string> &command_words)
     if (command == "matches_result_league" || command == "team_of_the_week")
     {
         if (command_words.size() < 3 || command_words.size() > 5 || command_words[2] != QUESTION_MARK)
-            throw runtime_error(BAD_REQUEST_ER);
+            throw runtime_error(BAD_REQUEST_ER + "475");
         int showing_week = week_num;
         if (command_words.size() > 3)
         {
@@ -253,22 +277,30 @@ void FutballFantasy::public_get_req(vector<string> &command_words)
             print_week_team(showing_week);
     }
     else if (command == "league_standings")
+    {
+        check_command_words_count(2, command_words);
         print_league_info();
+    }
     else if (command == "players")
         print_team_players(command_words);
     else if (command == "users_ranking")
+    {
+        check_command_words_count(2, command_words);
         print_users();
+    }
     else if (command == "squad")
-    {
-        if (cur_user)
-            print_squad(command_words);
-        else
-            throw runtime_error(PERMISSION_ER);
-    }
+        throw runtime_error(PERMISSION_ER);
     else
-    {
-        throw runtime_error(BAD_REQUEST_ER + "4");
-    }
+        throw runtime_error(BAD_REQUEST_ER);
+}
+
+void FutballFantasy::user_get_req(vector<string> &command_words)
+{
+    string command = command_words[1];
+    if (command == "squad")
+        print_squad(command_words);
+    else
+        throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::handle_post_requests(vector<string> &command_words)
@@ -284,132 +316,84 @@ void FutballFantasy::handle_post_requests(vector<string> &command_words)
 void FutballFantasy::admin_post_req(vector<string> &command_words)
 {
     string command = command_words[1];
-    if (command == "pass_week")
-    {
-        pass_week();
-        cout << SUCCESSFUL_RESPONSE << endl;
-    }
-    else if (command == "open_transfer_window")
-    {
-        open_transfer_window();
-        cout << SUCCESSFUL_RESPONSE << endl;
-    }
-    else if (command == "close_transfer_window")
-    {
-        close_transfer_window();
-        cout << SUCCESSFUL_RESPONSE << endl;
-    }
-    else if (command == "logout")
-    {
-        admin->log_out();
-        cout << SUCCESSFUL_RESPONSE << endl;
-    }
-    else if (command == "buy_player" || command == "sell_player")
+    if (command == "buy_player" || command == "sell_player")
         throw runtime_error(PERMISSION_ER);
+
+    check_command_words_count(2, command_words);
+    if (command == "pass_week")
+        pass_week();
+    else if (command == "open_transfer_window")
+        open_transfer_window();
+    else if (command == "close_transfer_window")
+        close_transfer_window();
+    else if (command == "logout")
+        admin->log_out();
     else
-        throw runtime_error(BAD_REQUEST_ER + "6");
+        throw runtime_error(BAD_REQUEST_ER);
+    cout << SUCCESSFUL_RESPONSE << endl;
 }
 
 void FutballFantasy::user_post_req(vector<string> &command_words)
 {
-    string name_sign, player_name, command = command_words[1], question_mark;
-
+    string player_name, command = command_words[1];
+    if (command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
+        throw runtime_error(PERMISSION_ER);
     if (command == "logout")
     {
+        check_command_words_count(2, command_words);
         cur_user->log_out();
         cur_user = nullptr;
     }
     else if (command == "sell_player")
     {
-        if (command_words.size() < 5)
-            throw runtime_error(BAD_REQUEST_ER + "2");
-        question_mark = command_words[2];
-        name_sign = command_words[3];
-        for (int i = 4; i < command_words.size(); i++)
-        {
-            if (i != 4)
-                player_name += " ";
-            player_name += command_words[i];
-        }
-        if (question_mark != QUESTION_MARK || name_sign != NAME || command_words.size())
-            throw runtime_error(BAD_REQUEST_ER + "2");
+        check_buysell_request_validity(player_name, command_words);
         sell_player(player_name);
-        cout << SUCCESSFUL_RESPONSE << endl;
     }
     else if (command == "buy_player")
     {
-        if (command_words.size() < 5)
-            throw runtime_error(BAD_REQUEST_ER + "2");
-        question_mark = command_words[2];
-        name_sign = command_words[3];
-        for (int i = 4; i < command_words.size(); i++)
-        {
-            if (i != 4)
-                player_name += " ";
-            player_name += command_words[i];
-        }
-        if (question_mark != QUESTION_MARK || name_sign != NAME)
-            throw runtime_error(BAD_REQUEST_ER + "2");
+        check_buysell_request_validity(player_name, command_words);
         buy_player(player_name);
-        cout << SUCCESSFUL_RESPONSE << endl;
     }
-    else if (command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
-        throw runtime_error(PERMISSION_ER);
     else
-        throw runtime_error(BAD_REQUEST_ER + "3");
+        throw runtime_error(BAD_REQUEST_ER);
+    cout << SUCCESSFUL_RESPONSE << endl;
 }
 
 void FutballFantasy::public_post_req(vector<string> &command_words)
 {
-    string team_name_sign, password_sign, username_sign, question_mark,
-        user_team_name, admin_name, password, command = command_words[1];
+    string team_name_sign = command_words[3], password_sign = command_words[5], username_sign = command_words[3],
+           question_mark = command_words[2], user_team_name = command_words[4], admin_name = command_words[4],
+           password = command_words[6], command = command_words[1];
+
+    if (command == "close_transfer_window" || command == "open_transfer_window" ||
+        command == "pass_week" || command == "buy_player" || command == "sell_player" ||
+        command == "logout")
+        throw runtime_error(PERMISSION_ER);
+
+    check_command_words_count(7, command_words);
+    if (question_mark != QUESTION_MARK || password_sign != PASSWORD)
+        throw runtime_error(BAD_REQUEST_ER);
+
     if (command == "signup")
     {
-        if (command_words.size() != 7)
-            throw runtime_error(BAD_REQUEST_ER);
-        question_mark = command_words[2];
-        team_name_sign = command_words[3];
-        user_team_name = command_words[4];
-        password_sign = command_words[5];
-        password = command_words[6];
-        if (question_mark != QUESTION_MARK ||
-            team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+        if (team_name_sign != TEAM_NAME)
             throw runtime_error(BAD_REQUEST_ER);
         signup(user_team_name, password);
     }
     else if (command == "login")
     {
-        if (command_words.size() != 7)
-            throw runtime_error(BAD_REQUEST_ER);
-        question_mark = command_words[2];
-        team_name_sign = command_words[3];
-        user_team_name = command_words[4];
-        password_sign = command_words[5];
-        password = command_words[6];
-        if (question_mark != QUESTION_MARK ||
-            team_name_sign != TEAM_NAME || password_sign != PASSWORD)
+        if (team_name_sign != TEAM_NAME)
             throw runtime_error(BAD_REQUEST_ER);
         login(user_team_name, password);
     }
     else if (command == "register_admin")
     {
-        if (command_words.size() != 7)
-            throw runtime_error(BAD_REQUEST_ER);
-        question_mark = command_words[2];
-        username_sign = command_words[3];
-        admin_name = command_words[4];
-        password_sign = command_words[5];
-        password = command_words[6];
-        if (question_mark != QUESTION_MARK ||
-            username_sign != USERNAME || password_sign != PASSWORD)
+        if (username_sign != USERNAME)
             throw runtime_error(BAD_REQUEST_ER);
         register_admin(admin_name, password);
     }
-    else if (command == "buy_player" || command == "sell_player" || command == "logout" ||
-             command == "close_transfer_window" || command == "open_transfer_window" || command == "pass_week")
-        throw runtime_error(PERMISSION_ER);
     else
-        throw runtime_error(BAD_REQUEST_ER + "8");
+        throw runtime_error(BAD_REQUEST_ER);
 }
 
 void FutballFantasy::public_put_req(vector<string> &command_words)
@@ -434,20 +418,15 @@ void FutballFantasy::handle_delete_requests(vector<string> &command_words)
 
 void FutballFantasy::handle_commands()
 {
-    string request_type;
-    string command_line;
+    string request_type, command_line, command;
     vector<string> command_words;
     while (getline(cin, command_line))
     {
-        command_words = string_splitter(command_line, ' ');
-        request_type = command_words[0];
         try
         {
-            if ((request_type != "GET" && request_type != "POST" && request_type != "PUT" && request_type != "DELETE") || command_words.size() < 2)
-            {
-                throw runtime_error(BAD_REQUEST_ER + "69");
-            }
-            string command = command_words[1];
+            command_words = string_splitter(command_line, ' ');
+            request_type = command_words[0];
+            check_request_validity(request_type, command_words);
             if (request_type == "GET")
                 handle_get_requests(command_words);
             else if (request_type == "POST")
@@ -558,10 +537,8 @@ void FutballFantasy::print_squad(vector<string> &command_words)
 Player *FutballFantasy::find_player_by_name(string name)
 {
     for (int i = 0; i < players.size(); i++)
-    {
         if (players[i]->get_name() == name)
             return players[i];
-    }
     return nullptr;
 }
 
@@ -620,12 +597,8 @@ User *FutballFantasy::find_logged_in_user()
 User *FutballFantasy::find_user_by_name(string name)
 {
     for (User *user : users)
-    {
         if (user->get_name() == name)
-        {
             return user;
-        }
-    }
     return nullptr;
 }
 

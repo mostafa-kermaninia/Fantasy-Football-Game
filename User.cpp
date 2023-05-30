@@ -3,6 +3,7 @@
 User::User(string _name, string _password)
 {
     team = new Team();
+    last_week_team = new Team();
     name = _name;
     password = _password;
     sell_coupons = 2;
@@ -14,6 +15,8 @@ User::User(string _name, string _password)
 
 User::~User()
 {
+    delete team;
+    delete last_week_team;
 }
 
 bool User::is_logged_in()
@@ -24,18 +27,13 @@ bool User::is_logged_in()
 void User::log_out()
 {
     is_in_account = false;
-    cout << SUCCESSFUL_RESPONSE << endl;
 }
 
 Player *User::find_player_in_team(string player_name)
 {
     for (Player *player : team->get_players())
-    {
         if (player->get_name() == player_name)
-        {
             return player;
-        }
-    }
     return nullptr;
 }
 
@@ -72,6 +70,8 @@ void User::add_player(Player *selected_player)
 
 void User::reset_coupons()
 {
+    delete last_week_team;
+    last_week_team = new Team(*team);
     if (!complete_team && team->get_players().size() == 5)
         complete_team = true;
     sell_coupons = 2;
@@ -92,7 +92,7 @@ void User::print_fantasy_team()
 
 void User::print_team_info()
 {
-    if (team->get_players().size() != 5)
+    if (last_week_team->get_players().size() != 5)
         throw runtime_error(EMPTY_ER);
     vector<Player *> goalkeeper = find_players_by_role(GK);
     vector<Player *> defender = find_players_by_role(DF);

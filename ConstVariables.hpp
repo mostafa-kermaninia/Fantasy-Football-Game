@@ -1,11 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
-
 using namespace std;
 
 const vector<string> ROLES = {"gk", "df", "md", "fw"};
-
 enum ROLE
 {
     GK,
@@ -15,15 +13,17 @@ enum ROLE
     NO_ROLE
 };
 
-const string OUTPUT_DELIMITER = " | ";
+
 const string BAD_REQUEST_ER = "Bad Request";
 const string PERMISSION_ER = "Permission Denied";
 const string SUCCESSFUL_RESPONSE = "OK";
 const string NOT_FOUND_ER = "Not Found";
 const string EMPTY_ER = "Empty";
+
 const string WEEKS_FOLDER_PATH = "data/weeks_stats/";
 const string LEAGUE_INFO_FILE_PATH = "data/premier_league.csv";
 
+const string OUTPUT_DELIMITER = " | ";
 const string QUESTION_MARK = "?";
 const string TEAM_NAME = "team_name";
 const string PASSWORD = "password";

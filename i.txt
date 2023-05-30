@@ -14,7 +14,6 @@ POST pass_week
 GET league_standings
 POST pass_week
 GET team_of_the_week ?
-POST close_transfer_window
 POST logout
 POST signup ? team_name akbar password 1234
 POST buy_player ? name Divin Mubama

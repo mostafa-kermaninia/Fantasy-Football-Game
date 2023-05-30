@@ -10,7 +10,6 @@ class Player
 
 public:
     Player(string name, ROLE role);
-    ~Player();
 
     string get_name() { return name; }
     ROLE get_role() { return role; }

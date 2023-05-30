@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.c": "c",
+        "makefile": "makefile",
+        "*.csv": "excel",
+        "iostream": "cpp",
+        "stdexcept": "cpp",
+        "new": "cpp"
+    }
+}
