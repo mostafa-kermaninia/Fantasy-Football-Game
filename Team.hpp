@@ -39,5 +39,4 @@ private:
     void find_players_by_role(ROLE r, vector<Player *> &players);
     void sort_by_score(vector<Player *> &not_sorted_players);
     void sort_by_name(vector<Player *> &not_sorted_players);
-    double round_to(double pre, double value);
 };

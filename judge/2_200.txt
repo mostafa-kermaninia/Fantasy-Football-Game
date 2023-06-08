@@ -1,0 +1,663 @@
+Permission Denied
+Bad Request
+Bad Request
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Permission Denied
+Bad Request
+Bad Request
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Permission Denied
+Bad Request
+Bad Request
+Bad Request
+OK
+Empty
+list of players:
+1. name: A. Smithies | role: gk | score: 0.0
+2. name: B. Soumare | role: md | score: 0.0
+3. name: C. Soyuncu | role: df | score: 0.0
+4. name: D. Amartey | role: df | score: 0.0
+5. name: D. Praet | role: md | score: 0.0
+6. name: D. Ward | role: gk | score: 0.0
+7. name: Daniel Iversen | role: gk | score: 0.0
+8. name: Harry Souttar | role: df | score: 0.0
+9. name: Harvey Barnes | role: fw | score: 0.0
+10. name: J. Justin | role: df | score: 0.0
+11. name: J. Maddison | role: md | score: 0.0
+12. name: J. Vardy | role: fw | score: 0.0
+13. name: Jannik Vestergaard | role: df | score: 0.0
+14. name: Joe Wormleighton | role: df | score: 0.0
+15. name: Jonathan Evans | role: df | score: 0.0
+16. name: K. Iheanacho | role: fw | score: 0.0
+17. name: Kiernan Dewsbury-Hall | role: md | score: 0.0
+18. name: L. Thomas | role: df | score: 0.0
+19. name: Lewis Brunt | role: df | score: 0.0
+20. name: N. Mendy | role: md | score: 0.0
+21. name: P. Daka | role: fw | score: 0.0
+22. name: Ricardo Pereira | role: df | score: 0.0
+23. name: Ryan Bertrand | role: df | score: 0.0
+24. name: Sammy Braybrooke | role: md | score: 0.0
+25. name: T. Castagne | role: df | score: 0.0
+26. name: Tete | role: fw | score: 0.0
+27. name: V. Kristiansen | role: df | score: 0.0
+28. name: W. Faes | role: df | score: 0.0
+29. name: W. Ndidi | role: md | score: 0.0
+30. name: Y. Tielemans | role: md | score: 0.0
+Bad Request
+Bad Request
+Permission Denied
+Bad Request
+OK
+Bad Request
+Bad Request
+Permission Denied
+Empty
+OK
+OK
+list of players:
+1. name: J. Worrall | role: df | score: 8.5
+2. name: W. Boly | role: df | score: 7.6
+3. name: Renan Lodi | role: df | score: 6.9
+4. name: S. McKenna | role: df | score: 5.4
+5. name: S. Cook | role: df | score: 4.9
+6. name: Felipe | role: df | score: 0.0
+7. name: Giulian Biancone | role: df | score: 0.0
+8. name: H. Toffolo | role: df | score: 0.0
+9. name: M. Niakhate | role: df | score: 0.0
+10. name: N. Williams | role: df | score: 0.0
+11. name: Omar Richards | role: df | score: 0.0
+12. name: S. Aurier | role: df | score: 0.0
+Bad Request
+OK
+Empty
+Bad Request
+Permission Denied
+OK
+Permission Denied
+Permission Denied
+OK
+Bad Request
+Not Found
+Permission Denied
+OK
+Permission Denied
+OK
+Empty
+Bad Request
+West Ham United 3 | AFC Bournemouth 0
+Tottenham Hotspur 1 | Wolves 3
+Southampton FC 5 | Arsenal FC 2
+Nottingham Forest 3 | Aston Villa 3
+Newcastle United 0 | Brentford FC 4
+Manchester United 5 | Brighton FC 0
+Man. City 1 | Chelsea FC 0
+Liverpool FC 4 | Crystal Palace 4
+Leicester City 2 | Everton FC 5
+Leeds United 0 | Fulham FC 1
+league standing:
+1. Manchester United: score: 6 | GF: 10 | GA: 3
+2. Man. City: score: 6 | GF: 5 | GA: 0
+3. Southampton FC: score: 6 | GF: 7 | GA: 3
+4. Aston Villa: score: 4 | GF: 8 | GA: 3
+5. West Ham United: score: 4 | GF: 3 | GA: 0
+6. Liverpool FC: score: 4 | GF: 9 | GA: 7
+7. Wolves: score: 4 | GF: 4 | GA: 2
+8. Brentford FC: score: 3 | GF: 5 | GA: 2
+9. Leeds United: score: 3 | GF: 4 | GA: 3
+10. Everton FC: score: 3 | GF: 5 | GA: 6
+11. Fulham FC: score: 3 | GF: 4 | GA: 5
+12. Brighton FC: score: 3 | GF: 5 | GA: 7
+13. Chelsea FC: score: 1 | GF: 2 | GA: 3
+14. Crystal Palace: score: 1 | GF: 7 | GA: 9
+15. Nottingham Forest: score: 1 | GF: 5 | GA: 8
+16. Arsenal FC: score: 1 | GF: 2 | GA: 5
+17. AFC Bournemouth: score: 1 | GF: 1 | GA: 4
+18. Newcastle United: score: 1 | GF: 2 | GA: 6
+19. Leicester City: score: 0 | GF: 4 | GA: 9
+20. Tottenham Hotspur: score: 0 | GF: 1 | GA: 8
+Permission Denied
+OK
+Goalkeeper: L. Karius | score: 9.9
+Defender 1: Rico Lewis | score: 9.9
+Defender 2: T. Mitchell | score: 9.9
+Midfielder: Mason Mount | score: 9.9
+Forward: Martinelli | score: 9.9
+Bad Request
+Bad Request
+Empty
+Bad Request
+Permission Denied
+OK
+Permission Denied
+Permission Denied
+OK
+OK
+Empty
+OK
+OK
+OK
+AFC Bournemouth 0 | Tottenham Hotspur 5
+West Ham United 5 | Southampton FC 1
+Wolves 5 | Nottingham Forest 3
+Arsenal FC 4 | Newcastle United 3
+Aston Villa 5 | Manchester United 0
+Brentford FC 3 | Man. City 5
+Brighton FC 3 | Liverpool FC 4
+Chelsea FC 4 | Leicester City 4
+Crystal Palace 3 | Leeds United 2
+Everton FC 5 | Fulham FC 1
+Bad Request
+Not Found
+list of players:
+1. name: Rhys Williams | role: df | score: 8.8
+2. name: Calvin Ramsay | role: df | score: 8.7
+3. name: Ben Doak | role: md | score: 8.6
+4. name: I. Konate | role: df | score: 8.6
+5. name: N. Keita | role: md | score: 8.5
+6. name: H. Elliott | role: md | score: 7.6
+7. name: A. Oxlade-Chamberlain | role: md | score: 7.5
+8. name: J. Henderson | role: md | score: 7.4
+9. name: Thiago | role: md | score: 7.4
+10. name: V. Van Dijk | role: df | score: 7.4
+11. name: C. Gakpo | role: fw | score: 7.3
+12. name: Curtis Jones | role: md | score: 7.2
+13. name: L. Diaz | role: fw | score: 7.0
+14. name: Alexander-Arnold | role: df | score: 6.8
+15. name: D. Nunez | role: fw | score: 6.8
+16. name: K. Tsimikas | role: df | score: 6.8
+17. name: Stefan Bajcetic | role: md | score: 6.8
+18. name: Adrian | role: gk | score: 6.6
+19. name: Diogo Jota | role: fw | score: 6.6
+20. name: Bobby Clark | role: md | score: 6.2
+21. name: Nathaniel Phillips | role: df | score: 6.0
+22. name: Joe Gomez | role: df | score: 5.6
+23. name: Firmino | role: fw | score: 5.5
+24. name: M. Salah | role: fw | score: 5.5
+25. name: Alisson | role: gk | score: 5.4
+26. name: Caoimhin Kelleher | role: gk | score: 5.4
+27. name: J. Matip | role: df | score: 5.0
+28. name: A. Robertson | role: df | score: 4.9
+29. name: Fabio Carvalho | role: md | score: 4.8
+30. name: Arthur Henrique | role: md | score: 0.0
+31. name: Fabinho | role: md | score: 0.0
+32. name: Harvey Davies | role: gk | score: 0.0
+33. name: J. Milner | role: md | score: 0.0
+Permission Denied
+Permission Denied
+Permission Denied
+Empty
+list of players:
+1. name: Diego Costa | role: fw | score: 9.6
+2. name: S. Kalajdzic | role: fw | score: 7.8
+3. name: P. Sarabia | role: fw | score: 6.4
+4. name: Chiquinho | role: fw | score: 6.2
+5. name: Pedro Neto | role: fw | score: 5.6
+6. name: Hee-Chan Hwang | role: fw | score: 5.3
+7. name: D. Podence | role: fw | score: 4.6
+8. name: A. Traore | role: fw | score: 4.5
+9. name: Matheus Cunha | role: fw | score: 0.0
+10. name: Nathan Fraser | role: fw | score: 0.0
+11. name: R. Jimenez | role: fw | score: 0.0
+list of players:
+1. name: B. White | role: df | score: 9.0
+2. name: Gabriel Magalhaes | role: df | score: 7.1
+3. name: Jakub Kiwior | role: df | score: 5.8
+4. name: K. Tierney | role: df | score: 5.5
+5. name: Lino Sousa | role: df | score: 0.0
+6. name: Matthew Smith | role: df | score: 0.0
+7. name: O. Zinchenko | role: df | score: 7.0
+8. name: Reuell Walters | role: df | score: 7.2
+9. name: Rob Holding | role: df | score: 4.4
+10. name: Takehiro Tomiyasu | role: df | score: 7.9
+11. name: W. Saliba | role: df | score: 6.6
+Bad Request
+Permission Denied
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Permission Denied
+Permission Denied
+Permission Denied
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Not Found
+Permission Denied
+OK
+Bad Request
+Bad Request
+Bad Request
+Bad Request
+Permission Denied
+Bad Request
+Bad Request
+OK
+OK
+Bad Request
+Bad Request
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Bad Request
+Bad Request
+Bad Request
+OK
+OK
+Empty
+Not Found
+Permission Denied
+Southampton FC 1 | AFC Bournemouth 0
+Nottingham Forest 4 | Tottenham Hotspur 0
+Newcastle United 4 | West Ham United 4
+Manchester United 1 | Wolves 5
+Man. City 0 | Arsenal FC 0
+Liverpool FC 3 | Aston Villa 2
+Leicester City 2 | Brentford FC 1
+Leeds United 4 | Brighton FC 1
+Fulham FC 0 | Chelsea FC 3
+Everton FC 1 | Crystal Palace 0
+Bad Request
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Empty
+Permission Denied
+Goalkeeper: D. Ward | score: 9.9
+Defender 1: Reece James | score: 9.9
+Defender 2: S. Dallas | score: 9.9
+Midfielder: Scott Mctominay | score: 9.9
+Forward: W. Zaha | score: 9.9
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+list of players:
+1. name: N. Williams | role: df | score: 9.9
+2. name: Felipe | role: df | score: 9.7
+3. name: M. Niakhate | role: df | score: 8.7
+4. name: Renan Lodi | role: df | score: 8.1
+5. name: H. Toffolo | role: df | score: 7.7
+6. name: S. McKenna | role: df | score: 7.7
+7. name: W. Boly | role: df | score: 7.6
+8. name: J. Worrall | role: df | score: 7.3
+9. name: S. Cook | role: df | score: 5.7
+10. name: Omar Richards | role: df | score: 5.5
+11. name: Giulian Biancone | role: df | score: 0.0
+12. name: S. Aurier | role: df | score: 0.0
+Southampton FC 1 | AFC Bournemouth 0
+Nottingham Forest 4 | Tottenham Hotspur 0
+Newcastle United 4 | West Ham United 4
+Manchester United 1 | Wolves 5
+Man. City 0 | Arsenal FC 0
+Liverpool FC 3 | Aston Villa 2
+Leicester City 2 | Brentford FC 1
+Leeds United 4 | Brighton FC 1
+Fulham FC 0 | Chelsea FC 3
+Everton FC 1 | Crystal Palace 0
+Permission Denied
+Bad Request
+Permission Denied
+OK
+Bad Request
+Bad Request
+Bad Request
+Bad Request
+Bad Request
+list of players:
+1. name: L. Sinisterra | role: fw | score: 9.6
+2. name: Rodrigo | role: fw | score: 8.9
+3. name: Georginio Rutter | role: fw | score: 8.5
+4. name: Sonny Perkins | role: fw | score: 8.5
+5. name: Mateo Joseph | role: fw | score: 7.9
+6. name: Patrick Bamford | role: fw | score: 7.6
+7. name: J. Harrison | role: fw | score: 7.2
+8. name: Sam Greenwood | role: fw | score: 5.8
+9. name: Crysencio Summerville | role: fw | score: 4.7
+10. name: Gnonto | role: fw | score: 0.0
+1. team_name: bdzukathkp | point: 0.0
+Not Found
+Bad Request
+Bad Request
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Bad Request
+Southampton FC 1 | AFC Bournemouth 0
+Nottingham Forest 4 | Tottenham Hotspur 0
+Newcastle United 4 | West Ham United 4
+Manchester United 1 | Wolves 5
+Man. City 0 | Arsenal FC 0
+Liverpool FC 3 | Aston Villa 2
+Leicester City 2 | Brentford FC 1
+Leeds United 4 | Brighton FC 1
+Fulham FC 0 | Chelsea FC 3
+Everton FC 1 | Crystal Palace 0
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+OK
+Permission Denied
+OK
+Bad Request
+1. team_name: bdzukathkp | point: 0.0
+2. team_name: xizqsagqqa | point: 0.0
+Not Found
+Bad Request
+Bad Request
+Not Found
+Bad Request
+Bad Request
+list of players:
+1. name: Sam Johnstone | role: gk | score: 7.6
+2. name: Owen Goodman | role: gk | score: 6.7
+3. name: Joe Whitworth | role: gk | score: 0.0
+4. name: V. Guaita | role: gk | score: 0.0
+list of players:
+1. name: Jean Mateta | role: fw | score: 7.7
+2. name: O. Edouard | role: fw | score: 6.7
+3. name: W. Zaha | role: fw | score: 6.7
+4. name: J. Ayew | role: fw | score: 6.6
+Bad Request
+Bad Request
+Not Found
+Bad Request
+Bad Request
+Bad Request
+1. team_name: bdzukathkp | point: 0.0
+2. team_name: xizqsagqqa | point: 0.0
+Bad Request
+Bad Request
+Not Found
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Not Found
+Bad Request
+Not Found
+Permission Denied
+Bad Request
+list of players:
+1. name: Maximo Perrone | role: md | score: 9.2
+2. name: I. Gundogan | role: md | score: 8.8
+3. name: Rodri | role: md | score: 8.5
+4. name: Bernardo Silva | role: md | score: 7.3
+5. name: K. De Bruyne | role: md | score: 6.7
+6. name: K. Phillips | role: md | score: 6.5
+7. name: C. Palmer | role: md | score: 5.9
+8. name: P. Foden | role: md | score: 0.0
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+league standing:
+1. Wolves: score: 10 | GF: 14 | GA: 6
+2. Man. City: score: 10 | GF: 10 | GA: 3
+3. Liverpool FC: score: 10 | GF: 16 | GA: 12
+4. Everton FC: score: 9 | GF: 11 | GA: 7
+5. Southampton FC: score: 9 | GF: 9 | GA: 8
+6. West Ham United: score: 8 | GF: 12 | GA: 5
+7. Aston Villa: score: 7 | GF: 15 | GA: 6
+8. Leeds United: score: 6 | GF: 10 | GA: 7
+9. Manchester United: score: 6 | GF: 11 | GA: 13
+10. Chelsea FC: score: 5 | GF: 9 | GA: 7
+11. Arsenal FC: score: 5 | GF: 6 | GA: 8
+12. Nottingham Forest: score: 4 | GF: 12 | GA: 13
+13. Crystal Palace: score: 4 | GF: 10 | GA: 12
+14. Leicester City: score: 4 | GF: 10 | GA: 14
+15. Brentford FC: score: 3 | GF: 9 | GA: 9
+16. Brighton FC: score: 3 | GF: 9 | GA: 15
+17. Tottenham Hotspur: score: 3 | GF: 6 | GA: 12
+18. Fulham FC: score: 3 | GF: 5 | GA: 13
+19. Newcastle United: score: 2 | GF: 9 | GA: 14
+20. AFC Bournemouth: score: 1 | GF: 1 | GA: 10
+Bad Request
+Bad Request
+OK
+Permission Denied
+Permission Denied
+Goalkeeper: D. Ward | score: 9.9
+Defender 1: Reece James | score: 9.9
+Defender 2: S. Dallas | score: 9.9
+Midfielder: Scott Mctominay | score: 9.9
+Forward: W. Zaha | score: 9.9
+Permission Denied
+Bad Request
+Bad Request
+Southampton FC 1 | AFC Bournemouth 0
+Nottingham Forest 4 | Tottenham Hotspur 0
+Newcastle United 4 | West Ham United 4
+Manchester United 1 | Wolves 5
+Man. City 0 | Arsenal FC 0
+Liverpool FC 3 | Aston Villa 2
+Leicester City 2 | Brentford FC 1
+Leeds United 4 | Brighton FC 1
+Fulham FC 0 | Chelsea FC 3
+Everton FC 1 | Crystal Palace 0
+Permission Denied
+list of players:
+1. name: A. Begovic | role: gk | score: 9.9
+2. name: A. Lonergan | role: gk | score: 8.2
+3. name: Jordan Pickford | role: gk | score: 6.6
+Permission Denied
+OK
+Bad Request
+OK
+Bad Request
+Permission Denied
+Goalkeeper: A. Ramsdale | score: 9.8
+Defender 1: Junior Firpo | score: 9.9
+Defender 2: Lyanco | score: 9.9
+Midfielder: T. Soucek | score: 9.9
+Forward: M. Solomon | score: 9.9
+Bad Request
+Permission Denied
+Permission Denied
+1. team_name: bdzukathkp | point: 0.0
+2. team_name: xizqsagqqa | point: 0.0
+3. team_name: dmbnobyctu | point: 0.0
+1. team_name: bdzukathkp | point: 0.0
+2. team_name: xizqsagqqa | point: 0.0
+3. team_name: dmbnobyctu | point: 0.0
+OK
+Bad Request
+list of players:
+1. name: J. Veltman | role: df | score: 8.9
+2. name: L. Dunk | role: df | score: 8.7
+3. name: Oddel Offiah | role: df | score: 7.7
+4. name: Jan Van Hecke | role: df | score: 7.6
+5. name: Adam Webster | role: df | score: 7.0
+6. name: Imari Samuels | role: df | score: 6.7
+7. name: P. Estupinan | role: df | score: 6.7
+8. name: T. Lamptey | role: df | score: 6.2
+9. name: Levi Colwill | role: df | score: 4.7
+Bad Request

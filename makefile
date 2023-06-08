@@ -1,4 +1,4 @@
-all: admin player match team user futballFantasy main result run
+all: admin player match team user futballFantasy main result
 
 admin: Admin.hpp ConstVariables.hpp
 	g++ -c --std=c++11 Admin.cpp -o Admin.o

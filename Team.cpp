@@ -33,18 +33,21 @@ void Team::print_team(ROLE r, bool show_sorted)
         sort_by_score(showing_players);
     else
         sort_by_name(showing_players);
+    cout << "list of players:" << endl;
     for (auto p : showing_players)
     {
         cout << fixed;
         cout << player_num << ". name: " << p->get_name() << OUTPUT_DELIMITER << "role: " << ROLES[p->get_role()]
-             << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(0.1, p->calculate_avarage_score()) << endl;
+             << OUTPUT_DELIMITER << "score: " << setprecision(1) << p->calculate_avarage_score() << endl;
         player_num++;
     }
 }
 
 void Team::print_team_info()
 {
-    cout << team_name << ": " << total_score << OUTPUT_DELIMITER << "GF: " << goals_for << OUTPUT_DELIMITER << "GA: " << goals_against << endl;
+    cout << team_name << ": "
+         << "score: " << total_score << OUTPUT_DELIMITER
+         << "GF: " << goals_for << OUTPUT_DELIMITER << "GA: " << goals_against << endl;
 }
 
 double Team::calculate_total_players_score()
@@ -85,8 +88,8 @@ void Team::sort_by_score(vector<Player *> &not_sorted_players)
 {
     for (int i = 0; i < not_sorted_players.size() - 1; i++)
         for (int j = i + 1; j < not_sorted_players.size(); j++)
-            if (not_sorted_players[i]->get_score() < not_sorted_players[j]->get_score() ||
-                (not_sorted_players[i]->get_score() == not_sorted_players[j]->get_score() &&
+            if (not_sorted_players[i]->calculate_avarage_score() < not_sorted_players[j]->calculate_avarage_score() ||
+                (not_sorted_players[i]->calculate_avarage_score() == not_sorted_players[j]->calculate_avarage_score() &&
                  not_sorted_players[i]->get_name() > not_sorted_players[j]->get_name()))
             {
                 Player *swaped_player = not_sorted_players[i];
@@ -105,9 +108,4 @@ void Team::sort_by_name(vector<Player *> &not_sorted_players)
                 not_sorted_players[i] = not_sorted_players[j];
                 not_sorted_players[j] = swaping_player;
             }
-}
-
-double Team::round_to(double pre, double value)
-{
-    return round(value / pre) * pre;
 }

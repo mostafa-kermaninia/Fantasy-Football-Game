@@ -1,0 +1,532 @@
+list of players:
+1. name: A. Mitrovic | role: fw | score: 0.0
+2. name: A. Pereira | role: md | score: 0.0
+3. name: Antonee Robinson | role: df | score: 0.0
+4. name: B. Leno | role: gk | score: 0.0
+5. name: B. Reid | role: md | score: 0.0
+6. name: Cedric Soares | role: df | score: 0.0
+7. name: Charlie Robinson | role: df | score: 0.0
+8. name: Daniel James | role: fw | score: 0.0
+9. name: George Wickens | role: gk | score: 0.0
+10. name: Harrison Reed | role: md | score: 0.0
+11. name: Harry Wilson | role: fw | score: 0.0
+12. name: I. Diop | role: df | score: 0.0
+13. name: J. Palhinha | role: md | score: 0.0
+14. name: K. Tete | role: df | score: 0.0
+15. name: Kristian Sekularac | role: md | score: 0.0
+16. name: L. Kurzawa | role: df | score: 0.0
+17. name: Luke Harris | role: md | score: 0.0
+18. name: M. Rodak | role: gk | score: 0.0
+19. name: M. Solomon | role: fw | score: 0.0
+20. name: Martial Godo | role: fw | score: 0.0
+21. name: Matthew Dibley | role: md | score: 0.0
+22. name: N. Kebano | role: fw | score: 0.0
+23. name: S. Duffy | role: df | score: 0.0
+24. name: S. Lukic | role: md | score: 0.0
+25. name: Stefan Parkes | role: df | score: 0.0
+26. name: T. Cairney | role: md | score: 0.0
+27. name: T. Francois | role: md | score: 0.0
+28. name: T. Ream | role: df | score: 0.0
+29. name: Terry Ablade | role: fw | score: 0.0
+30. name: Tosin Adarabioyo | role: df | score: 0.0
+31. name: Vinicius | role: fw | score: 0.0
+32. name: Willian | role: fw | score: 0.0
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Bad Request
+list of players:
+1. name: D. Undav | role: fw | score: 0.0
+2. name: Danny Welbeck | role: fw | score: 0.0
+3. name: Evan Ferguson | role: fw | score: 0.0
+4. name: Julio Enciso | role: fw | score: 0.0
+5. name: K. Mitoma | role: fw | score: 0.0
+Bad Request
+list of players:
+1. name: Edward Nketiah | role: fw | score: 0.0
+2. name: Gabriel Jesus | role: fw | score: 0.0
+3. name: L. Trossard | role: fw | score: 0.0
+4. name: Martinelli | role: fw | score: 0.0
+5. name: Reiss Nelson | role: fw | score: 0.0
+Bad Request
+OK
+OK
+OK
+Bad Request
+OK
+Bad Request
+Bad Request
+Bad Request
+Permission Denied
+Bad Request
+Bad Request
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Permission Denied
+Bad Request
+list of players:
+1. name: Adrian | role: gk | score: 0.0
+2. name: Alisson | role: gk | score: 0.0
+3. name: Caoimhin Kelleher | role: gk | score: 0.0
+4. name: Harvey Davies | role: gk | score: 0.0
+Bad Request
+Bad Request
+Bad Request
+OK
+Bad Request
+Bad Request
+Bad Request
+Permission Denied
+Not Found
+Permission Denied
+OK
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+Bad Request
+Bad Request
+Not Found
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Empty
+Permission Denied
+Permission Denied
+Bad Request
+Permission Denied
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+1. team_name: yssvysscnm | point: 0.0
+Bad Request
+Bad Request
+Bad Request
+Bad Request
+OK
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Bad Request
+Permission Denied
+Bad Request
+OK
+1. team_name: yssvysscnm | point: 0.0
+Bad Request
+OK
+OK
+Bad Request
+Permission Denied
+OK
+OK
+Permission Denied
+Permission Denied
+Permission Denied
+Bad Request
+Bad Request
+Permission Denied
+Bad Request
+Bad Request
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+Not Found
+Permission Denied
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Bad Request
+Bad Request
+Permission Denied
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Permission Denied
+Permission Denied
+Permission Denied
+list of players:
+1. name: B. Kamara | role: md | score: 0.0
+2. name: Douglas Luiz | role: md | score: 0.0
+3. name: J. Mcginn | role: md | score: 0.0
+4. name: J. Ramsey | role: md | score: 0.0
+5. name: L. Dendoncker | role: md | score: 0.0
+6. name: Tommi O'reilly | role: md | score: 0.0
+Bad Request
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+1. team_name: yssvysscnm | point: 0.0
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+league standing:
+1. AFC Bournemouth: score: 0 | GF: 0 | GA: 0
+2. Arsenal FC: score: 0 | GF: 0 | GA: 0
+3. Aston Villa: score: 0 | GF: 0 | GA: 0
+4. Brentford FC: score: 0 | GF: 0 | GA: 0
+5. Brighton FC: score: 0 | GF: 0 | GA: 0
+6. Chelsea FC: score: 0 | GF: 0 | GA: 0
+7. Crystal Palace: score: 0 | GF: 0 | GA: 0
+8. Everton FC: score: 0 | GF: 0 | GA: 0
+9. Fulham FC: score: 0 | GF: 0 | GA: 0
+10. Leeds United: score: 0 | GF: 0 | GA: 0
+11. Leicester City: score: 0 | GF: 0 | GA: 0
+12. Liverpool FC: score: 0 | GF: 0 | GA: 0
+13. Man. City: score: 0 | GF: 0 | GA: 0
+14. Manchester United: score: 0 | GF: 0 | GA: 0
+15. Newcastle United: score: 0 | GF: 0 | GA: 0
+16. Nottingham Forest: score: 0 | GF: 0 | GA: 0
+17. Southampton FC: score: 0 | GF: 0 | GA: 0
+18. Tottenham Hotspur: score: 0 | GF: 0 | GA: 0
+19. West Ham United: score: 0 | GF: 0 | GA: 0
+20. Wolves: score: 0 | GF: 0 | GA: 0
+Permission Denied
+Bad Request
+Permission Denied
+list of players:
+1. name: Ederson | role: gk | score: 0.0
+2. name: S. Carson | role: gk | score: 0.0
+3. name: S. Ortega | role: gk | score: 0.0
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+Bad Request
+OK
+OK
+Bad Request
+Bad Request
+league standing:
+1. Aston Villa: score: 3 | GF: 5 | GA: 0
+2. Man. City: score: 3 | GF: 4 | GA: 0
+3. Brighton FC: score: 3 | GF: 5 | GA: 2
+4. Liverpool FC: score: 3 | GF: 5 | GA: 3
+5. Manchester United: score: 3 | GF: 5 | GA: 3
+6. Leeds United: score: 3 | GF: 4 | GA: 2
+7. Southampton FC: score: 3 | GF: 2 | GA: 1
+8. Chelsea FC: score: 1 | GF: 2 | GA: 2
+9. Newcastle United: score: 1 | GF: 2 | GA: 2
+10. AFC Bournemouth: score: 1 | GF: 1 | GA: 1
+11. Wolves: score: 1 | GF: 1 | GA: 1
+12. Arsenal FC: score: 1 | GF: 0 | GA: 0
+13. West Ham United: score: 1 | GF: 0 | GA: 0
+14. Brentford FC: score: 0 | GF: 1 | GA: 2
+15. Crystal Palace: score: 0 | GF: 3 | GA: 5
+16. Fulham FC: score: 0 | GF: 3 | GA: 5
+17. Leicester City: score: 0 | GF: 2 | GA: 4
+18. Nottingham Forest: score: 0 | GF: 2 | GA: 5
+19. Everton FC: score: 0 | GF: 0 | GA: 4
+20. Tottenham Hotspur: score: 0 | GF: 0 | GA: 5
+Goalkeeper: A. Ramsdale | score: 9.8
+Defender 1: Junior Firpo | score: 9.9
+Defender 2: Lyanco | score: 9.9
+Midfielder: T. Soucek | score: 9.9
+Forward: M. Solomon | score: 9.9
+OK
+Permission Denied
+Bad Request
+league standing:
+1. Aston Villa: score: 3 | GF: 5 | GA: 0
+2. Man. City: score: 3 | GF: 4 | GA: 0
+3. Brighton FC: score: 3 | GF: 5 | GA: 2
+4. Liverpool FC: score: 3 | GF: 5 | GA: 3
+5. Manchester United: score: 3 | GF: 5 | GA: 3
+6. Leeds United: score: 3 | GF: 4 | GA: 2
+7. Southampton FC: score: 3 | GF: 2 | GA: 1
+8. Chelsea FC: score: 1 | GF: 2 | GA: 2
+9. Newcastle United: score: 1 | GF: 2 | GA: 2
+10. AFC Bournemouth: score: 1 | GF: 1 | GA: 1
+11. Wolves: score: 1 | GF: 1 | GA: 1
+12. Arsenal FC: score: 1 | GF: 0 | GA: 0
+13. West Ham United: score: 1 | GF: 0 | GA: 0
+14. Brentford FC: score: 0 | GF: 1 | GA: 2
+15. Crystal Palace: score: 0 | GF: 3 | GA: 5
+16. Fulham FC: score: 0 | GF: 3 | GA: 5
+17. Leicester City: score: 0 | GF: 2 | GA: 4
+18. Nottingham Forest: score: 0 | GF: 2 | GA: 5
+19. Everton FC: score: 0 | GF: 0 | GA: 4
+20. Tottenham Hotspur: score: 0 | GF: 0 | GA: 5
+list of players:
+1. name: T. Soucek | role: md | score: 9.9
+2. name: D. Rice | role: md | score: 7.9
+3. name: L. Paqueta | role: md | score: 4.9
+4. name: Armstrong Okoflex | role: md | score: 0.0
+5. name: F. Downes | role: md | score: 0.0
+6. name: Kaelan Casey | role: md | score: 0.0
+7. name: M. Lanzini | role: md | score: 0.0
+8. name: P. Fornals | role: md | score: 0.0
+Goalkeeper: A. Ramsdale | score: 9.8
+Defender 1: Junior Firpo | score: 9.9
+Defender 2: Lyanco | score: 9.9
+Midfielder: T. Soucek | score: 9.9
+Forward: M. Solomon | score: 9.9
+Bad Request
+Bad Request
+Bad Request
+Bad Request
+Permission Denied
+Permission Denied
+Permission Denied
+1. team_name: yssvysscnm | point: 0.0
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+list of players:
+1. name: Lyanco | role: df | score: 9.9
+2. name: J. Bednarek | role: df | score: 7.7
+3. name: Kyle Walker-Peters | role: df | score: 7.7
+4. name: R. Perraud | role: df | score: 6.4
+5. name: D. Caleta-Car | role: df | score: 4.7
+6. name: A. Bella-Kotchap | role: df | score: 0.0
+7. name: James Bree | role: df | score: 0.0
+8. name: Juan Larios | role: df | score: 0.0
+9. name: M. Salisu | role: df | score: 0.0
+10. name: Tino Livramento | role: df | score: 0.0
+OK
+Permission Denied
+Bad Request
+Bad Request
+Permission Denied
+Permission Denied
+Bad Request
+Bad Request
+OK
+Permission Denied
+Goalkeeper: Neto | score: 8.5
+Defender 1: R. Koch | score: 9.9
+Defender 2: S. McKenna | score: 9.9
+Midfielder: Kobbie Mainoo | score: 9.9
+Forward: R. Sterling | score: 9.9
+Permission Denied
+Permission Denied
+Permission Denied
+Permission Denied
+Bad Request
+Permission Denied
+Bad Request
+Permission Denied
+OK
+1. team_name: yssvysscnm | point: 0.0
+OK
+Permission Denied
+OK
+Bad Request
+Bad Request
+Permission Denied
+Bad Request
+Permission Denied
+Bad Request
+OK
+Permission Denied
+Permission Denied
+OK
+Bad Request
+OK
+Bad Request
+list of players:
+1. name: D. Ward | role: gk | score: 9.4
+2. name: A. Smithies | role: gk | score: 4.5
+3. name: Daniel Iversen | role: gk | score: 0.0
+1. team_name: yssvysscnm | point: 0.0
+Permission Denied
+Bad Request
+OK
+Permission Denied
+Bad Request
+league standing:
+1. Manchester United: score: 6 | GF: 10 | GA: 3
+2. Man. City: score: 6 | GF: 5 | GA: 0
+3. Southampton FC: score: 6 | GF: 7 | GA: 3
+4. Aston Villa: score: 4 | GF: 8 | GA: 3
+5. West Ham United: score: 4 | GF: 3 | GA: 0
+6. Liverpool FC: score: 4 | GF: 9 | GA: 7
+7. Wolves: score: 4 | GF: 4 | GA: 2
+8. Brentford FC: score: 3 | GF: 5 | GA: 2
+9. Leeds United: score: 3 | GF: 4 | GA: 3
+10. Everton FC: score: 3 | GF: 5 | GA: 6
+11. Fulham FC: score: 3 | GF: 4 | GA: 5
+12. Brighton FC: score: 3 | GF: 5 | GA: 7
+13. Chelsea FC: score: 1 | GF: 2 | GA: 3
+14. Crystal Palace: score: 1 | GF: 7 | GA: 9
+15. Nottingham Forest: score: 1 | GF: 5 | GA: 8
+16. Arsenal FC: score: 1 | GF: 2 | GA: 5
+17. AFC Bournemouth: score: 1 | GF: 1 | GA: 4
+18. Newcastle United: score: 1 | GF: 2 | GA: 6
+19. Leicester City: score: 0 | GF: 4 | GA: 9
+20. Tottenham Hotspur: score: 0 | GF: 1 | GA: 8
+Permission Denied
+Bad Request
+Bad Request
+Bad Request
+list of players:
+1. name: Gabriel Slonina | role: gk | score: 6.8
+2. name: E. Mendy | role: gk | score: 0.0
+3. name: Kepa | role: gk | score: 0.0
+4. name: Marcus Bettinelli | role: gk | score: 0.0
+Not Found
+Bad Request
+Bad Request
+OK
+league standing:
+1. Manchester United: score: 6 | GF: 10 | GA: 3
+2. Man. City: score: 6 | GF: 5 | GA: 0
+3. Southampton FC: score: 6 | GF: 7 | GA: 3
+4. Aston Villa: score: 4 | GF: 8 | GA: 3
+5. West Ham United: score: 4 | GF: 3 | GA: 0
+6. Liverpool FC: score: 4 | GF: 9 | GA: 7
+7. Wolves: score: 4 | GF: 4 | GA: 2
+8. Brentford FC: score: 3 | GF: 5 | GA: 2
+9. Leeds United: score: 3 | GF: 4 | GA: 3
+10. Everton FC: score: 3 | GF: 5 | GA: 6
+11. Fulham FC: score: 3 | GF: 4 | GA: 5
+12. Brighton FC: score: 3 | GF: 5 | GA: 7
+13. Chelsea FC: score: 1 | GF: 2 | GA: 3
+14. Crystal Palace: score: 1 | GF: 7 | GA: 9
+15. Nottingham Forest: score: 1 | GF: 5 | GA: 8
+16. Arsenal FC: score: 1 | GF: 2 | GA: 5
+17. AFC Bournemouth: score: 1 | GF: 1 | GA: 4
+18. Newcastle United: score: 1 | GF: 2 | GA: 6
+19. Leicester City: score: 0 | GF: 4 | GA: 9
+20. Tottenham Hotspur: score: 0 | GF: 1 | GA: 8
+Bad Request
+Permission Denied
+Permission Denied
+Bad Request
+Bad Request
+Permission Denied

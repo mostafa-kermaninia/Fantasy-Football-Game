@@ -267,9 +267,9 @@ void FutballFantasy::public_get_req(vector<string> &command_words)
         int showing_week = week_num;
         if (command_words.size() > 3)
         {
-            showing_week = stoi(command_words[4]);
             if (command_words[3] != "week_num")
                 throw runtime_error(BAD_REQUEST_ER);
+            showing_week = stoi(command_words[4]);
         }
         if (command == "matches_result_league")
             print_week_matches(showing_week);
@@ -300,7 +300,8 @@ void FutballFantasy::user_get_req(vector<string> &command_words)
     if (command == "squad")
         print_squad(command_words);
     else
-        throw runtime_error(BAD_REQUEST_ER);
+        public_get_req(command_words);
+    // throw runtime_error(BAD_REQUEST_ER + "7");
 }
 
 void FutballFantasy::handle_post_requests(vector<string> &command_words)
@@ -425,6 +426,8 @@ void FutballFantasy::handle_commands()
         try
         {
             command_words = string_splitter(command_line, ' ');
+            if (command_words.back() == "")
+                command_words.pop_back();
             request_type = command_words[0];
             check_request_validity(request_type, command_words);
             if (request_type == "GET")
@@ -447,6 +450,8 @@ void FutballFantasy::print_league_info()
 {
     sort_teams();
     int rank = 1;
+    cout << "league standing:" << endl;
+    // s ezafe she
     for (auto t : teams)
     {
         cout << rank << ". ";
@@ -461,7 +466,7 @@ void FutballFantasy::print_week_team(int week_number)
         throw runtime_error(BAD_REQUEST_ER);
     vector<Player *> week_team_players = week_teams[week_number - 1]->get_players();
     cout << fixed;
-    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
+    cout << "Goalkeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
     cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[1]->get_score() << endl;
     cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[2]->get_score() << endl;
     cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[3]->get_score() << endl;
@@ -509,6 +514,8 @@ void FutballFantasy::print_team_players(vector<string> &command_words)
 
 void FutballFantasy::print_users()
 {
+    if (users.size() == 0)
+        throw runtime_error(EMPTY_ER);
     int rank = 1;
     for (auto u : users)
     {
@@ -681,7 +688,7 @@ bool FutballFantasy::is_better_team(Team *team1, Team *team2)
         return false;
     else if (team1->get_total_score() == team2->get_total_score() &&
              team1->calculate_goal_difrence() == team2->calculate_goal_difrence() &&
-             team1->get_goals_for() == team2->get_goals_for() && team1->get_name() > team2->get_name())
+             team1->get_goals_for() == team2->get_goals_for() && team1->get_name() < team2->get_name())
         return false;
     return true;
 }
