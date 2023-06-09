@@ -110,6 +110,8 @@ void User::print_team_info()
 bool User::player_post_is_not_full(Player *selected_player)
 {
     ROLE role = selected_player->get_role();
+    if (find_player_in_team(selected_player->get_name()) != NULL)
+        throw runtime_error(BAD_REQUEST_ER);
     return ((role == DF && team->count_of_players_in_selected_post(role) < 2) ||
             (role != DF && team->count_of_players_in_selected_post(role) < 1));
 }
