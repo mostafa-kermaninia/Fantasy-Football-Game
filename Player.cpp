@@ -36,7 +36,7 @@ double Player::calculate_avarage_score()
     }
     if (played_match_num == 0)
         return 0;
-    return round_to(0.1, score_sum / played_match_num);
+    return round_to(score_sum / played_match_num);
 }
 
 void Player::reset_for_new_week()
@@ -62,7 +62,7 @@ void Player::reset_for_new_week()
         available = true;
 }
 
-double Player::round_to(double pre, double value)
+double Player::round_to(double value)
 {
-    return round(value / pre) * pre;
+    return round(value * 10) / 10;
 }

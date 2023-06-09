@@ -514,15 +514,20 @@ void FutballFantasy::print_team_players(vector<string> &command_words)
 
 void FutballFantasy::print_users()
 {
-    if (users.size() == 0)
-        throw runtime_error(EMPTY_ER);
     int rank = 1;
+    bool user_founded = false;
     for (auto u : users)
     {
-        cout << rank << ". ";
-        u->print_fantasy_team();
-        rank++;
+        if (u->is_team_completed())
+        {
+            cout << rank << ". ";
+            u->print_fantasy_team();
+            rank++;
+            user_founded = true;
+        }
     }
+    if (!user_founded)
+        throw runtime_error(EMPTY_ER);
 }
 
 void FutballFantasy::print_squad(vector<string> &command_words)

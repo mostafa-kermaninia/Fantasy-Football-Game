@@ -1,0 +1,2000 @@
+POST close_transfer_window
+GET matches_result_league ? week_num 11
+POST register_admin ? username 
+GET league_standings
+POST sell_player ? name Lyanco
+LOL
+LOL
+GET league_standings
+POST sell_player ? name R. Loftus-Cheek
+LOL
+GET team_of_the_week ? 
+LOL
+POST register_admin ? username admin password 123456
+GET users_ranking
+GET players ? team_name Leicester_City ranks
+LOL
+LOL
+POST buy_player ? name E. Mendy
+LOL
+POST pass_week
+GET matches_result_league ? week_num 4
+LOL
+GET squad ? fantasy_team Crystal_Palace
+GET users_ranking
+POST open_transfer_window
+POST logout
+GET players ? team_name Nottingham_Forest df ranks
+POST signup ? team_name 
+POST register_admin ? username admin password 123456
+GET users_ranking
+POST signup ? team_name edocubperi password dqxoxqpipl
+GET squad ? fantasy_team Wolves
+POST pass_week
+GET squad ? fantasy_team Liverpool_FC
+POST buy_player ? name M. Ritchie
+POST logout
+LOL
+POST login ? team_name edocubperi password dqxoxqpipl
+GET squad ? fantasy_team Fulham_FC
+POST register_admin ? username admin password 123456
+POST sell_player ? name E. Krafth
+POST open_transfer_window
+GET users_ranking
+LOL
+GET matches_result_league ? 
+GET league_standings
+POST buy_player ? name O. Onyeka
+POST pass_week
+GET team_of_the_week ? 
+LOL
+POST login ? team_name edocubperi password dqxoxqpipl
+GET users_ranking
+POST signup ? team_name csbynxajlx password uopewabuds
+POST buy_player ? name Emerson Royal
+POST close_transfer_window
+POST sell_player ? name A. Lallana
+POST sell_player ? name R. Olsen
+POST pass_week
+POST close_transfer_window
+GET users_ranking
+POST close_transfer_window
+POST open_transfer_window
+POST logout
+GET matches_result_league ? week_num 3
+GET matches_result_league ? week_num 19
+POST login ? team_name csbynxajlx password uopewabuds
+GET players ? team_name Liverpool_FC ranks
+POST open_transfer_window
+GET squad ? 
+POST pass_week
+GET users_ranking
+GET players ? team_name Wolves fw ranks
+GET players ? team_name Arsenal_FC df
+LOL
+POST sell_player ? name M. Greenwood
+GET league_standings
+POST sell_player ? name Phil Jones
+POST pass_week
+POST sell_player ? name Fabio Carvalho
+GET league_standings
+POST login ? team_name edocubperi password dqxoxqpipl
+GET squad ? 
+POST register_admin ? username admin password 123456
+POST register_admin ? username admin password 123456
+LOL
+LOL
+LOL
+POST buy_player ? name S. Baptiste
+LOL
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST open_transfer_window
+POST login ? team_name csbynxajlx
+LOL
+GET league_standings
+GET league_standings
+LOL
+GET matches_result_league ? week_num 17
+POST signup ? team_name sicozivtpd password zboxrryyoi
+POST open_transfer_window
+POST logout
+GET users_ranking
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST sell_player ? name M. Jensen
+GET matches_result_league ? 
+GET matches_result_league ? week_num 18
+POST open_transfer_window
+POST sell_player ? name S. McKenna
+POST buy_player ? name Kadan Young
+POST sell_player ? name Heung-Min Son
+GET users_ranking
+POST buy_player ? name Matthew Longstaff
+GET team_of_the_week ? 
+POST logout
+POST sell_player ? name Joao Felix
+POST close_transfer_window
+POST logout
+POST pass_week
+POST sell_player ? name Jonny
+POST open_transfer_window
+GET players ? team_name Nottingham_Forest df ranks
+GET matches_result_league ? 
+POST sell_player ? name A. Cresswell
+GET team_of_the_week ? 19
+POST sell_player ? name D. Burn
+POST signup ? team_name bdzukathkp password dupsydzuzh
+POST register_admin ? username admin password 123456
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST login ? team_name bdzukathkp password dupsydzuzh
+LOL
+LOL
+GET players ? team_name Leeds_United fw ranks
+GET users_ranking
+POST sell_player ? name Joe Rothwell
+LOL
+POST register_admin ? username admin password 123456
+GET league_standings
+GET matches_result_league ? week_num 17
+GET matches_result_league ? 
+GET league_standings
+POST logout
+GET squad ? fantasy_team Southampton_FC
+POST signup ? team_name xizqsagqqa password gsbofdjmdp
+GET team_of_the_week ? week_num 15
+GET users_ranking
+GET squad ? fantasy_team Aston_Villa
+LOL
+POST login ? team_name bdzukathkp password dupsydzuzh
+POST sell_player ? name S. Longstaff
+POST register_admin ? username adminpassword 1402
+POST signup ? team_name lzxhgpwyhn password kbpzlnyvmm
+GET players ? team_name Crystal_Palace gk ranks
+GET players ? team_name Crystal_Palace fw ranks
+LOL
+GET matches_result_league ? week_num 9
+GET squad ? fantasy_team Wolves
+GET matches_result_league ? week_num 12
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST register_admin ? username admin password 123456
+GET users_ranking
+LOL
+POST register_admin ? username admin password 123456
+GET squad ? fantasy_team Leicester_City
+GET league_standings
+POST sell_player ? name K. Schade
+GET matches_result_league ? week_num 7
+GET squad ? fantasy_team Southampton_FC
+POST pass_week
+POST signup ? team_name csbynxajlx password 
+GET players ? team_name Man._City md ranks
+GET league_standings
+GET league_standings
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 6
+POST logout
+POST logout
+POST buy_player ? name T. Strakosha
+GET team_of_the_week ? 
+GET squad ? 
+LOL
+GET team_of_the_week ? week_num 15
+GET matches_result_league ? 
+POST logout
+GET players ? team_name Everton_FC gk ranks
+POST logout
+POST signup ? team_name dmbnobyctu password vviqophcht
+LOL
+POST buy_player ? name Hee-Chan Hwang
+LOL
+POST close_transfer_window
+GET team_of_the_week ? week_num 1
+LOL
+POST open_transfer_window
+POST close_transfer_window
+GET users_ranking
+GET users_ranking
+POST logout
+POST register_admin ? username admin
+GET players ? team_name Brighton_FC df ranks
+LOL
+POST buy_player ? name Trevoh Chalobah
+POST close_transfer_window
+POST open_transfer_window
+POST pass_week
+POST buy_player ? name B. White
+POST open_transfer_window
+GET players ? team_name Manchester_United df ranks
+GET players ? team_name 
+POST close_transfer_window
+POST pass_week
+POST register_admin ? username admin password 123456
+POST logout
+POST signup ? team_name 
+POST pass_week
+GET users_ranking
+POST signup ? team_name dmbnobyctu password Babak
+LOL
+POST pass_week
+POST open_transfer_window
+GET team_of_the_week ? week_num 5
+POST close_transfer_window
+POST pass_week
+POST close_transfer_window
+GET league_standings
+POST sell_player ? name P. Coutinho
+POST pass_week
+LOL
+POST register_admin ? username admin password 123456
+POST login ? team_name csbynxajlx password uopewabuds
+GET league_standings
+GET users_ranking
+POST close_transfer_window
+LOL
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST register_admin ? username 
+POST login ? team_name 
+GET league_standings
+GET league_standings
+POST logout
+GET users_ranking
+GET users_ranking
+GET matches_result_league ? 
+POST login ? team_name 
+GET users_ranking
+POST logout
+GET team_of_the_week ? 
+POST logout
+POST logout
+POST register_admin ? username admin password 123456
+GET users_ranking
+LOL
+GET team_of_the_week ? week_num 13
+POST login ? team_name 
+POST logout
+POST buy_player ? name Y. Bissouma
+GET league_standings
+GET players ? team_name Crystal_Palace fw ranks
+GET users_ranking
+GET players ? team_name Everton_FC md ranks
+POST signup ? team_name muommejwzd password sqdxfxzlrv
+LOL
+LOL
+POST open_transfer_window
+POST logout
+GET squad ? 
+POST login ? team_name muommejwzd password sqdxfxzlrv
+POST sell_player ? name Viljami Sinisalo
+GET players ? team_name 
+GET users_ranking
+GET users_ranking
+LOL
+POST sell_player ? name Joelinton
+POST pass_week
+GET users_ranking
+POST register_admin ? username admin password 123456
+POST register_admin ? username admin password 123456
+POST close_transfer_window
+POST close_transfer_window
+POST buy_player ? name Imari Samuels
+POST signup ? team_name gldsllqvah password ghiaginfgv
+GET matches_result_league ? week_num 13
+POST logout
+POST signup ? team_name alqiwtekrk password kxrzszzoxz
+LOL
+GET users_ranking
+POST logout
+POST open_transfer_window
+LOL
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET users_ranking
+POST close_transfer_window
+LOL
+POST signup ? team_name edocubperi password dqxoxqpipl
+LOL
+POST pass_week
+LOL
+GET team_of_the_week ? week_num 16
+POST open_transfer_window
+POST buy_player ? name Alexander Mighten
+LOL
+POST login ? team_name muommejwzd password sqdxfxzlrv
+POST close_transfer_window
+POST close_transfer_window
+POST register_admin ? username adminpassword 
+LOL
+GET squad ? fantasy_team Newcastle_United
+GET league_standings
+GET league_standings
+POST buy_player ? name C. Plain
+GET matches_result_league ? week_num 16
+GET matches_result_league ? week_num 103
+GET league_standings
+LOL
+POST close_transfer_window
+POST logout
+POST close_transfer_window
+GET matches_result_league ? week_num 13
+LOL
+POST register_admin ? username admin password 123456
+POST sell_player ? name Jonny
+POST close_transfer_window
+POST login ? team_name sicozivtpd password zboxrryyoi
+LOL
+POST logout
+POST register_admin ? username admin password 123456
+GET matches_result_league ? 
+POST open_transfer_window
+LOL
+POST register_admin ? username admin password 123456
+GET users_ranking
+POST close_transfer_window
+GET matches_result_league ? week_num 10
+POST signup ? team_name sicozivtpd password Babak
+GET players ? team_name West_Ham_United GG Naeeni
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 9
+GET players ? team_name Crystal_Palace md ranks
+GET league_standings
+POST open_transfer_window
+POST register_admin ? username 
+GET squad ? fantasy_team Nottingham_Forest
+GET league_standings
+POST logout
+GET league_standings
+POST open_transfer_window
+POST buy_player ? name Carney Chukwuemeka
+LOL
+GET matches_result_league ? week_num 8
+POST pass_week
+LOL
+POST pass_week
+GET matches_result_league ? week_num 8
+GET users_ranking
+GET users_ranking
+POST register_admin ? username admin
+POST pass_week
+POST buy_player ? name K. Tierney
+LOL
+LOL
+LOL
+LOL
+GET players ? team_name Fulham_FC df ranks
+GET users_ranking
+GET matches_result_league ? week_num 2
+LOL
+LOL
+GET squad ? fantasy_team Leicester_City
+POST close_transfer_window
+POST open_transfer_window
+GET matches_result_league ? week_num 1
+GET matches_result_league ? week_num 15
+POST logout
+GET team_of_the_week ? week_num 107
+POST login ? team_name muommejwzd password sqdxfxzlrv
+GET players ? team_name Manchester_United df ranks
+GET league_standings
+LOL
+POST register_admin ? username admin password 123456
+LOL
+GET team_of_the_week ? 
+POST close_transfer_window
+GET league_standings
+LOL
+POST open_transfer_window
+LOL
+POST register_admin ? username admin password 123456
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? 
+GET users_ranking
+GET players ? team_name Fulham_FC fw ranks
+POST login ? team_name 
+GET team_of_the_week ? 
+POST open_transfer_window
+GET matches_result_league ? 
+GET team_of_the_week ? week_num 5
+POST login ? team_name muommejwzd password sqdxfxzlrv
+GET matches_result_league ? week_num 10
+POST register_admin ? username adminpassword 
+POST sell_player ? name Kristoffer Klaesson
+LOL
+GET users_ranking
+GET matches_result_league ? week_num 17
+GET squad ? 
+POST sell_player ? name Sam Greenwood
+GET users_ranking
+POST register_admin ? username admin password 123456
+GET users_ranking
+POST buy_player ? name K. Havertz
+POST buy_player ? name J. Stanislas
+GET users_ranking
+POST register_admin ? username admin password 123456
+GET users_ranking
+GET league_standings
+POST close_transfer_window
+GET players ? team_name Leeds_United GG Naeeni
+GET team_of_the_week ? 
+GET users_ranking
+POST open_transfer_window
+POST open_transfer_window
+GET matches_result_league ? week_num 10
+POST pass_week
+LOL
+POST logout
+GET team_of_the_week ? week_num 6
+POST register_admin ? username admin password 123456
+POST signup ? team_name 
+GET squad ? fantasy_team Man._City
+GET users_ranking
+GET players ? team_name 
+POST login ? team_name lzxhgpwyhn password kbpzlnyvmm
+POST register_admin ? username admin password 123456
+LOL
+GET league_standings
+LOL
+LOL
+POST register_admin ? username admin password 123456
+GET league_standings
+POST buy_player ? name Ruben Vinagre
+POST register_admin ? username admin password 123456
+POST sell_player ? name L. Bailey
+GET league_standings
+POST register_admin ? username admin password 123456
+POST register_admin ? username admin password 123456
+POST sell_player ? name M. Cash
+GET players ? team_name Fulham_FC df ranks
+GET team_of_the_week ? week_num 2
+LOL
+POST register_admin ? username admin password 123456
+POST login ? team_name edocubperi password dqxoxqpipl
+GET squad ? fantasy_team Aston_Villa
+POST login ? team_name lzxhgpwyhn password kbpzlnyvmm
+GET users_ranking
+LOL
+POST login ? team_name Hosseini_Mohtasham password 
+POST sell_player ? name Terry Ablade
+POST signup ? team_name ydkevvxgnz password jgolhhhjjp
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? 
+LOL
+GET team_of_the_week ? week_num 9
+POST signup ? team_name lacjngnwys password nxexenpavo
+POST open_transfer_window
+POST close_transfer_window
+GET users_ranking
+POST logout
+POST buy_player ? name Japhet Tanganga
+POST open_transfer_window
+POST open_transfer_window
+GET team_of_the_week ? week_num 14
+GET league_standings
+POST register_admin ? username 
+POST logout
+POST buy_player ? name Divin Mubama
+POST login ? team_name muommejwzd password sqdxfxzlrv
+GET players ? team_name Fulham_FC fw ranks
+POST sell_player ? name Harrison Reed
+GET users_ranking
+POST open_transfer_window
+POST logout
+POST pass_week
+GET matches_result_league ? 
+POST sell_player ? name Tino Livramento
+GET team_of_the_week ? week_num 7
+POST close_transfer_window
+GET players ? team_name Brighton_FC md
+POST register_admin ? username admin password 123456
+POST close_transfer_window
+POST logout
+GET team_of_the_week ? week_num 10
+LOL
+GET team_of_the_week ? week_num 13
+POST open_transfer_window
+POST logout
+POST logout
+POST open_transfer_window
+GET team_of_the_week ? week_num 10
+POST buy_player ? name R. Bentancur
+POST pass_week
+POST login ? team_name muommejwzd password sqdxfxzlrv
+LOL
+POST login ? team_name alqiwtekrk password kxrzszzoxz
+GET matches_result_league ? 
+GET users_ranking
+GET league_standings
+POST sell_player ? name S. Baptiste
+GET league_standings
+GET team_of_the_week ? 
+GET squad ? 
+POST buy_player ? name K. Iheanacho
+POST logout
+GET squad ? fantasy_team Arsenal_FC
+GET team_of_the_week ? week_num 16
+GET players ? team_name Wolves df
+GET league_standings
+POST pass_week
+POST pass_week
+POST login ? team_name sicozivtpd password zboxrryyoi
+GET team_of_the_week ? 
+GET users_ranking
+POST logout
+POST logout
+GET players ? team_name Aston_Villa fw ranks
+POST pass_week
+GET players ? team_name Newcastle_United md ranks
+LOL
+GET team_of_the_week ? 
+POST close_transfer_window
+GET matches_result_league ? week_num 11
+POST login ? team_name muommejwzd password sqdxfxzlrv
+POST pass_week
+LOL
+POST pass_week
+GET team_of_the_week ? week_num 18
+LOL
+POST pass_week
+GET team_of_the_week ? week_num 104
+LOL
+GET league_standings
+POST register_admin ? username admin password 123456
+GET matches_result_league ? 
+GET players ? team_name West_Ham_United gk ranks
+LOL
+GET players ? team_name Leicester_City fw ranks
+LOL
+GET team_of_the_week ? week_num 19
+POST open_transfer_window
+LOL
+POST logout
+POST pass_week
+POST signup ? team_name kedqengqoz password rtglwioinj
+POST logout
+GET squad ? fantasy_team Chelsea_FC
+POST pass_week
+POST register_admin ? username admin password 123456
+GET league_standings
+GET users_ranking
+POST sell_player ? name K. Tierney
+POST buy_player ? name J. Manquillo
+POST login ? team_name muommejwzd password sqdxfxzlrv
+GET league_standings
+GET team_of_the_week ? week_num 104
+POST login ? team_name ydkevvxgnz password 
+POST open_transfer_window
+LOL
+GET players ? team_name Leeds_United GG Naeeni
+GET users_ranking
+GET league_standings
+LOL
+GET players ? team_name Man._City df ranks
+POST login ? team_name edocubperi password dqxoxqpipl
+GET players ? team_name Liverpool_FC md ranks
+GET league_standings
+GET league_standings
+POST logout
+GET users_ranking
+POST open_transfer_window
+POST open_transfer_window
+GET league_standings
+POST sell_player ? name Kristoffer Klaesson
+GET users_ranking
+POST open_transfer_window
+GET users_ranking
+POST signup ? team_name 
+GET squad ? fantasy_team Arsenal_FC
+POST signup ? team_name 
+POST signup ? team_name oorjtxaikn password becebuknra
+LOL
+GET players ? team_name Chelsea_FC md ranks
+POST buy_player ? name S. Lukic
+POST pass_week
+GET players ? team_name Manchester_United md ranks
+POST sell_player ? name James Bree
+GET league_standings
+GET league_standings
+POST logout
+POST login ? team_name lacjngnwys password nxexenpavo
+POST sell_player ? name Joao Moutinho
+POST open_transfer_window
+POST signup ? team_name usqdreeqdh password fzeytdaduo
+GET matches_result_league ? week_num 3
+POST pass_week
+POST buy_player ? name L. Thomas
+GET matches_result_league ? 
+POST signup ? team_name 
+GET players ? team_name Wolves md
+GET squad ? fantasy_team Leeds_United
+POST logout
+GET matches_result_league ? week_num 10
+GET league_standings
+GET league_standings
+POST pass_week
+GET players ? team_name 
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 5
+GET squad ? fantasy_team Everton_FC
+POST sell_player ? name M. Senesi
+POST open_transfer_window
+GET users_ranking
+GET team_of_the_week ? 
+LOL
+GET squad ? fantasy_team Leicester_City
+GET matches_result_league ? week_num 11
+POST register_admin ? username admin password 123456
+POST signup ? team_name twrhowlqia password pdnjjrjysz
+POST close_transfer_window
+GET users_ranking
+POST login ? team_name lzxhgpwyhn password kbpzlnyvmm
+POST pass_week
+POST close_transfer_window
+GET matches_result_league ? week_num 7
+POST close_transfer_window
+GET squad ? 
+POST logout
+POST login ? team_name sicozivtpd password zboxrryyoi
+GET users_ranking
+GET players ? team_name Nottingham_Forest df ranks
+POST open_transfer_window
+GET matches_result_league ? week_num 1
+LOL
+POST register_admin ? username admin password 123456
+POST pass_week
+GET users_ranking
+POST pass_week
+POST sell_player ? name Yasin Ayari
+GET matches_result_league ? week_num 10
+GET league_standings
+GET league_standings
+GET matches_result_league ? 
+GET matches_result_league ? 9
+POST close_transfer_window
+GET team_of_the_week ? week_num 16
+GET matches_result_league ? week_num 8
+POST sell_player ? name Jack Stephens
+POST pass_week
+POST pass_week
+POST buy_player ? name Matt Targett
+POST login ? team_name gldsllqvah password ghiaginfgv
+POST pass_week
+GET matches_result_league ? 
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST signup ? team_name afltfpehwv password ysjlpbtubh
+POST register_admin ? username admin password 123456
+GET players ? team_name Manchester_United fw ranks
+POST buy_player ? name Nathan Fraser
+LOL
+GET users_ranking
+GET users_ranking
+GET squad ? 
+POST signup ? team_name erymsjrgbh password xtxgkpnabc
+POST signup ? team_name oorjtxaikn password Babak
+LOL
+POST signup ? team_name wourwlkyga password atirzhazbj
+GET players ? team_name AFC_Bournemouth GG Naeeni
+GET squad ? fantasy_team Arsenal_FC
+POST sell_player ? name Japhet Tanganga
+POST logout
+GET matches_result_league ? week_num 15
+POST open_transfer_window
+POST buy_player ? name G. Xhaka
+GET squad ? 
+POST buy_player ? name Carney Chukwuemeka
+POST sell_player ? name R. Loftus-Cheek
+GET users_ranking
+GET team_of_the_week ? week_num 19
+POST buy_player ? name Jack Stephens
+POST logout
+POST logout
+LOL
+GET users_ranking
+GET squad ? fantasy_team 0:33AM
+POST logout
+POST sell_player ? name Joe Rothwell
+POST pass_week
+POST pass_week
+GET squad ? fantasy_team Crystal_Palace
+POST close_transfer_window
+POST open_transfer_window
+POST buy_player ? name S. Carson
+GET matches_result_league ? week_num 16
+GET squad ? 
+GET team_of_the_week ? 
+LOL
+POST signup ? team_name ssetlfunpl password vjpclelryh
+LOL
+POST signup ? team_name nabnduniuw password wikaiojpvb
+POST close_transfer_window
+GET squad ? 
+POST signup ? team_name vcsyzfbxyf password hzpubmivki
+GET matches_result_league ? week_num 14
+POST signup ? team_name gldsllqvah password 
+GET users_ranking
+POST pass_week
+POST open_transfer_window
+POST signup ? team_name edocubperi password 
+POST close_transfer_window
+POST pass_week
+GET players ? team_name Aston_Villa df ranks
+POST open_transfer_window
+GET team_of_the_week ? week_num 16
+POST close_transfer_window
+LOL
+POST logout
+POST close_transfer_window
+GET squad ? fantasy_team Nottingham_Forest
+POST buy_player ? name J. Duran
+GET users_ranking
+LOL
+POST pass_week
+POST logout
+GET squad ? fantasy_team Chelsea_FC
+POST pass_week
+GET league_standings
+LOL
+POST login ? team_name usqdreeqdh password fzeytdaduo
+POST signup ? team_name htsidmslbp password mgubjeoiqy
+LOL
+POST pass_week
+POST signup ? team_name aosipiykah password zhczcjqbws
+POST signup ? team_name clozrmlkgy password oukncigubo
+GET players ? team_name Leicester_City GG
+LOL
+GET squad ? fantasy_team Chelsea_FC
+GET users_ranking
+POST signup ? team_name wxaxdbskno password qkztlomyka
+POST signup ? team_name 
+POST close_transfer_window
+POST signup ? team_name uthpbikmba password ezphralmeo
+LOL
+LOL
+GET matches_result_league ? week_num 12
+POST login ? team_name wxaxdbskno password qkztlomyka
+GET squad ? 
+POST signup ? team_name okoumjseai password fdmweakskz
+POST close_transfer_window
+POST pass_week
+POST close_transfer_window
+POST buy_player ? name Demarai Gray
+POST logout
+GET matches_result_league ? week_num 5
+POST pass_week
+POST register_admin ? username admin password 123456
+LOL
+POST logout
+POST buy_player ? name L. Shaw
+POST signup ? team_name tmeazgrgra password jtyykyimje
+POST sell_player ? name D. Burn
+GET squad ? fantasy_team Liverpool_FC
+LOL
+POST buy_player ? name Joao Moutinho
+GET users_ranking
+GET players ? team_name 
+GET squad ? West_Ham_United
+GET users_ranking
+GET users_ranking
+GET matches_result_league ? week_num 7
+GET users_ranking
+POST buy_player ? name Louie Moulden
+GET players ? team_name Brighton_FC md
+GET players ? team_name 
+GET users_ranking
+GET matches_result_league ? week_num 6
+POST pass_week
+POST sell_player ? name T. Lamptey
+LOL
+LOL
+POST buy_player ? name J. Tarkowski
+POST signup ? team_name mbhbvnqdvh password gpbxutnqpm
+POST register_admin ? username admin password 123456
+POST logout
+POST register_admin ? username admin password 123456
+POST register_admin ? username admin password 123456
+POST buy_player ? name D. Kulusevski
+GET users_ranking
+POST pass_week
+POST register_admin ? username 
+POST sell_player ? name D. Sanchez
+POST logout
+GET matches_result_league ? 
+POST pass_week
+POST logout
+POST pass_week
+POST pass_week
+POST close_transfer_window
+GET players ? team_name Brentford_FC md ranks
+POST login ? team_name okoumjseai password fdmweakskz
+GET matches_result_league ? week_num 3
+POST buy_player ? name Harvey Barnes
+POST login ? team_name 
+GET players ? team_name West_Ham_United md ranks
+GET team_of_the_week ? 
+LOL
+POST signup ? team_name bnrpyckkox password covsklucjq
+POST logout
+GET players ? team_name Southampton_FC gk ranks
+POST close_transfer_window
+GET league_standings
+LOL
+POST open_transfer_window
+POST signup ? team_name ydkevvxgnz
+POST login ? team_name 
+GET squad ? fantasy_team 0:33AM
+POST open_transfer_window
+LOL
+GET matches_result_league ? 2
+POST buy_player ? name Jack Wells-Morrison
+POST pass_week
+POST close_transfer_window
+GET users_ranking
+POST open_transfer_window
+POST pass_week
+POST pass_week
+POST logout
+POST register_admin ? username admin password 123456
+POST signup ? team_name zxrlzrsqkr password lwfyegwvyk
+GET squad ? fantasy_team Newcastle_United
+POST close_transfer_window
+POST pass_week
+LOL
+GET league_standings
+POST buy_player ? name M. Akanji
+POST login ? team_name aosipiykah password zhczcjqbws
+GET league_standings
+GET players ? team_name Leeds_United df ranks
+GET squad ? fantasy_team Crystal_Palace
+GET players ? team_name Brentford_FC fw ranks
+POST register_admin ? username admin password 123456
+GET squad ? fantasy_team Nottingham_Forest
+POST pass_week
+POST open_transfer_window
+GET team_of_the_week ? 
+POST login ? team_name afltfpehwv password ysjlpbtubh
+LOL
+POST sell_player ? name Brenden Aaronson
+POST logout
+POST close_transfer_window
+POST pass_week
+POST signup ? team_name nlfepmjirf password wdekrbdync
+GET squad ? 
+GET squad ? fantasy_team Southampton_FC
+POST close_transfer_window
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET squad ? 
+GET users_ranking
+GET league_standings
+POST logout
+GET users_ranking
+POST register_admin ? username admin password 123456
+POST buy_player ? name M. Salisu
+POST open_transfer_window
+LOL
+GET team_of_the_week ? week_num 9
+LOL
+POST close_transfer_window
+LOL
+GET league_standings
+POST close_transfer_window
+POST signup ? team_name fnorntvicp password decpqfbrzo
+LOL
+POST buy_player ? name Yasin Ayari
+GET users_ranking
+GET team_of_the_week ? week_num 13
+LOL
+LOL
+LOL
+GET users_ranking
+POST sell_player ? name Reece James
+GET users_ranking
+POST register_admin ? username admin password 123456
+GET users_ranking
+LOL
+POST register_admin ? username admin password 123456
+GET squad ? 
+POST sell_player ? name Oliver Skipp
+POST pass_week
+POST logout
+POST close_transfer_window
+POST open_transfer_window
+POST register_admin ? username admin password 123456
+POST login ? team_name sicozivtpd password 
+LOL
+POST sell_player ? name Tete
+GET matches_result_league ? 
+POST open_transfer_window
+GET league_standings
+POST signup ? team_name 
+POST sell_player ? name K. Mitoma
+GET players ? team_name Fulham_FC gk
+POST open_transfer_window
+GET league_standings
+LOL
+LOL
+LOL
+POST open_transfer_window
+GET league_standings
+POST close_transfer_window
+GET squad ? fantasy_team West_Ham_United
+POST signup ? team_name irdqbjqrah password qcrvqgjqol
+GET team_of_the_week ? week_num 19
+LOL
+GET squad ? 
+LOL
+GET matches_result_league ? 
+POST signup ? team_name 
+GET league_standings
+GET team_of_the_week ? week_num 18
+POST buy_player ? name Japhet Tanganga
+GET players ? team_name Chelsea_FC fw ranks
+LOL
+GET squad ? fantasy_team Brentford_FC
+POST buy_player ? name George Wickens
+POST close_transfer_window
+GET matches_result_league ? week_num 7
+GET league_standings
+POST buy_player ? name Lucas Moura
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? week_num 15
+GET users_ranking
+POST open_transfer_window
+LOL
+POST sell_player ? name Keylor Navas
+POST logout
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 12
+POST signup ? team_name bxhlygouxn password bhdyichaxr
+POST buy_player ? name E. Anderson
+POST login ? team_name alqiwtekrk password kxrzszzoxz
+POST buy_player ? name L. Dunk
+LOL
+GET team_of_the_week ? week_num 18
+POST signup ? team_name ukonmeegum password ofkvejduba
+GET users_ranking
+POST open_transfer_window
+POST close_transfer_window
+POST login ? team_name 
+POST signup ? team_name gxejtscrcf password qcjvyiwjzw
+GET users_ranking
+GET players ? team_name Manchester_United gk ranks
+POST logout
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? week_num 16
+GET league_standings
+POST register_admin ? username adminpassword 123456
+GET league_standings
+LOL
+POST login ? team_name lzxhgpwyhn password kbpzlnyvmm
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+POST close_transfer_window
+GET team_of_the_week ? week_num 3
+LOL
+POST close_transfer_window
+POST login ? team_name vcsyzfbxyf password Babak
+POST login ? team_name lzxhgpwyhn password kbpzlnyvmm
+GET players ? team_name Tottenham_Hotspur md ranks
+LOL
+GET squad ? fantasy_team Tottenham_Hotspur
+POST register_admin ? username adminpassword 123456
+GET players ? team_name Leeds_United md ranks
+GET matches_result_league ? week_num 5
+POST login ? team_name sicozivtpd password zboxrryyoi
+POST close_transfer_window
+GET team_of_the_week ? 
+GET matches_result_league ? week_num 2
+POST register_admin ? username admin password 123456
+POST login ? team_name fnorntvicp password decpqfbrzo
+POST open_transfer_window
+POST register_admin ? username admin password 123456
+POST buy_player ? name J. Milner
+LOL
+POST register_admin ? username admin password 123456
+POST pass_week
+LOL
+POST open_transfer_window
+GET league_standings
+LOL
+POST open_transfer_window
+GET matches_result_league ? 
+GET team_of_the_week ? week_num 13
+GET squad ? 
+POST login ? team_name alqiwtekrk password kxrzszzoxz
+POST close_transfer_window
+POST sell_player ? name M. Odegaard
+GET players ? team_name Arsenal_FC gk ranks
+POST login ? team_name twrhowlqia password pdnjjrjysz
+GET users_ranking
+GET squad ? fantasy_team Everton_FC
+LOL
+GET team_of_the_week ? week_num 19
+POST open_transfer_window
+POST sell_player ? name Pape Sarr
+POST register_admin ? username adminpassword 123456
+LOL
+LOL
+GET players ? team_name Manchester_United gk ranks
+POST pass_week
+POST open_transfer_window
+POST close_transfer_window
+GET league_standings
+GET league_standings
+POST register_admin ? username UTpassword 
+LOL
+GET users_ranking
+POST close_transfer_window
+GET squad ? 
+POST logout
+POST close_transfer_window
+POST sell_player ? name A. Lallana
+POST sell_player ? name Alfie Devine
+GET squad ? fantasy_team Everton_FC
+GET squad ? fantasy_team Brighton_FC
+GET matches_result_league ? week_num 12
+POST close_transfer_window
+POST logout
+GET league_standings
+GET league_standings
+POST open_transfer_window
+POST login ? team_name 
+GET team_of_the_week ? 
+GET squad ? fantasy_team 0:33AM
+GET matches_result_league ? week_num 7
+POST open_transfer_window
+LOL
+GET players ? team_name AFC_Bournemouth fw ranks
+POST buy_player ? name Harrison Ashby
+POST logout
+POST sell_player ? name Nick Pope
+POST register_admin ? username admin password 123456
+GET users_ranking
+GET users_ranking
+POST sell_player ? name T. Adams
+POST signup ? team_name 
+POST sell_player ? name Nathan Fraser
+GET squad ? 
+POST login ? team_name erymsjrgbh password xtxgkpnabc
+POST login ? team_name Hosseini_Mohtasham password Babak
+LOL
+POST open_transfer_window
+LOL
+POST logout
+POST pass_week
+POST pass_week
+POST register_admin ? username UT
+POST sell_player ? name A. Ramsdale
+POST logout
+GET players ? team_name Liverpool_FC fw ranks
+GET matches_result_league ? 
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+POST buy_player ? name I. Gundogan
+POST close_transfer_window
+LOL
+GET squad ? 
+LOL
+GET league_standings
+GET matches_result_league ? week_num 7
+POST sell_player ? name M. Niakhate
+GET team_of_the_week ? 
+POST logout
+POST buy_player ? name Pedro Porro
+POST open_transfer_window
+GET users_ranking
+POST close_transfer_window
+GET players ? team_name Wolves gk ranks
+GET users_ranking
+POST close_transfer_window
+LOL
+POST login ? team_name aosipiykah password zhczcjqbws
+GET players ? team_name Mahdi
+GET matches_result_league ? 
+GET squad ? fantasy_team Brighton_FC
+POST close_transfer_window
+GET squad ? fantasy_team 0:33AM
+POST buy_player ? name Patrick Bamford
+POST login ? team_name xizqsagqqa password gsbofdjmdp
+GET matches_result_league ? week_num 3
+POST close_transfer_window
+POST pass_week
+GET players ? team_name Liverpool_FC GG Naeeni
+GET players ? team_name 
+LOL
+POST register_admin ? username admin password 123456
+POST logout
+POST buy_player ? name Joe Willock
+GET team_of_the_week ? week_num 18
+POST pass_week
+GET matches_result_league ? week_num 7
+GET matches_result_league ? 
+GET team_of_the_week ? week_num 13
+GET team_of_the_week ? week_num 15
+POST open_transfer_window
+POST sell_player ? name E. Buendia
+POST sell_player ? name I. Gueye
+POST sell_player ? name N. Kebano
+GET league_standings
+GET team_of_the_week ? week_num 11
+GET players ? team_name Fulham_FC GG Naeeni
+GET matches_result_league ? 
+POST logout
+POST open_transfer_window
+GET league_standings
+POST buy_player ? name C. Gakpo
+LOL
+LOL
+POST buy_player ? name A. Lallana
+POST sell_player ? name L. Thomas
+POST logout
+POST login ? team_name aosipiykah password zhczcjqbws
+POST login ? team_name bxhlygouxn password bhdyichaxr
+POST open_transfer_window
+GET matches_result_league ? week_num 19
+POST sell_player ? name Julio Enciso
+GET matches_result_league ? week_num 12
+POST close_transfer_window
+GET league_standings
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 17
+POST logout
+LOL
+POST sell_player ? name O. Watkins
+POST login ? team_name mbhbvnqdvh password gpbxutnqpm
+POST register_admin ? username 
+GET team_of_the_week ? week_num 14
+GET squad ? 
+POST close_transfer_window
+GET users_ranking
+POST close_transfer_window
+LOL
+POST logout
+GET users_ranking
+GET squad ? fantasy_team 0:33AM
+POST pass_week
+GET squad ? fantasy_team Chelsea_FC
+GET matches_result_league ? 
+GET squad ? fantasy_team Nottingham_Forest
+POST buy_player ? name Isaac Price
+POST buy_player ? name R. Sanchez
+POST close_transfer_window
+LOL
+LOL
+GET team_of_the_week ? 
+POST close_transfer_window
+GET players ? team_name Everton_FC md ranks
+POST pass_week
+GET users_ranking
+GET players ? team_name Mahdi
+GET players ? team_name Leicester_City fw ranks
+GET players ? team_name Mahdi
+GET squad ? 
+LOL
+GET users_ranking
+POST logout
+GET matches_result_league ? week_num 8
+LOL
+POST login ? team_name usqdreeqdh password fzeytdaduo
+GET players ? team_name Brighton_FC md ranks
+LOL
+GET team_of_the_week ? 
+POST login ? team_name usqdreeqdh password fzeytdaduo
+POST signup ? team_name aarmoizpfo password zmmkkszuuw
+POST logout
+LOL
+LOL
+POST sell_player ? name Phil Jones
+LOL
+LOL
+POST open_transfer_window
+GET squad ? fantasy_team Brighton_FC
+GET team_of_the_week ? week_num 16
+GET league_standings
+POST sell_player ? name Jack Stephens
+LOL
+POST signup ? team_name htsidmslbp password 
+GET matches_result_league ? week_num 18
+POST close_transfer_window
+POST login ? team_name oorjtxaikn password becebuknra
+POST signup ? team_name eutampbcil password tvcygosiyz
+POST open_transfer_window
+POST signup ? team_name znhxublpsa password uanfqpejyi
+POST login ? team_name alqiwtekrk password kxrzszzoxz
+POST register_admin ? username admin password 123456
+POST login ? team_name 
+POST buy_player ? name M. Gibbs-White
+GET league_standings
+GET users_ranking
+POST signup ? team_name hsmwdvvvyt password ggopkvoywj
+POST login ? team_name edocubperi password dqxoxqpipl
+GET team_of_the_week ? 
+POST signup ? team_name qtzvnmcfbv password nwirhkaabm
+GET players ? team_name AFC_Bournemouth fw ranks
+POST pass_week
+POST logout
+GET league_standings
+GET league_standings
+POST sell_player ? name Scott Mctominay
+GET team_of_the_week ? week_num 11
+GET league_standings
+POST login ? team_name uthpbikmba password ezphralmeo
+GET users_ranking
+GET squad ? Nottingham_Forest
+GET team_of_the_week ? week_num 12
+GET matches_result_league ? 
+POST pass_week
+GET players ? team_name 
+LOL
+POST logout
+GET users_ranking
+POST logout
+POST sell_player ? name Gabriel Jesus
+GET team_of_the_week ? week_num 11
+GET matches_result_league ? week_num 11
+POST pass_week
+POST close_transfer_window
+GET users_ranking
+POST open_transfer_window
+POST buy_player ? name Ricardo Pereira
+GET matches_result_league ? 
+POST buy_player ? name Hee-Chan Hwang
+POST logout
+POST register_admin ? username admin password 123456
+POST buy_player ? name V. Coufal
+POST logout
+LOL
+POST pass_week
+GET squad ? 
+POST login ? team_name wourwlkyga password atirzhazbj
+GET league_standings
+POST buy_player ? name E. Anderson
+GET matches_result_league ? week_num 19
+POST pass_week
+POST logout
+POST signup ? team_name kugkcejtbs password mccdxdfujm
+GET matches_result_league ? 
+LOL
+POST login ? team_name dmbnobyctu password Babak
+GET users_ranking
+GET users_ranking
+LOL
+POST register_admin ? username admin password 123456
+POST buy_player ? name Romaine Mundle
+POST pass_week
+GET league_standings
+LOL
+GET users_ranking
+GET league_standings
+POST logout
+POST logout
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST buy_player ? name J. Manquillo
+POST register_admin ? username admin password 123456
+GET players ? team_name 
+GET players ? team_name Fulham_FC fw ranks
+LOL
+POST register_admin ? username admin password 123456
+POST signup ? team_name 
+LOL
+GET players ? team_name Manchester_United fw
+LOL
+GET team_of_the_week ? 
+GET matches_result_league ? week_num 110
+POST buy_player ? name Tom Davies
+GET team_of_the_week ? week_num 10
+GET users_ranking
+GET matches_result_league ? 
+GET squad ? fantasy_team Chelsea_FC
+POST open_transfer_window
+POST open_transfer_window
+POST buy_player ? name Matthew Dibley
+GET matches_result_league ? week_num 1
+LOL
+POST close_transfer_window
+POST login ? team_name ukonmeegum password ofkvejduba
+POST logout
+GET squad ? fantasy_team Brighton_FC
+GET team_of_the_week ? 
+POST logout
+GET squad ? 
+POST login ? team_name irdqbjqrah password qcrvqgjqol
+GET players ? team_name 
+POST login ? team_name oorjtxaikn password becebuknra
+GET team_of_the_week ? week_num 6
+LOL
+POST login ? team_name afltfpehwv password ysjlpbtubh
+GET league_standings
+GET team_of_the_week ? 
+POST logout
+POST sell_player ? name Nathan Patterson
+LOL
+GET matches_result_league ? week_num 12
+POST sell_player ? name Kofi Balmer
+POST buy_player ? name Y. Yarmolyuk
+GET matches_result_league ? week_num 5
+POST logout
+POST logout
+GET team_of_the_week ? 
+POST login ? team_name wxaxdbskno password qkztlomyka
+POST signup ? team_name tqobvbknbb password rmnuvvvefe
+GET users_ranking
+GET team_of_the_week ? week_num 17
+POST login ? team_name 
+GET players ? team_name Fulham_FC ranks
+POST register_admin ? username admin password 123456
+POST sell_player ? name N. Ake
+LOL
+POST sell_player ? name Ruben Vinagre
+POST open_transfer_window
+LOL
+POST logout
+GET matches_result_league ? week_num 1
+POST register_admin ? username adminpassword 123456
+LOL
+POST signup ? team_name muommejwzd password sqdxfxzlrv
+GET matches_result_league ? 
+POST signup ? team_name wkofcoorli password cctwdimgdu
+GET users_ranking
+POST open_transfer_window
+LOL
+POST login ? team_name hsmwdvvvyt password ggopkvoywj
+GET league_standings
+POST logout
+POST register_admin ? username 
+POST buy_player ? name Dominic Solanke
+POST sell_player ? name Jannik Vestergaard
+GET users_ranking
+POST pass_week
+GET league_standings
+POST open_transfer_window
+POST buy_player ? name T. Ream
+GET players ? team_name Leeds_United md ranks
+GET league_standings
+GET players ? team_name Chelsea_FC gk ranks
+POST buy_player ? name C. Azpilicueta
+LOL
+POST close_transfer_window
+LOL
+POST pass_week
+POST buy_player ? name M. Odegaard
+POST register_admin ? username 
+POST sell_player ? name Orel Mangala
+LOL
+GET squad ? fantasy_team Leeds_United
+POST pass_week
+GET users_ranking
+POST open_transfer_window
+GET team_of_the_week ? 
+GET squad ? fantasy_team Aston_Villa
+GET players ? team_name Leicester_City md ranks
+POST pass_week
+GET matches_result_league ? week_num 3
+GET players ? team_name Fulham_FC md ranks
+POST open_transfer_window
+POST close_transfer_window
+POST signup ? team_name kkxuydkkgg password vhmasrzjum
+GET squad ? 
+POST sell_player ? name W. Mckennie
+LOL
+POST login ? team_name znhxublpsa password uanfqpejyi
+GET users_ranking
+GET league_standings
+POST buy_player ? name L. Dendoncker
+LOL
+GET squad ? fantasy_team Newcastle_United
+GET players ? team_name Crystal_Palace fw ranks
+GET matches_result_league ? week_num 6
+LOL
+POST login ? team_name okoumjseai password fdmweakskz
+GET players ? team_name Crystal_Palace fw ranks
+LOL
+POST sell_player ? name I. Gueye
+GET team_of_the_week ? week_num 1
+POST signup ? team_name vudbqtqtag password wprtyxatyo
+POST login ? team_name eutampbcil password tvcygosiyz
+POST login ? team_name mbhbvnqdvh password gpbxutnqpm
+LOL
+GET league_standings
+GET users_ranking
+POST close_transfer_window
+POST pass_week
+GET matches_result_league ? week_num 6
+GET team_of_the_week ? week_num 12
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? 
+POST sell_player ? name M. Keane
+LOL
+POST sell_player ? name Fabio Vieira
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+POST register_admin ? username admin password 123456
+LOL
+POST signup ? team_name psxoyckvkp password zpapoxgali
+POST close_transfer_window
+LOL
+POST open_transfer_window
+LOL
+POST signup ? team_name bpvfxstcqe password oggpcmqxon
+LOL
+GET users_ranking
+LOL
+GET users_ranking
+POST buy_player ? name K. Moore
+GET players ? team_name AFC_Bournemouth md ranks
+POST signup ? team_name qrkbeutxzp password uxqcwhkzmx
+LOL
+POST sell_player ? name James Garner
+GET team_of_the_week ? week_num 17
+GET league_standings
+POST close_transfer_window
+GET squad ? 
+POST close_transfer_window
+GET players ? team_name Brighton_FC md
+POST register_admin ? username 
+GET matches_result_league ? week_num 118
+GET team_of_the_week ? 
+POST open_transfer_window
+POST signup ? team_name ayktmqdork password pfocygpico
+POST logout
+POST sell_player ? name N. Keita
+POST buy_player ? name A. Lokonga
+POST close_transfer_window
+LOL
+LOL
+LOL
+POST open_transfer_window
+GET team_of_the_week ? week_num 6
+GET players ? team_name Leicester_City md ranks
+GET league_standings
+GET team_of_the_week ? week_num 5
+GET matches_result_league ? week_num 4
+LOL
+GET squad ? fantasy_team Wolves
+LOL
+POST close_transfer_window
+POST sell_player ? name K. Iheanacho
+GET players ? team_name 
+GET players ? team_name Brighton_FC fw ranks
+POST close_transfer_window
+LOL
+LOL
+POST close_transfer_window
+POST sell_player ? name E. Dier
+GET squad ? fantasy_team Man._City
+POST open_transfer_window
+GET league_standings
+POST open_transfer_window
+GET squad ? fantasy_team Leeds_United
+GET league_standings
+POST buy_player ? name M. Odegaard
+GET squad ? fantasy_team West_Ham_United
+GET league_standings
+POST login ? team_name 
+POST register_admin ? username admin password 123456
+GET users_ranking
+GET league_standings
+POST pass_week
+GET players ? team_name 
+GET team_of_the_week ? week_num 15
+POST open_transfer_window
+POST buy_player ? name E. Anderson
+POST sell_player ? name Rhys Williams
+LOL
+GET users_ranking
+POST login ? team_name zxrlzrsqkr password 
+POST open_transfer_window
+POST logout
+POST pass_week
+LOL
+POST pass_week
+GET league_standings
+GET matches_result_league ? week_num 12
+POST pass_week
+POST pass_week
+GET team_of_the_week ? 3
+GET team_of_the_week ? 
+POST buy_player ? name Romaine Mundle
+POST pass_week
+POST login ? team_name ssetlfunpl password vjpclelryh
+GET users_ranking
+GET league_standings
+POST open_transfer_window
+POST open_transfer_window
+POST signup ? team_name xcbhxfgdbu password vqaqvjyxra
+POST sell_player ? name J. Andersen
+POST close_transfer_window
+GET squad ? fantasy_team Wolves
+POST buy_player ? name P. Foden
+POST buy_player ? name R. Kristensen
+LOL
+GET matches_result_league ? week_num 8
+LOL
+POST open_transfer_window
+POST open_transfer_window
+GET league_standings
+LOL
+LOL
+POST pass_week
+POST buy_player ? name M. Akanji
+POST buy_player ? name N. Kante
+LOL
+POST register_admin ? username admin password 123456
+LOL
+POST register_admin ? username admin password 123456
+POST buy_player ? name I. Toney
+POST logout
+GET team_of_the_week ? week_num 18
+GET team_of_the_week ? week_num 12
+GET team_of_the_week ? week_num 12
+POST pass_week
+POST logout
+POST sell_player ? name Matheus Cunha
+POST login ? team_name bxhlygouxn password bhdyichaxr
+POST sell_player ? name George Wickens
+GET squad ? fantasy_team 0:33AM
+POST login ? team_name znhxublpsa password uanfqpejyi
+POST logout
+POST login ? team_name afltfpehwv password ysjlpbtubh
+GET matches_result_league ? week_num 9
+POST sell_player ? name K. Lewis-Potter
+POST sell_player ? name M. Damsgaard
+POST open_transfer_window
+GET matches_result_league ? week_num 11
+POST logout
+POST open_transfer_window
+POST buy_player ? name N. Ahamada
+POST buy_player ? name K. Tete
+POST login ? team_name 
+POST close_transfer_window
+POST close_transfer_window
+POST logout
+POST logout
+POST login ? team_name 
+GET team_of_the_week ? week_num 18
+POST sell_player ? name B. Soumare
+POST signup ? team_name quhjvxobif password jexdxnscer
+GET matches_result_league ? week_num 11
+POST sell_player ? name Sonny Perkins
+GET team_of_the_week ? week_num 5
+POST pass_week
+GET league_standings
+POST sell_player ? name V. Van Dijk
+GET users_ranking
+GET matches_result_league ? week_num 112
+POST register_admin ? username admin password 123456
+POST close_transfer_window
+POST logout
+POST login ? team_name nlfepmjirf password wdekrbdync
+LOL
+GET matches_result_league ? 
+POST logout
+POST sell_player ? name J. Vardy
+POST close_transfer_window
+POST sell_player ? name K. Moore
+GET users_ranking
+GET league_standings
+GET league_standings
+LOL
+LOL
+GET matches_result_league ? week_num 13
+POST open_transfer_window
+GET users_ranking
+LOL
+GET users_ranking
+POST logout
+POST open_transfer_window
+GET users_ranking
+GET matches_result_league ? week_num 107
+GET team_of_the_week ? 
+GET team_of_the_week ? week_num 7
+GET players ? team_name Everton_FC gk ranks
+GET users_ranking
+GET team_of_the_week ? week_num 12
+POST register_admin ? username admin password 123456
+LOL
+POST open_transfer_window
+POST buy_player ? name J. Andersen
+GET team_of_the_week ? week_num 16
+POST open_transfer_window
+POST signup ? team_name 
+GET squad ? fantasy_team Brentford_FC
+POST login ? team_name zxrlzrsqkr password lwfyegwvyk
+GET matches_result_league ? 
+POST close_transfer_window
+POST buy_player ? name B. Leno
+GET users_ranking
+POST buy_player ? name Pape Sarr
+LOL
+POST logout
+LOL
+LOL
+POST close_transfer_window
+POST sell_player ? name Isaac Price
+POST close_transfer_window
+POST signup ? team_name cfioasxofi password qscbdjimpb
+POST pass_week
+GET users_ranking
+POST buy_player ? name D. Sadi
+POST buy_player ? name S. Aurier
+POST pass_week
+POST logout
+POST logout
+GET users_ranking
+GET team_of_the_week ? week_num 6
+POST close_transfer_window
+POST buy_player ? name Calvin Ramsay
+POST logout
+GET users_ranking
+POST pass_week
+POST sell_player ? name B. Leno
+POST register_admin ? username admin password 123456
+POST pass_week
+GET matches_result_league ? 
+POST logout
+POST sell_player ? name Y. Wissa
+POST pass_week
+GET users_ranking
+POST sell_player ? name Fabinho
+POST open_transfer_window
+POST signup ? team_name etbzmvepla password gmlrprehwg
+GET matches_result_league ? week_num 1
+POST buy_player ? name Joao Felix
+GET matches_result_league ? 
+GET team_of_the_week ? week_num 17
+POST open_transfer_window
+POST buy_player ? name L. Bailey
+POST buy_player ? name J. Milner
+GET users_ranking
+POST sell_player ? name Matthew Longstaff
+GET squad ? fantasy_team Crystal_Palace
+GET matches_result_league ? week_num 16
+GET team_of_the_week ? 
+POST signup ? team_name xrfvrdcvir password lbpuygazai
+POST sell_player ? name Caoimhin Kelleher
+GET team_of_the_week ? week_num 3
+POST open_transfer_window
+GET matches_result_league ? 
+GET players ? team_name Brighton_FC df ranks
+GET squad ? fantasy_team Man._City
+POST open_transfer_window
+GET players ? team_name Chelsea_FC df ranks
+GET users_ranking
+GET league_standings
+POST open_transfer_window
+GET team_of_the_week ? week_num 9
+LOL
+POST logout
+POST sell_player ? name N. Mendy
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 6
+POST close_transfer_window
+LOL
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+GET league_standings
+GET squad ? 
+POST buy_player ? name C. Kouyate
+POST buy_player ? name E. Pollock
+POST open_transfer_window
+POST close_transfer_window
+POST buy_player ? name R. Christie
+LOL
+POST register_admin ? username admin password 123456
+GET matches_result_league ? 
+POST register_admin ? username 
+GET team_of_the_week ? 
+POST sell_player ? name T. Awoniyi
+POST buy_player ? name A. Onana
+POST buy_player ? name Nick Pope
+POST register_admin ? username admin password 123456
+GET league_standings
+POST register_admin ? username admin password 123456
+GET users_ranking
+POST sell_player ? name F. Pellistri
+POST sell_player ? name Lucas Moura
+LOL
+POST buy_player ? name Joel Robles
+POST signup ? team_name aouxfbbcgr password keketqegoy
+GET squad ? 
+POST pass_week
+GET players ? team_name Fulham_FC gk ranks
+GET users_ranking
+POST buy_player ? name R. Sanchez
+POST buy_player ? name K. Tierney
+POST logout
+POST sell_player ? name Sekou Mara
+POST register_admin ? username admin password 123456
+LOL
+LOL
+POST sell_player ? name C. Eriksen
+POST signup ? team_name shebtmbhgz password ejsjvbvszt
+GET users_ranking
+POST logout
+POST pass_week
+GET league_standings
+POST pass_week
+POST close_transfer_window
+POST logout
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST close_transfer_window
+POST register_admin ? username admin password 123456
+POST buy_player ? name E. Dier
+GET users_ranking
+POST sell_player ? name Daniel James
+POST open_transfer_window
+POST login ? team_name aouxfbbcgr password keketqegoy
+POST logout
+POST buy_player ? name S. McKenna
+POST buy_player ? name Joao Felix
+POST register_admin ? username admin password 123456
+LOL
+GET users_ranking
+POST logout
+LOL
+POST logout
+GET players ? team_name Liverpool_FC ranks
+GET squad ? fantasy_team Arsenal_FC
+GET matches_result_league ? week_num 17
+GET team_of_the_week ? week_num 2
+POST sell_player ? name A. Lokonga
+POST signup ? team_name nikgwrzvxu password dmfbifzpoo
+GET players ? team_name Brentford_FC md ranks
+LOL
+POST logout
+GET players ? team_name Leicester_City df ranks
+POST buy_player ? name Joao Moutinho
+POST buy_player ? name Takehiro Tomiyasu
+LOL
+GET team_of_the_week ? week_num 12
+POST buy_player ? name Demarai Gray
+POST login ? team_name wourwlkyga
+GET team_of_the_week ? 
+GET matches_result_league ? week_num 7
+POST sell_player ? name Stefan Parkes
+GET matches_result_league ? 
+POST signup ? team_name abbfdbqzcm password wffnnddhke
+GET matches_result_league ? 
+POST register_admin ? username 
+GET league_standings
+POST register_admin ? username admin password 123456
+POST logout
+POST open_transfer_window
+GET users_ranking
+POST pass_week
+POST logout
+GET matches_result_league ? 
+POST pass_week
+GET matches_result_league ? week_num 9
+POST open_transfer_window
+POST sell_player ? name James Bree
+POST open_transfer_window
+GET team_of_the_week ? week_num 1
+POST pass_week
+POST logout
+GET squad ? fantasy_team Newcastle_United
+GET matches_result_league ? 
+POST register_admin ? username 
+GET players ? team_name Manchester_United gk ranks
+GET squad ? fantasy_team Arsenal_FC
+GET players ? team_name Man._City fw ranks
+POST close_transfer_window
+POST signup ? team_name ciqtarxmex password xeroagwvwe
+GET matches_result_league ? week_num 14
+POST signup ? team_name bpjvxkbsvq password oyrtnsnush
+GET players ? team_name Newcastle_United df ranks
+LOL
+LOL
+POST register_admin ? username admin password 123456
+LOL
+GET league_standings
+GET league_standings
+GET team_of_the_week ? 
+GET squad ? fantasy_team Southampton_FC
+POST signup ? team_name sqndvcdfgh password qlmfqddhib
+POST pass_week
+POST sell_player ? name J. Veltman
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+GET matches_result_league ? 
+POST sell_player ? name E. Fernandez
+GET team_of_the_week ? 
+POST register_admin ? username admin password 123456
+POST login ? team_name irdqbjqrah password qcrvqgjqol
+POST open_transfer_window
+GET players ? team_name Nottingham_Forest gk ranks
+GET team_of_the_week ? week_num 12
+POST buy_player ? name Jean Mateta
+POST logout
+POST close_transfer_window
+POST sell_player ? name A. Danjuma
+LOL
+POST pass_week
+POST pass_week
+POST register_admin ? username admin password 123456
+GET matches_result_league ? week_num 10
+LOL
+GET team_of_the_week ? week_num 17
+GET squad ? 
+POST register_admin ? username admin password 123456
+POST signup ? team_name cxbmyushgt password mkzejxxpag
+POST logout
+POST close_transfer_window
+GET league_standings
+GET matches_result_league ? week_num 18
+GET matches_result_league ? 
+POST close_transfer_window
+POST register_admin ? username UT
+POST open_transfer_window
+LOL
+GET squad ? fantasy_team Crystal_Palace
+POST login ? team_name aosipiykah password zhczcjqbws
+POST pass_week
+POST signup ? team_name 
+POST open_transfer_window
+POST sell_player ? name W. Weghorst
+POST signup ? team_name tpvwyjzvuy password ggojskkugy
+POST signup ? team_name bnzzcmzisq password hkxgsujxjd
+POST register_admin ? username admin password 123456
+POST pass_week
+POST close_transfer_window
+GET matches_result_league ? week_num 7
+POST pass_week
+GET squad ? fantasy_team Arsenal_FC
+LOL
+POST logout
+POST buy_player ? name P. Dummett
+LOL
+POST close_transfer_window
+LOL
+POST logout
+LOL
+GET squad ? fantasy_team Man._City
+GET players ? team_name Brentford_FC md ranks
+POST buy_player ? name Joseph Hodge
+GET users_ranking
+POST signup ? team_name 
+POST open_transfer_window
+GET team_of_the_week ? week_num 16
+LOL
+POST close_transfer_window
+GET team_of_the_week ? week_num 17
+POST open_transfer_window
+POST logout
+LOL
+GET squad ? fantasy_team AFC_Bournemouth
+POST close_transfer_window
+GET players ? team_name Aston_Villa md
+POST login ? team_name vudbqtqtag password wprtyxatyo
+POST close_transfer_window
+POST close_transfer_window
+POST buy_player ? name S. March
+POST close_transfer_window
+POST pass_week
+GET matches_result_league ? week_num 5
+POST open_transfer_window
+GET matches_result_league ? 
+POST logout
+POST register_admin ? username admin password 123456
+POST buy_player ? name Phil Jones
+POST buy_player ? name Thiago
+POST open_transfer_window
+GET users_ranking
+GET users_ranking
+GET league_standings
+LOL
+POST signup ? team_name syhhyvgsbl password wdgetufuuy
+POST logout
+GET team_of_the_week ? 2
+POST login ? team_name mbhbvnqdvh password gpbxutnqpm
+GET league_standings
+POST login ? team_name dmbnobyctu password vviqophcht
+POST pass_week
+GET team_of_the_week ? week_num 15
+POST sell_player ? name Brandon Austin
+GET players ? team_name Liverpool_FC gk
+POST open_transfer_window
+GET squad ? fantasy_team Newcastle_United
+GET squad ? 
+POST pass_week
+POST buy_player ? name Archie Gray
+GET squad ? 
+GET matches_result_league ? week_num 11
+GET squad ? fantasy_team Nottingham_Forest
+LOL
+LOL
+LOL
+LOL
+LOL
+POST signup ? team_name ixouulowxh password ooxghwxigm
+POST login ? team_name twrhowlqia password pdnjjrjysz
+LOL
+POST sell_player ? name L. Karius
+POST signup ? team_name jlmkhimask password xuiafevcyq
+POST pass_week
+POST buy_player ? name Matthew Craig
+GET users_ranking
+GET matches_result_league ? week_num 4
+POST signup ? team_name 
+POST register_admin ? username admin password 123456
+LOL
+GET users_ranking
+GET users_ranking
+LOL
+POST close_transfer_window
+GET users_ranking
+GET league_standings
+GET squad ? fantasy_team 0:33AM
+POST sell_player ? name L. Digne
+POST logout
+POST pass_week
+LOL
+POST login ? team_name vcsyzfbxyf password hzpubmivki
+GET team_of_the_week ? week_num 1
+POST buy_player ? name T. Soucek
+POST sell_player ? name M. Cucurella
+LOL
+POST open_transfer_window
+POST open_transfer_window
+POST login ? team_name ssetlfunpl password vjpclelryh
+POST sell_player ? name Fabio Vieira
+GET users_ranking
+POST close_transfer_window
+GET matches_result_league ? 
+LOL
+GET league_standings
+GET team_of_the_week ? week_num 6
+GET matches_result_league ? week_num 10
+LOL
+GET players ? team_name Brentford_FC df ranks
+POST logout
+GET users_ranking
+POST register_admin ? username admin password 123456
+GET team_of_the_week ? 
+GET team_of_the_week ? week_num 16
+POST register_admin ? username admin password 123456
+GET squad ? fantasy_team Arsenal_FC
+GET users_ranking
+LOL
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST logout
+POST open_transfer_window
+POST close_transfer_window
+GET team_of_the_week ? week_num 11
+POST register_admin ? username admin password 123456
+GET league_standings
+GET players ? team_name Wolves fw ranks
+POST sell_player ? name James Wright
+POST sell_player ? name Matt Targett
+POST logout
+GET matches_result_league ? week_num 3
+POST register_admin ? username adminpassword 
+LOL
+POST close_transfer_window
+POST open_transfer_window
+GET squad ? fantasy_team AFC_Bournemouth
+GET matches_result_league ? week_num 5
+GET players ? team_name 
+GET team_of_the_week ? 7
+GET players ? team_name Tottenham_Hotspur
+GET matches_result_league ? week_num 1
+POST pass_week
+POST pass_week
+POST sell_player ? name Casemiro
+POST sell_player ? name S. Lukic
+POST login ? team_name wxaxdbskno password qkztlomyka
+GET players ? team_name Man._City fw ranks
+LOL
+POST login ? team_name 
+POST pass_week
+POST signup ? team_name gorsxqqyxw password xkertaqwto
+POST pass_week
+POST login ? team_name 
+POST signup ? team_name qyxctqngnw password cfgmwlnfyo
+GET team_of_the_week ? 
+GET users_ranking
+GET squad ? 

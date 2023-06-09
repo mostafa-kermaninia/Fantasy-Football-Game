@@ -36,5 +36,5 @@ private:
     int yellow_cards_num;
     int red_cards_num;
 
-    double round_to(double pre, double value);
+    double round_to(double value);
 };
