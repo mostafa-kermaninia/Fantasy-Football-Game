@@ -301,7 +301,6 @@ void FutballFantasy::user_get_req(vector<string> &command_words)
         print_squad(command_words);
     else
         public_get_req(command_words);
-    // throw runtime_error(BAD_REQUEST_ER + "7");
 }
 
 void FutballFantasy::handle_post_requests(vector<string> &command_words)
@@ -450,8 +449,7 @@ void FutballFantasy::print_league_info()
 {
     sort_teams();
     int rank = 1;
-    cout << "league standing:" << endl;
-    // s ezafe she
+    cout << "league standings:" << endl;
     for (auto t : teams)
     {
         cout << rank << ". ";
@@ -771,3 +769,4 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
             selected_player->add_to_score(stod(name_and_score[1]));
     }
 }
+
