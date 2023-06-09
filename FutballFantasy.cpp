@@ -105,7 +105,7 @@ vector<Player *> FutballFantasy::find_bests(ROLE r)
                 chosen_players.insert(chosen_players.begin(), adding_player);
             }
         }
-        if (r == DF && chosen_players.size() == choose_limit && (chosen_players[0]->get_score() > chosen_players[1]->get_score() || (chosen_players[0]->get_score() == chosen_players[1]->get_score() && chosen_players[0]->get_name() > chosen_players[1]->get_name())))
+        if (r == DF && chosen_players.size() == choose_limit && (chosen_players[0]->get_score() > chosen_players[1]->get_score() || (chosen_players[0]->get_score() == chosen_players[1]->get_score() && chosen_players[0]->get_name() < chosen_players[1]->get_name())))
         {
             Player *swaped_player = chosen_players[0];
             chosen_players[0] = chosen_players[1];
@@ -132,7 +132,7 @@ bool FutballFantasy::better_than_chosen_players(vector<Player *> choosen_players
 {
     for (auto p : choosen_players)
         if (p->get_score() < new_player->get_score() ||
-            (p->get_score() == new_player->get_score() && p->get_name() < new_player->get_name()))
+            (p->get_score() == new_player->get_score() && p->get_name() > new_player->get_name()))
             return true;
     return false;
 }
@@ -463,8 +463,9 @@ void FutballFantasy::print_week_team(int week_number)
     if (week_number <= 0 || week_number > week_num)
         throw runtime_error(BAD_REQUEST_ER);
     vector<Player *> week_team_players = week_teams[week_number - 1]->get_players();
+    cout << "team of the week:" << endl;
     cout << fixed;
-    cout << "Goalkeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
+    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
     cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[1]->get_score() << endl;
     cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[2]->get_score() << endl;
     cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[3]->get_score() << endl;
@@ -769,4 +770,3 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
             selected_player->add_to_score(stod(name_and_score[1]));
     }
 }
-

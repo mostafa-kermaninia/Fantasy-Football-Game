@@ -64,5 +64,5 @@ void Player::reset_for_new_week()
 
 double Player::round_to(double value)
 {
-    return round(value * 10) / 10;
+    return round(value * 10 ) / 10;
 }
