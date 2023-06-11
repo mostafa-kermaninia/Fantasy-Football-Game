@@ -14,8 +14,12 @@ GoalKeeper *GoalKeeper::clone()
     return new GoalKeeper(*this);
 }
 
-void GoalKeeper::calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og)
+void GoalKeeper::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
 {
+    raw_point = INITIAL_GK_POINT;
+    raw_point += result;
+    
+    
 }
 
 void GoalKeeper::print_info(int player_num)

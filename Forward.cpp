@@ -14,7 +14,7 @@ Forward *Forward::clone()
     return new Forward(*this);
 }
 
-void Forward::calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og)
+void Forward::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
 {
 }
 

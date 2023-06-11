@@ -22,7 +22,10 @@ FutballFantasy::~FutballFantasy()
     for (Team *team : teams)
         delete team;
     for (Team *week_team : week_teams)
+    {
+        week_team->free_players();
         delete week_team;
+    }
     delete admin;
 }
 
@@ -43,10 +46,10 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
         update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1],
                          cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 6], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 7]);
         update_goal_info_vecs(own_goalers, goal_scorers, assisters, cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
-
+        update_players_score(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], own_goalers, assisters, goal_scorers);
         // update shavad
         update_players_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 2], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 3],
-                           cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
+                           cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4]);
     }
 }
 
@@ -631,6 +634,8 @@ void FutballFantasy::update_winner_and_loser_team_info(Team *team1, int team1_go
     team2->add_to_goals_for(team2_goals);
     team1->add_to_goals_against(team2_goals);
     team2->add_to_goals_against(team1_goals);
+    team1->add_match_result(team1_goals, team2_goals);
+    team2->add_match_result(team2_goals, team1_goals);
 }
 
 User *FutballFantasy::find_logged_in_user()
@@ -791,12 +796,11 @@ void FutballFantasy::update_teams_vec(string team_names, string result, string t
     team2->update_week_lineup(team2_lineup_players);
 }
 
-void FutballFantasy::update_players_vec(string injureds, string yellow_cards, string red_cards, string scores)
+void FutballFantasy::update_players_vec(string injureds, string yellow_cards, string red_cards)
 {
     vector<string> injured_players = string_splitter(injureds, ';');
     vector<string> yellow_card_reciever_players = string_splitter(yellow_cards, ';');
     vector<string> red_card_reciever_players = string_splitter(red_cards, ';');
-    vector<string> score_of_players = string_splitter(scores, ';'); // update shavad
 
     for (int i = 0; i < injured_players.size(); i++)
         if (Player *selected_player = find_player_by_name(injured_players[i]))
@@ -807,12 +811,16 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
     for (int i = 0; i < red_card_reciever_players.size(); i++)
         if (Player *selected_player = find_player_by_name(red_card_reciever_players[i]))
             selected_player->add_to_red_cards();
-    for (int i = 0; i < score_of_players.size(); i++) // update shavad
-    {
-        vector<string> name_and_score = string_splitter(score_of_players[i], ':');
-        if (Player *selected_player = find_player_by_name(name_and_score[0]))
-            selected_player->add_to_score(stod(name_and_score[1]));
-    }
+}
+
+void FutballFantasy::update_players_score(string team_names, vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers)
+{
+    string team1_name = string_splitter(team_names, ':')[0];
+    string team2_name = string_splitter(team_names, ':')[1];
+    Team *team1 = find_team_by_name(team1_name);
+    Team *team2 = find_team_by_name(team2_name);
+    team1->update_players_score(own_goalers, assisters, goal_scorers);
+    team2->update_players_score(own_goalers, assisters, goal_scorers);
 }
 
 void FutballFantasy::update_goal_info_vecs(vector<Player *> &own_goalers, vector<Player *> &goal_scorers, vector<Player *> &assistors, string g_with_a)

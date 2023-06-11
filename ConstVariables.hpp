@@ -15,9 +15,9 @@ enum ROLE
 
 enum MATCH_RESULT
 {
-    WIN,
-    DRAW,
-    LOSE
+    WIN = 5,
+    DRAW = 1,
+    LOSE = -1
 };
 
 enum FIELD

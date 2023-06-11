@@ -12,9 +12,12 @@ public:
     Defender(string _name_and_price);
     ~Defender();
 
+    void set_field(FIELD f) { player_field = f; }
+
     Defender *clone();
-    void calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og);
+    void calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result);
     void print_info(int player_num);
 
 private:
+    FIELD player_field;
 };

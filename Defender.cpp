@@ -13,7 +13,7 @@ Defender *Defender::clone()
     return new Defender(*this);
 }
 
-void Defender::calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og)
+void Defender::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
 {
 }
 

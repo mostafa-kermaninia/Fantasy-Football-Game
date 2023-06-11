@@ -56,6 +56,22 @@ double Team::calculate_total_players_score()
     return total_score;
 }
 
+void Team::free_players()
+{
+    for (auto p : team_players)
+        delete p;
+}
+
+void Team::add_match_result(int scored_goals, int gained_goals)
+{
+    if (scored_goals > gained_goals)
+        last_match_result = WIN;
+    else if (scored_goals == gained_goals)
+        last_match_result = DRAW;
+    else
+        last_match_result = LOSE;
+}
+
 void Team::delete_player(string player_name)
 {
     for (int i = 0; i < team_players.size(); i++)
@@ -83,6 +99,13 @@ int Team::calculate_cost()
 void Team::update_week_lineup(vector<Player *> lineup)
 {
     week_lineup = lineup;
+    update_players_fields();
+}
+
+void Team::update_players_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers)
+{
+    for (auto p : week_lineup)
+        p->calculate_raw_score(own_goalers, assisters, goal_scorers, last_match_result);
 }
 
 void Team::find_players_by_role(ROLE r, vector<Player *> &players)
@@ -119,4 +142,15 @@ void Team::sort_by_name(vector<Player *> &not_sorted_players)
                 not_sorted_players[i] = not_sorted_players[j];
                 not_sorted_players[j] = swaping_player;
             }
+}
+
+void Team::update_players_fields()
+{
+    week_lineup[1]->set_field(LEFT);
+    week_lineup[2]->set_field(MIDDLE);
+    week_lineup[3]->set_field(MIDDLE);
+    week_lineup[4]->set_field(RIGHT);
+    week_lineup[8]->set_field(LEFT);
+    week_lineup[9]->set_field(MIDDLE);
+    week_lineup[10]->set_field(RIGHT);
 }

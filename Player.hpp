@@ -27,8 +27,9 @@ public:
     void add_to_yellow_cards() { yellow_cards_num += 1; }
     void add_to_red_cards() { red_cards_num += 1; }
     void add_to_score(double num) { scores.back() = num; }
-    virtual void calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og) = 0;
+    virtual void calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result) = 0;
     virtual void print_info(int player_num) = 0;
+    virtual void set_field(FIELD f) = 0;
 
 protected:
     string name;
@@ -39,6 +40,7 @@ protected:
     int yellow_cards_num;
     int red_cards_num;
     double price;
+    double raw_point;
 
     double round_to(double value);
     double calculate_final_score(double score);
