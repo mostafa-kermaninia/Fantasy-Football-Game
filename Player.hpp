@@ -28,7 +28,7 @@ public:
     void add_to_red_cards() { red_cards_num += 1; }
     void add_to_score(double num) { scores.back() = num; }
 
-private:
+protected:
     string name;
     ROLE role;
     vector<double> scores;
