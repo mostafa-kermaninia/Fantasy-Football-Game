@@ -28,15 +28,16 @@ const string TEAM_NAME = "team_name";
 const string PASSWORD = "password";
 const string USERNAME = "username";
 const string NAME = "name";
+const string OWN_GOALER_SIGN = "OWN_GOAL";
 
 const int COUNT_OF_WEEKS = 19;
 const int THIS_WEEK = -1;
 const int LEAGUE_FILE_HEADERS_COUNT = 5;
-const int WEEK_FILE_HEADERS_COUNT = 6;
+const int WEEK_FILE_HEADERS_COUNT = 8;
 
 const int WINNER_SCORE_INCREMENT = 3;
 const int EQUALIZED_SCORE_INCREMENT = 1;
 const int LOSER_SCORE_INCREMENT = 0;
 
 const int INITIAL_BUDGET = 2500;
-const int PLAYER_PRICE_LEN =3;
+const int PLAYER_PRICE_LEN = 3;

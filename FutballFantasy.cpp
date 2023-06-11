@@ -35,14 +35,18 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
 {
     string cur_week_file_path = folder_path + "week_" + to_string(cur_week_num) + ".csv";
     vector<string> cur_week_info = read_file(cur_week_file_path);
+
     vector<Player *> own_goalers, assisters, goal_scorers;
     for (int i = 0; i < cur_week_info.size() / WEEK_FILE_HEADERS_COUNT; i++)
     {
         update_matches_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
-        update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
+        update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1],
+                         cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 6], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 7]);
+        update_goal_info_vecs(own_goalers, goal_scorers, assisters, cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
+
+        // update shavad
         update_players_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 2], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 3],
                            cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
-        
     }
 }
 
@@ -755,7 +759,7 @@ void FutballFantasy::update_matches_vec(string team_names, string result)
     matches.push_back(new Match(week_num, team1_name, team1_goals, team2_name, team2_goals));
 }
 
-void FutballFantasy::update_teams_vec(string team_names, string result)
+void FutballFantasy::update_teams_vec(string team_names, string result, string team1_lineup, string team2_lineup)
 {
     string team1_name = string_splitter(team_names, ':')[0];
     string team2_name = string_splitter(team_names, ':')[1];
@@ -764,6 +768,14 @@ void FutballFantasy::update_teams_vec(string team_names, string result)
     int team1_goals = stoi(string_splitter(result, ':')[0]);
     int team2_goals = stoi(string_splitter(result, ':')[1]);
     update_winner_and_loser_team_info(team1, team1_goals, team2, team2_goals);
+
+    vector<Player *> team1_lineup_players, team2_lineup_players;
+    for (string player_name : string_splitter(team1_lineup, ';'))
+        team1_lineup_players.push_back(find_player_by_name(player_name));
+    for (string player_name : string_splitter(team2_lineup, ';'))
+        team2_lineup_players.push_back(find_player_by_name(player_name));
+    team1->update_week_lineup(team1_lineup_players);
+    team2->update_week_lineup(team2_lineup_players);
 }
 
 void FutballFantasy::update_players_vec(string injureds, string yellow_cards, string red_cards, string scores)
@@ -771,7 +783,7 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
     vector<string> injured_players = string_splitter(injureds, ';');
     vector<string> yellow_card_reciever_players = string_splitter(yellow_cards, ';');
     vector<string> red_card_reciever_players = string_splitter(red_cards, ';');
-    vector<string> score_of_players = string_splitter(scores, ';');
+    vector<string> score_of_players = string_splitter(scores, ';'); // update shavad
 
     for (int i = 0; i < injured_players.size(); i++)
         if (Player *selected_player = find_player_by_name(injured_players[i]))
@@ -782,10 +794,30 @@ void FutballFantasy::update_players_vec(string injureds, string yellow_cards, st
     for (int i = 0; i < red_card_reciever_players.size(); i++)
         if (Player *selected_player = find_player_by_name(red_card_reciever_players[i]))
             selected_player->add_to_red_cards();
-    for (int i = 0; i < score_of_players.size(); i++)
+    for (int i = 0; i < score_of_players.size(); i++) // update shavad
     {
         vector<string> name_and_score = string_splitter(score_of_players[i], ':');
         if (Player *selected_player = find_player_by_name(name_and_score[0]))
             selected_player->add_to_score(stod(name_and_score[1]));
+    }
+}
+
+void FutballFantasy::update_goal_info_vecs(vector<Player *> &own_goalers, vector<Player *> &goal_scorers, vector<Player *> &assistors, string g_with_a)
+{
+    vector<string> goals_and_assists = string_splitter(g_with_a, ';');
+    string goal_scorer, assister;
+    for (string goal_and_assist : goals_and_assists)
+    {
+        goal_scorer = string_splitter(goal_and_assist, ':')[0];
+        assister = string_splitter(goal_and_assist, ':')[1];
+        if (assister == OWN_GOALER_SIGN)
+        {
+            own_goalers.push_back(find_player_by_name(goal_scorer));
+        }
+        else
+        {
+            goal_scorers.push_back(find_player_by_name(goal_scorer));
+            assistors.push_back(find_player_by_name(assister));
+        }
     }
 }

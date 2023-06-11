@@ -29,10 +29,12 @@ public:
     void delete_player(string player_name);
     int count_of_players_in_selected_post(ROLE role);
     int calculate_cost();
+    void update_week_lineup(vector<Player *> lineup);
 
 private:
     string team_name;
     vector<Player *> team_players;
+    vector<Player *> week_lineup;
     int goals_for;
     int goals_against;
     int total_score;

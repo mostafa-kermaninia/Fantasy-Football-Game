@@ -62,8 +62,9 @@ private:
     void reset_users_coupons();
     void update_users_score();
     void update_matches_vec(string team_names, string result);
-    void update_teams_vec(string team_names, string result);
+    void update_teams_vec(string team_names, string result, string team1_lineup, string team2_lineup);
     void update_players_vec(string injured_players, string yellow_card_recievers, string red_card_recievers, string scores);
+    void update_goal_info_vecs(vector<Player *> &own_goalers, vector<Player *> &goalers, vector<Player *> &assistors, string goals_with_assists);
     void read_cur_week_file(string folder_path, int cur_week_num);
     void add_week_team();
 

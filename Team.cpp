@@ -82,6 +82,11 @@ int Team::calculate_cost()
     return team_value;
 }
 
+void Team::update_week_lineup(vector<Player *> lineup)
+{
+    week_lineup = lineup;
+}
+
 void Team::find_players_by_role(ROLE r, vector<Player *> &players)
 {
     for (int i = 0; i < players.size(); i++)
