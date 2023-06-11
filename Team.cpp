@@ -13,11 +13,6 @@ Team::Team(string name, vector<Player *> players)
     goals_against = 0;
     total_score = 0;
 }
-
-Team::~Team()
-{
-}
-
 vector<Player *> Team::get_players()
 {
     return team_players;
@@ -38,18 +33,21 @@ void Team::print_team(ROLE r, bool show_sorted)
         sort_by_score(showing_players);
     else
         sort_by_name(showing_players);
+    cout << "list of players:" << endl;
     for (auto p : showing_players)
     {
         cout << fixed;
         cout << player_num << ". name: " << p->get_name() << OUTPUT_DELIMITER << "role: " << ROLES[p->get_role()]
-             << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(0.1, p->calculate_avarage_score()) << endl;
+             << OUTPUT_DELIMITER << "score: " << setprecision(1) << p->calculate_avarage_score() << endl;
         player_num++;
     }
 }
 
 void Team::print_team_info()
 {
-    cout << team_name << ": " << total_score << OUTPUT_DELIMITER << "GF: " << goals_for << OUTPUT_DELIMITER << "GA: " << goals_against << endl;
+    cout << team_name << ": "
+         << "score: " << total_score << OUTPUT_DELIMITER
+         << "GF: " << goals_for << OUTPUT_DELIMITER << "GA: " << goals_against << endl;
 }
 
 double Team::calculate_total_players_score()
@@ -63,12 +61,25 @@ double Team::calculate_total_players_score()
 void Team::delete_player(string player_name)
 {
     for (int i = 0; i < team_players.size(); i++)
-    {
         if (team_players[i]->get_name() == player_name)
-        {
             team_players.erase(team_players.begin() + i);
-        }
-    }
+}
+
+int Team::count_of_players_in_selected_post(ROLE role)
+{
+    int counter = 0;
+    for (Player *player : team_players)
+        if (player->get_role() == role)
+            counter++;
+    return counter;
+}
+
+int Team::calculate_cost()
+{
+    double team_value = 0;
+    for (auto p : team_players)
+        team_value += p->get_cost();
+    return team_value;
 }
 
 void Team::find_players_by_role(ROLE r, vector<Player *> &players)
@@ -84,19 +95,15 @@ void Team::find_players_by_role(ROLE r, vector<Player *> &players)
 void Team::sort_by_score(vector<Player *> &not_sorted_players)
 {
     for (int i = 0; i < not_sorted_players.size() - 1; i++)
-    {
         for (int j = i + 1; j < not_sorted_players.size(); j++)
-        {
-            if (not_sorted_players[i]->get_score() < not_sorted_players[j]->get_score() ||
-                (not_sorted_players[i]->get_score() == not_sorted_players[j]->get_score() &&
+            if (not_sorted_players[i]->calculate_avarage_score() < not_sorted_players[j]->calculate_avarage_score() ||
+                (not_sorted_players[i]->calculate_avarage_score() == not_sorted_players[j]->calculate_avarage_score() &&
                  not_sorted_players[i]->get_name() > not_sorted_players[j]->get_name()))
             {
                 Player *swaped_player = not_sorted_players[i];
                 not_sorted_players[i] = not_sorted_players[j];
                 not_sorted_players[j] = swaped_player;
             }
-        }
-    }
 }
 
 void Team::sort_by_name(vector<Player *> &not_sorted_players)
@@ -109,9 +116,4 @@ void Team::sort_by_name(vector<Player *> &not_sorted_players)
                 not_sorted_players[i] = not_sorted_players[j];
                 not_sorted_players[j] = swaping_player;
             }
-}
-
-double Team::round_to(double pre, double value)
-{
-    return round(value / pre) * pre;
 }

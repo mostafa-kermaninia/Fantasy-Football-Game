@@ -9,10 +9,6 @@ Match::Match(int _week_num, string _team1_name, int _team1_goals, string _team2_
     team2_goals = _team2_goals;
 }
 
-Match::~Match()
-{
-}
-
 void Match::print_match_info()
 {
     cout << team1_name << " " << team1_goals << OUTPUT_DELIMITER << team2_name << " " << team2_goals << endl;

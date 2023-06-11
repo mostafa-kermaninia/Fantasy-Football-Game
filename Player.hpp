@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 #include <iostream>
 #include <vector>
 #include "ConstVariables.hpp"
@@ -10,11 +11,13 @@ class Player
 
 public:
     Player(string name, ROLE role);
-    ~Player();
 
     string get_name() { return name; }
     ROLE get_role() { return role; }
-    double get_score() { return scores.back(); }
+    int get_yellow_cards() { return yellow_cards_num; }
+    int get_red_cards() { return red_cards_num; }
+    double get_cost() { return cost; }
+    double get_score();
 
     Player *clone();
     double calculate_avarage_score();
@@ -33,4 +36,7 @@ private:
     int injured_weeks = 0;
     int yellow_cards_num;
     int red_cards_num;
+    double cost;
+
+    double round_to(double value);
 };

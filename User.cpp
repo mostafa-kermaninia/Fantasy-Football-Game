@@ -2,17 +2,23 @@
 
 User::User(string _name, string _password)
 {
+    team = new Team();
+    last_week_team = new Team();
     name = _name;
     password = _password;
     sell_coupons = 2;
     buy_coupons = 0;
     point = 0;
+    budget = INITIAL_BUDGET;
+    capitan = NULL;
     complete_team = false;
     is_in_account = true;
 }
 
 User::~User()
 {
+    delete team;
+    delete last_week_team;
 }
 
 bool User::is_logged_in()
@@ -23,23 +29,20 @@ bool User::is_logged_in()
 void User::log_out()
 {
     is_in_account = false;
-    cout << SUCCESSFUL_RESPONSE;
 }
 
 Player *User::find_player_in_team(string player_name)
 {
     for (Player *player : team->get_players())
-    {
         if (player->get_name() == player_name)
-        {
             return player;
-        }
-    }
     return nullptr;
 }
 
 void User::delete_player(string player_name)
 {
+    if (capitan != nullptr && capitan->get_name() == player_name)
+        capitan = nullptr;
     if (Player *selected_player = find_player_in_team(player_name))
     {
         if (complete_team)
@@ -47,7 +50,9 @@ void User::delete_player(string player_name)
             if (sell_coupons == 0)
                 throw runtime_error(PERMISSION_ER);
             sell_coupons--;
+            buy_coupons++;
         }
+        budget += selected_player->get_cost();
         team->delete_player(player_name);
     }
     else
@@ -56,20 +61,39 @@ void User::delete_player(string player_name)
 
 void User::add_player(Player *selected_player)
 {
-    if (is_player_buyable(selected_player))
-        team->add_new_player(selected_player);
+    if (!player_post_is_not_full(selected_player))
+        throw runtime_error(BAD_REQUEST_ER);
+
+    if (selected_player->is_available())
+    {
+        if (budget > selected_player->get_cost())
+        {
+            team->add_new_player(selected_player);
+            buy_coupons--;
+            budget -= selected_player->get_cost();
+        }
+        else
+            throw runtime_error(BAD_REQUEST_ER);
+    }
     else
-        throw runtime_error(PERMISSION_ER);
+        cout << "This player is not available for next week" << endl;
 }
 
-bool User::is_player_buyable(Player *selected_player)
+void User::set_capitan(string player_name)
 {
-
-    return false;
+    Player *new_capitan = find_player_in_team(player_name);
+    if (capitan == nullptr)
+        throw runtime_error(NOT_FOUND_ER);
+    else
+        capitan = new_capitan;
 }
 
 void User::reset_coupons()
 {
+    delete last_week_team;
+    last_week_team = new Team(*team);
+    if (!complete_team && team->get_players().size() == 5)
+        complete_team = true;
     sell_coupons = 2;
     buy_coupons = 0;
 }
@@ -80,6 +104,11 @@ void User::update_score()
         point += team->calculate_total_players_score();
 }
 
+void User::show_budget()
+{
+    cout << budget << endl;
+}
+
 void User::print_fantasy_team()
 {
     cout << fixed;
@@ -88,19 +117,42 @@ void User::print_fantasy_team()
 
 void User::print_team_info()
 {
-    if (team->get_players().size() != 5)
+    if (last_week_team->get_players().size() != 5)
         throw runtime_error(EMPTY_ER);
     vector<Player *> goalkeeper = find_players_by_role(GK);
     vector<Player *> defender = find_players_by_role(DF);
     vector<Player *> midfielder = find_players_by_role(MD);
     vector<Player *> striker = find_players_by_role(FW);
     cout << "fantasy_team: " << name << endl;
-    cout << "Goalkeeper: " << goalkeeper[0]->get_name() << endl;
-    cout << "Defender1: " << defender[0]->get_name() << endl;
-    cout << "Defender2: " << defender[1]->get_name() << endl;
-    cout << "Midfielder: " << midfielder[0]->get_name() << endl;
-    cout << "Striker: " << striker[0]->get_name() << endl;
+    cout << "Goalkeeper: ";
+    print_player_name(goalkeeper[0]->get_name());
+    cout << "Defender1: ";
+    print_player_name(defender[0]->get_name());
+    cout << "Defender2: ";
+    print_player_name(defender[1]->get_name());
+    cout << "Midfielder: ";
+    print_player_name(midfielder[0]->get_name());
+    cout << "Striker: ";
+    print_player_name(striker[0]->get_name());
     cout << "Total Points: " << point << endl;
+    cout << "Team Cost: " << team->calculate_cost() << endl;
+}
+
+void User::print_player_name(string name)
+{
+    cout << name;
+    if (capitan != nullptr && capitan->get_name() == name)
+        cout << " (CAPITAN)";
+    cout << endl;
+}
+
+bool User::player_post_is_not_full(Player *selected_player)
+{
+    ROLE role = selected_player->get_role();
+    if (find_player_in_team(selected_player->get_name()) != NULL)
+        throw runtime_error(BAD_REQUEST_ER);
+    return ((role == DF && team->count_of_players_in_selected_post(role) < 2) ||
+            (role != DF && team->count_of_players_in_selected_post(role) < 1));
 }
 
 vector<Player *> User::find_players_by_role(ROLE r)

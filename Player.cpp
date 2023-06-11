@@ -10,8 +10,11 @@ Player::Player(string _name, ROLE _role)
     available = true;
 }
 
-Player::~Player()
+double Player::get_score()
 {
+    if (scores.size() == 0)
+        return 0;
+    return scores.back();
 }
 
 Player *Player::clone()
@@ -33,7 +36,7 @@ double Player::calculate_avarage_score()
     }
     if (played_match_num == 0)
         return 0;
-    return score_sum / played_match_num;
+    return round_to(score_sum / played_match_num);
 }
 
 void Player::reset_for_new_week()
@@ -57,4 +60,9 @@ void Player::reset_for_new_week()
     }
     else
         available = true;
+}
+
+double Player::round_to(double value)
+{
+    return round(value * 10 ) / 10;
 }

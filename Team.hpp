@@ -8,9 +8,9 @@ class Team
 {
 
 public:
+    Team() {}
     Team(vector<Player *> p);
     Team(string name, vector<Player *> players);
-    ~Team();
 
     vector<Player *> get_players();
     void add_new_player(Player *new_player);
@@ -27,6 +27,8 @@ public:
     void add_to_goals_against(int num) { goals_against += num; }
     void add_to_total_score(int num) { total_score += num; }
     void delete_player(string player_name);
+    int count_of_players_in_selected_post(ROLE role);
+    int calculate_cost();
 
 private:
     string team_name;
@@ -38,6 +40,4 @@ private:
     void find_players_by_role(ROLE r, vector<Player *> &players);
     void sort_by_score(vector<Player *> &not_sorted_players);
     void sort_by_name(vector<Player *> &not_sorted_players);
-
-    double round_to(double pre, double value);
 };
