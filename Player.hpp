@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include "ConstVariables.hpp"
 
 using namespace std;
@@ -10,7 +11,7 @@ class Player
 {
 
 public:
-    Player(string name,string team_name, ROLE role);
+    Player(string name, string team_name, ROLE role);
 
     string get_name() { return name; }
     ROLE get_role() { return role; }
@@ -19,9 +20,11 @@ public:
     double get_price() { return price; }
     double get_score();
     string get_team_name();
+    virtual FIELD get_field() = 0;
 
     virtual Player *clone() = 0;
     double calculate_avarage_score();
+    double calculate_capitan_score();
     void reset_for_new_week();
     void set_when_injured() { injured_weeks = 3; }
     bool is_available() { return available; }
@@ -37,9 +40,12 @@ protected:
     ROLE role;
     vector<double> scores;
     bool available;
-    int injured_weeks = 0;
+    int injured_weeks;
     int yellow_cards_num;
     int red_cards_num;
+    int num_of_clean_sheets;
+    int num_of_scored_goals;
+    int num_of_assists;
     double price;
     double raw_point;
     string team_name;

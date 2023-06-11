@@ -9,6 +9,9 @@ Player::Player(string name_and_price, string team, ROLE _role)
     injured_weeks = 0;
     yellow_cards_num = 0;
     red_cards_num = 0;
+    num_of_clean_sheets = 0;
+    num_of_scored_goals = 0;
+    num_of_assists = 0;
     available = true;
 }
 
@@ -39,6 +42,11 @@ double Player::calculate_avarage_score()
     if (played_match_num == 0)
         return 0;
     return round_to(score_sum / played_match_num);
+}
+
+double Player::calculate_capitan_score()
+{
+    return calculate_final_score(2 * raw_point);
 }
 
 void Player::reset_for_new_week()

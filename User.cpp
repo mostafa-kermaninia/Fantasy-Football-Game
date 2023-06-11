@@ -102,6 +102,11 @@ void User::update_score()
 {
     if (team->get_players().size() == 5)
         point += team->calculate_total_players_score();
+    if (capitan != nullptr && capitan->get_score() != 0)
+    {
+        point -= capitan->get_score();
+        point += capitan->calculate_capitan_score();
+    }
 }
 
 void User::show_budget()

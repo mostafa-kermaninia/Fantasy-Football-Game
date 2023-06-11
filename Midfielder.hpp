@@ -13,6 +13,7 @@ public:
     ~Midfielder();
 
     void set_field(FIELD f) {}
+    FIELD get_field() { return NO_FIELD; }
 
     Midfielder *clone();
     void calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result);

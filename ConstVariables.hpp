@@ -22,9 +22,10 @@ enum MATCH_RESULT
 
 enum FIELD
 {
-    LEFT,
-    MIDDLE,
-    RIGHT
+    LEFT = -1,
+    MIDDLE = 0,
+    RIGHT = 1,
+    NO_FIELD
 };
 
 const string BAD_REQUEST_ER = "Bad Request";
@@ -60,3 +61,4 @@ const int INITIAL_DF_POINT = 1;
 const int INITIAL_MD_POINT = 0;
 const int INITIAL_FW_POINT = 0;
 const int PLAYER_PRICE_LEN = 3;
+const int OWN_GOAL_PENALTY = 3;
