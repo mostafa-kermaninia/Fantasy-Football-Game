@@ -36,9 +36,7 @@ void Team::print_team(ROLE r, bool show_sorted)
     cout << "list of players:" << endl;
     for (auto p : showing_players)
     {
-        cout << fixed;
-        cout << player_num << ". name: " << p->get_name() << OUTPUT_DELIMITER << "role: " << ROLES[p->get_role()]
-             << OUTPUT_DELIMITER << "score: " << setprecision(1) << p->calculate_avarage_score() << endl;
+        p->print_info(player_num);
         player_num++;
     }
 }
@@ -78,7 +76,7 @@ int Team::calculate_cost()
 {
     double team_value = 0;
     for (auto p : team_players)
-        team_value += p->get_cost();
+        team_value += p->get_price();
     return team_value;
 }
 

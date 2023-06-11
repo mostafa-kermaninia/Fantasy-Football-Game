@@ -13,6 +13,20 @@ enum ROLE
     NO_ROLE
 };
 
+enum MATCH_RESULT
+{
+    WIN,
+    DRAW,
+    LOSE
+};
+
+enum FIELD
+{
+    LEFT,
+    MIDDLE,
+    RIGHT
+};
+
 const string BAD_REQUEST_ER = "Bad Request";
 const string PERMISSION_ER = "Permission Denied";
 const string SUCCESSFUL_RESPONSE = "OK";
@@ -39,3 +53,8 @@ const int EQUALIZED_SCORE_INCREMENT = 1;
 const int LOSER_SCORE_INCREMENT = 0;
 
 const int INITIAL_BUDGET = 2500;
+
+const int INITIAL_GK_POINT = 3;
+const int INITIAL_DF_POINT = 1;
+const int INITIAL_MD_POINT = 0;
+const int INITIAL_FW_POINT = 0;

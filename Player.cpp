@@ -17,11 +17,6 @@ double Player::get_score()
     return scores.back();
 }
 
-Player *Player::clone()
-{
-    return new Player(*this);
-}
-
 double Player::calculate_avarage_score()
 {
     double score_sum = 0;
@@ -64,5 +59,10 @@ void Player::reset_for_new_week()
 
 double Player::round_to(double value)
 {
-    return round(value * 10 ) / 10;
+    return round(value * 10) / 10;
+}
+
+double Player::calculate_final_score(double score)
+{
+    return round_to(10 / (exp(-score / 6) + 1));
 }
