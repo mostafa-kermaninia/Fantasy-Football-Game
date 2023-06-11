@@ -11,6 +11,6 @@ class Defender : public Player
 private:
     
 public:
-    Defender(string _name);
+    Defender(string _name_and_price);
     ~Defender();
 };

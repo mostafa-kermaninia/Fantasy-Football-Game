@@ -1,7 +1,7 @@
 #include "GoalKeeper.hpp"
 
-GoalKeeper::GoalKeeper(string _name)
-    : Player(_name, GK)
+GoalKeeper::GoalKeeper(string _name_and_price)
+    : Player(_name_and_price, GK)
 {
 }
 

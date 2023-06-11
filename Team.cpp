@@ -78,7 +78,7 @@ int Team::calculate_cost()
 {
     double team_value = 0;
     for (auto p : team_players)
-        team_value += p->get_cost();
+        team_value += p->get_price();
     return team_value;
 }
 

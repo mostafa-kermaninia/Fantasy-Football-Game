@@ -11,6 +11,6 @@ class Midfielder : public Player
 private:
     
 public:
-    Midfielder(string _name);
+    Midfielder(string _name_and_price);
     ~Midfielder();
 };

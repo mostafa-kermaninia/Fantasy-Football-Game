@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <string>
 
 using namespace std;
 
@@ -45,6 +46,14 @@ int main()
     sorter(b);
 
     // cout << round_to(54.25);
-    cout<<calculate_final_score(5.8);
+    cout << calculate_final_score(5.8);
+
+    string po = "poM. Travers:350$";
+    int pos = po.find(':');
+    cout
+        << '\n'
+        << po.substr(pos+1, 3) << endl
+        << po.substr(0, pos);
+    ;
     return 0;
 }

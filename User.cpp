@@ -52,7 +52,7 @@ void User::delete_player(string player_name)
             sell_coupons--;
             buy_coupons++;
         }
-        budget += selected_player->get_cost();
+        budget += selected_player->get_price();
         team->delete_player(player_name);
     }
     else
@@ -66,11 +66,11 @@ void User::add_player(Player *selected_player)
 
     if (selected_player->is_available())
     {
-        if (budget > selected_player->get_cost())
+        if (budget > selected_player->get_price())
         {
             team->add_new_player(selected_player);
             buy_coupons--;
-            budget -= selected_player->get_cost();
+            budget -= selected_player->get_price();
         }
         else
             throw runtime_error(BAD_REQUEST_ER);

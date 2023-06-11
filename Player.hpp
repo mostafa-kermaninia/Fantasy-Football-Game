@@ -16,7 +16,7 @@ public:
     ROLE get_role() { return role; }
     int get_yellow_cards() { return yellow_cards_num; }
     int get_red_cards() { return red_cards_num; }
-    double get_cost() { return cost; }
+    double get_price() { return price; }
     double get_score();
 
     Player *clone();
@@ -36,7 +36,7 @@ protected:
     int injured_weeks = 0;
     int yellow_cards_num;
     int red_cards_num;
-    double cost;
+    double price;
 
     double round_to(double value);
 };

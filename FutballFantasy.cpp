@@ -35,12 +35,14 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
 {
     string cur_week_file_path = folder_path + "week_" + to_string(cur_week_num) + ".csv";
     vector<string> cur_week_info = read_file(cur_week_file_path);
+    vector<Player *> own_goalers, assisters, goal_scorers;
     for (int i = 0; i < cur_week_info.size() / WEEK_FILE_HEADERS_COUNT; i++)
     {
         update_matches_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
         update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
         update_players_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 2], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 3],
                            cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 4], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 5]);
+        
     }
 }
 
@@ -50,14 +52,14 @@ void FutballFantasy::build_objects(vector<string> elements)
     {
         string team_name = elements[LEAGUE_FILE_HEADERS_COUNT * i];
         vector<Player *> team_players;
-        for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 1], ';'))
-            team_players.push_back(new Player(player_name, GK));
-        for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 2], ';'))
-            team_players.push_back(new Player(player_name, DF));
-        for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 3], ';'))
-            team_players.push_back(new Player(player_name, MD));
-        for (string player_name : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 4], ';'))
-            team_players.push_back(new Player(player_name, FW));
+        for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 1], ';'))
+            team_players.push_back(new GoalKeeper(player_name_and_price));
+        for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 2], ';'))
+            team_players.push_back(new Defender(player_name_and_price));
+        for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 3], ';'))
+            team_players.push_back(new Midfielder(player_name_and_price));
+        for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 4], ';'))
+            team_players.push_back(new Forward(player_name_and_price));
         teams.push_back(new Team(team_name, team_players));
         for (int i = 0; i < team_players.size(); i++)
             players.push_back(team_players[i]);

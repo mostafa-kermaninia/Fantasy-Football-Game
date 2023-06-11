@@ -1,8 +1,9 @@
 #include "Player.hpp"
 
-Player::Player(string _name, ROLE _role)
+Player::Player(string name_and_price, ROLE _role)
 {
-    name = _name;
+    name = name_and_price.substr(0, name_and_price.find(':'));
+    price = stod(name_and_price.substr(name_and_price.find(':') + 1, PLAYER_PRICE_LEN));
     role = _role;
     injured_weeks = 0;
     yellow_cards_num = 0;
@@ -64,5 +65,5 @@ void Player::reset_for_new_week()
 
 double Player::round_to(double value)
 {
-    return round(value * 10 ) / 10;
+    return round(value * 10) / 10;
 }

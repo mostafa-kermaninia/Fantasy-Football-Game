@@ -1,7 +1,7 @@
 #include "Defender.hpp"
 
-Defender::Defender(string _name)
-    : Player(_name, DF)
+Defender::Defender(string _name_and_price)
+    : Player(_name_and_price, DF)
 {
 }
 

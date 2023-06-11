@@ -39,3 +39,4 @@ const int EQUALIZED_SCORE_INCREMENT = 1;
 const int LOSER_SCORE_INCREMENT = 0;
 
 const int INITIAL_BUDGET = 2500;
+const int PLAYER_PRICE_LEN =3;
