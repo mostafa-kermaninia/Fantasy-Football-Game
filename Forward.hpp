@@ -9,7 +9,7 @@ using namespace std;
 class Forward : public Player
 {
 public:
-    Forward(string _name_and_price);
+    Forward(string _name_and_price,string team_name);
     ~Forward();
 
     void set_field(FIELD f) { player_field = f; }

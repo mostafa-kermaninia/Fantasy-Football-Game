@@ -62,22 +62,22 @@ void FutballFantasy::build_objects(vector<string> elements)
         Player *new_player;
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 1], ';'))
         {
-            new_player = new GoalKeeper(player_name_and_price);
+            new_player = new GoalKeeper(player_name_and_price, team_name);
             team_players.push_back(new_player);
         }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 2], ';'))
         {
-            new_player = new Defender(player_name_and_price);
+            new_player = new Defender(player_name_and_price, team_name);
             team_players.push_back(new_player);
         }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 3], ';'))
         {
-            new_player = new Midfielder(player_name_and_price);
+            new_player = new Midfielder(player_name_and_price, team_name);
             team_players.push_back(new_player);
         }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 4], ';'))
         {
-            new_player = new Forward(player_name_and_price);
+            new_player = new Forward(player_name_and_price, team_name);
             team_players.push_back(new_player);
         }
         teams.push_back(new Team(team_name, team_players));

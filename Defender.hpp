@@ -9,7 +9,7 @@ using namespace std;
 class Defender : public Player
 {
 public:
-    Defender(string _name_and_price);
+    Defender(string _name_and_price,string team_name);
     ~Defender();
 
     void set_field(FIELD f) { player_field = f; }

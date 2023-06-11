@@ -10,7 +10,7 @@ using namespace std;
 class GoalKeeper : public Player
 {
 public:
-    GoalKeeper(string _name_and_price);
+    GoalKeeper(string _name_and_price,string team_name);
     ~GoalKeeper();
 
     void set_field(FIELD f) {}

@@ -10,7 +10,7 @@ class Player
 {
 
 public:
-    Player(string name, ROLE role);
+    Player(string name,string team_name, ROLE role);
 
     string get_name() { return name; }
     ROLE get_role() { return role; }
@@ -18,6 +18,7 @@ public:
     int get_red_cards() { return red_cards_num; }
     double get_price() { return price; }
     double get_score();
+    string get_team_name();
 
     virtual Player *clone() = 0;
     double calculate_avarage_score();
@@ -41,6 +42,7 @@ protected:
     int red_cards_num;
     double price;
     double raw_point;
+    string team_name;
 
     double round_to(double value);
     double calculate_final_score(double score);

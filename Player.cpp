@@ -1,10 +1,11 @@
 #include "Player.hpp"
 
-Player::Player(string name_and_price, ROLE _role)
+Player::Player(string name_and_price, string team, ROLE _role)
 {
     name = name_and_price.substr(0, name_and_price.find(':'));
     price = stod(name_and_price.substr(name_and_price.find(':') + 1, PLAYER_PRICE_LEN));
     role = _role;
+    team_name = team;
     injured_weeks = 0;
     yellow_cards_num = 0;
     red_cards_num = 0;
@@ -16,6 +17,11 @@ double Player::get_score()
     if (scores.size() == 0)
         return 0;
     return scores.back();
+}
+
+string Player::get_team_name()
+{
+    return team_name;
 }
 
 double Player::calculate_avarage_score()
