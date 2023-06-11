@@ -56,14 +56,27 @@ void FutballFantasy::build_objects(vector<string> elements)
     {
         string team_name = elements[LEAGUE_FILE_HEADERS_COUNT * i];
         vector<Player *> team_players;
+        Player *new_player;
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 1], ';'))
-            team_players.push_back(new GoalKeeper(player_name_and_price));
+        {
+            new_player = new GoalKeeper(player_name_and_price);
+            team_players.push_back(new_player);
+        }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 2], ';'))
-            team_players.push_back(new Defender(player_name_and_price));
+        {
+            new_player = new Defender(player_name_and_price);
+            team_players.push_back(new_player);
+        }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 3], ';'))
-            team_players.push_back(new Midfielder(player_name_and_price));
+        {
+            new_player = new Midfielder(player_name_and_price);
+            team_players.push_back(new_player);
+        }
         for (string player_name_and_price : string_splitter(elements[LEAGUE_FILE_HEADERS_COUNT * i + 4], ';'))
-            team_players.push_back(new Forward(player_name_and_price));
+        {
+            new_player = new Forward(player_name_and_price);
+            team_players.push_back(new_player);
+        }
         teams.push_back(new Team(team_name, team_players));
         for (int i = 0; i < team_players.size(); i++)
             players.push_back(team_players[i]);

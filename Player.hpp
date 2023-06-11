@@ -19,7 +19,7 @@ public:
     double get_price() { return price; }
     double get_score();
 
-    Player *clone();
+    virtual Player *clone() = 0;
     double calculate_avarage_score();
     void reset_for_new_week();
     void set_when_injured() { injured_weeks = 3; }
@@ -27,6 +27,8 @@ public:
     void add_to_yellow_cards() { yellow_cards_num += 1; }
     void add_to_red_cards() { red_cards_num += 1; }
     void add_to_score(double num) { scores.back() = num; }
+    virtual void calculate_score(vector<Player *> scorers, MATCH_RESULT result, int num_of_og) = 0;
+    virtual void print_info(int player_num) = 0;
 
 protected:
     string name;
@@ -39,4 +41,5 @@ protected:
     double price;
 
     double round_to(double value);
+    double calculate_final_score(double score);
 };
