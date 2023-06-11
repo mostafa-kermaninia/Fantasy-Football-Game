@@ -85,12 +85,14 @@ private:
     void register_admin(string admin_name, string password);
     void sell_player(string player_name);
     void buy_player(string player_name);
+    void set_capitan(string player_name);
+    void print_budget();
 
     void pass_week();
     void open_transfer_window();
     void close_transfer_window();
 
     void check_request_validity(string request, vector<string> command_words);
-    void check_buysell_request_validity(string&player_name,vector<string> command_words);
+    void check_buysell_request_validity(string &player_name, vector<string> command_words);
     void check_command_words_count(int words_count, vector<string> command_words);
 };

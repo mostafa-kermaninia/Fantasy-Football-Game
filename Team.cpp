@@ -74,6 +74,14 @@ int Team::count_of_players_in_selected_post(ROLE role)
     return counter;
 }
 
+int Team::calculate_cost()
+{
+    double team_value = 0;
+    for (auto p : team_players)
+        team_value += p->get_cost();
+    return team_value;
+}
+
 void Team::find_players_by_role(ROLE r, vector<Player *> &players)
 {
     for (int i = 0; i < players.size(); i++)

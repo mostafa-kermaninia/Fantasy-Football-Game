@@ -9,6 +9,8 @@ User::User(string _name, string _password)
     sell_coupons = 2;
     buy_coupons = 0;
     point = 0;
+    budget = INITIAL_BUDGET;
+    capitan = NULL;
     complete_team = false;
     is_in_account = true;
 }
@@ -39,6 +41,8 @@ Player *User::find_player_in_team(string player_name)
 
 void User::delete_player(string player_name)
 {
+    if (capitan != nullptr && capitan->get_name() == player_name)
+        capitan = nullptr;
     if (Player *selected_player = find_player_in_team(player_name))
     {
         if (complete_team)
@@ -48,6 +52,7 @@ void User::delete_player(string player_name)
             sell_coupons--;
             buy_coupons++;
         }
+        budget += selected_player->get_cost();
         team->delete_player(player_name);
     }
     else
@@ -61,11 +66,26 @@ void User::add_player(Player *selected_player)
 
     if (selected_player->is_available())
     {
-        team->add_new_player(selected_player);
-        buy_coupons--;
+        if (budget > selected_player->get_cost())
+        {
+            team->add_new_player(selected_player);
+            buy_coupons--;
+            budget -= selected_player->get_cost();
+        }
+        else
+            throw runtime_error(BAD_REQUEST_ER);
     }
     else
         cout << "This player is not available for next week" << endl;
+}
+
+void User::set_capitan(string player_name)
+{
+    Player *new_capitan = find_player_in_team(player_name);
+    if (capitan == nullptr)
+        throw runtime_error(NOT_FOUND_ER);
+    else
+        capitan = new_capitan;
 }
 
 void User::reset_coupons()
@@ -84,6 +104,11 @@ void User::update_score()
         point += team->calculate_total_players_score();
 }
 
+void User::show_budget()
+{
+    cout << budget << endl;
+}
+
 void User::print_fantasy_team()
 {
     cout << fixed;
@@ -99,12 +124,26 @@ void User::print_team_info()
     vector<Player *> midfielder = find_players_by_role(MD);
     vector<Player *> striker = find_players_by_role(FW);
     cout << "fantasy_team: " << name << endl;
-    cout << "Goalkeeper: " << goalkeeper[0]->get_name() << endl;
-    cout << "Defender1: " << defender[0]->get_name() << endl;
-    cout << "Defender2: " << defender[1]->get_name() << endl;
-    cout << "Midfielder: " << midfielder[0]->get_name() << endl;
-    cout << "Striker: " << striker[0]->get_name() << endl;
+    cout << "Goalkeeper: ";
+    print_player_name(goalkeeper[0]->get_name());
+    cout << "Defender1: ";
+    print_player_name(defender[0]->get_name());
+    cout << "Defender2: ";
+    print_player_name(defender[1]->get_name());
+    cout << "Midfielder: ";
+    print_player_name(midfielder[0]->get_name());
+    cout << "Striker: ";
+    print_player_name(striker[0]->get_name());
     cout << "Total Points: " << point << endl;
+    cout << "Team Cost: " << team->calculate_cost() << endl;
+}
+
+void User::print_player_name(string name)
+{
+    cout << name;
+    if (capitan != nullptr && capitan->get_name() == name)
+        cout << " (CAPITAN)";
+    cout << endl;
 }
 
 bool User::player_post_is_not_full(Player *selected_player)

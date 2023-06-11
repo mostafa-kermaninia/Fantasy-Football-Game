@@ -21,10 +21,13 @@ public:
     void delete_player(string player_name);
 
     void add_player(Player *selected_player);
+    void set_capitan(string player_name);
     void reset_coupons();
     void update_score();
+    void show_budget();
     void print_fantasy_team();
     void print_team_info();
+    void print_player_name(string name);
 
 private:
     string name;
@@ -32,10 +35,12 @@ private:
     int buy_coupons;
     Team *team;
     Team *last_week_team;
+    Player *capitan;
     string password;
     double point;
     bool complete_team;
     bool is_in_account;
+    double budget;
 
     bool player_post_is_not_full(Player *selected_player);
     vector<Player *> find_players_by_role(ROLE r);

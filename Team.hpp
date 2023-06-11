@@ -28,6 +28,7 @@ public:
     void add_to_total_score(int num) { total_score += num; }
     void delete_player(string player_name);
     int count_of_players_in_selected_post(ROLE role);
+    int calculate_cost();
 
 private:
     string team_name;

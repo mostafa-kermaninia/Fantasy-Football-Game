@@ -13,7 +13,6 @@ enum ROLE
     NO_ROLE
 };
 
-
 const string BAD_REQUEST_ER = "Bad Request";
 const string PERMISSION_ER = "Permission Denied";
 const string SUCCESSFUL_RESPONSE = "OK";
@@ -38,3 +37,5 @@ const int WEEK_FILE_HEADERS_COUNT = 6;
 const int WINNER_SCORE_INCREMENT = 3;
 const int EQUALIZED_SCORE_INCREMENT = 1;
 const int LOSER_SCORE_INCREMENT = 0;
+
+const int INITIAL_BUDGET = 2500;
