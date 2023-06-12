@@ -829,16 +829,19 @@ void FutballFantasy::update_goal_info_vecs(vector<Player *> &own_goalers, vector
     string goal_scorer, assister;
     for (string goal_and_assist : goals_and_assists)
     {
-        goal_scorer = string_splitter(goal_and_assist, ':')[0];
-        assister = string_splitter(goal_and_assist, ':')[1];
-        if (assister == OWN_GOALER_SIGN)
+        if (goal_and_assist != "")
         {
-            own_goalers.push_back(find_player_by_name(goal_scorer));
-        }
-        else
-        {
-            goal_scorers.push_back(find_player_by_name(goal_scorer));
-            assistors.push_back(find_player_by_name(assister));
+            goal_scorer = string_splitter(goal_and_assist, ':')[0];
+            assister = string_splitter(goal_and_assist, ':')[1];
+            if (assister == OWN_GOALER_SIGN)
+            {
+                own_goalers.push_back(find_player_by_name(goal_scorer));
+            }
+            else
+            {
+                goal_scorers.push_back(find_player_by_name(goal_scorer));
+                assistors.push_back(find_player_by_name(assister));
+            }
         }
     }
 }
