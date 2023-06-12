@@ -232,6 +232,7 @@ void FutballFantasy::pass_week()
     if (week_num > COUNT_OF_WEEKS)
         throw runtime_error(BAD_REQUEST_ER);
     read_cur_week_file(WEEKS_FOLDER_PATH, week_num);
+    update_players_avalability();
     update_users_score();
     add_week_team();
     sort_users();
@@ -764,6 +765,12 @@ void FutballFantasy::update_users_score()
 {
     for (int i = 0; i < users.size(); i++)
         users[i]->update_score();
+}
+
+void FutballFantasy::update_players_avalability()
+{
+    for (int i = 0; i < players.size(); i++)
+        players[i]->update_avalability_condition();
 }
 
 void FutballFantasy::update_matches_vec(string team_names, string result)

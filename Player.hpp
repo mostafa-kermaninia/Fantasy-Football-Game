@@ -27,6 +27,7 @@ public:
     double calculate_avarage_score();
     double calculate_capitan_score();
     void reset_for_new_week();
+    void update_avalability_condition();
     void set_when_injured() { injured_weeks = 3; }
     bool is_available() { return available; }
     void add_to_yellow_cards() { yellow_cards_num += 1; }

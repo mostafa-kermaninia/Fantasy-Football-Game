@@ -53,6 +53,10 @@ double Player::calculate_capitan_score()
 void Player::reset_for_new_week()
 {
     scores.push_back(0);
+}
+
+void Player::update_avalability_condition()
+{
     if (red_cards_num == 1)
     {
         red_cards_num = 0;

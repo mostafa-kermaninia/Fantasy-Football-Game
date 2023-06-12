@@ -61,6 +61,7 @@ private:
     void reset_players_score();
     void reset_users_coupons();
     void update_users_score();
+    void update_players_avalability();
     void update_matches_vec(string team_names, string result);
     void update_teams_vec(string team_names, string result, string team1_lineup, string team2_lineup);
     void update_players_vec(string injured_players, string yellow_card_recievers, string red_card_recievers);

@@ -1,0 +1,12 @@
+POST register_admin ? username admin password 123456
+POST pass_week
+POST logout
+POST signup ? team_name mehdi password 321
+POST buy_player ? name Joseph Hodge
+POST logout
+POST register_admin ? username admin password 123456
+POST pass_week
+POST logout
+POST login ? team_name mehdi password 321
+POST buy_player ? name D. Ouattara
+POST logout
