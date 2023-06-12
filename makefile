@@ -25,6 +25,6 @@ main: FutballFantasy.hpp FutballFantasy.o Match.hpp Match.o User.hpp User.o Play
 result: main.o FutballFantasy.hpp FutballFantasy.o Match.hpp Match.o User.hpp User.o Player.hpp Player.o GoalKeeper.hpp GoalKeeper.o Midfielder.hpp Midfielder.o Defender.hpp Defender.o Forward.hpp Forward.o Admin.hpp Admin.o ConstVariables.hpp
 	g++ --std=c++11 main.o FutballFantasy.o Admin.o Match.o User.o Team.o Player.o GoalKeeper.o Defender.o Midfielder.o Forward.o -o futballFantasy.out
 clean:
-	del *.o
+	rm *.o
 run:
 	./futballFantasy.out

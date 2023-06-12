@@ -214,9 +214,9 @@ void FutballFantasy::buy_player(string player_name)
         throw runtime_error(NOT_FOUND_ER);
 }
 
-void FutballFantasy::set_capitan(string player_name)
+void FutballFantasy::set_captain(string player_name)
 {
-    cur_user->set_capitan(player_name);
+    cur_user->set_captain(player_name);
 }
 
 void FutballFantasy::print_budget()
@@ -388,10 +388,10 @@ void FutballFantasy::user_post_req(vector<string> &command_words)
         check_buysell_request_validity(player_name, command_words);
         buy_player(player_name);
     }
-    else if (command == "set_capitan")
+    else if (command == "set_captain")
     {
         check_buysell_request_validity(player_name, command_words);
-        set_capitan(player_name);
+        set_captain(player_name);
     }
     else
         throw runtime_error(BAD_REQUEST_ER);
@@ -403,7 +403,7 @@ void FutballFantasy::public_post_req(vector<string> &command_words)
     string command = command_words[1];
     if (command == "close_transfer_window" || command == "open_transfer_window" ||
         command == "pass_week" || command == "buy_player" || command == "sell_player" ||
-        command == "logout")
+        command == "logout" || command == "set_captain")
         throw runtime_error(PERMISSION_ER);
     check_command_words_count(7, command_words);
     string team_name_sign = command_words[3], password_sign = command_words[5], username_sign = command_words[3],

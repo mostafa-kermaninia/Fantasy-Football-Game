@@ -2,6 +2,10 @@
 #include <cmath>
 #include <iomanip>
 #include "Player.hpp"
+#include "GoalKeeper.hpp"
+#include "Defender.hpp"
+#include "Midfielder.hpp"
+#include "Forward.hpp"
 #include "ConstVariables.hpp"
 
 class Team

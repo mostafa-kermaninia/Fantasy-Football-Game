@@ -91,7 +91,7 @@ private:
     void register_admin(string admin_name, string password);
     void sell_player(string player_name);
     void buy_player(string player_name);
-    void set_capitan(string player_name);
+    void set_captain(string player_name);
     void print_budget();
 
     void pass_week();

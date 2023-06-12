@@ -1,0 +1,41 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+Empty
+OK
+Permission Denied
+OK
+OK
+OK
+OK
+OK
+OK
+Bad Request
+OK
+OK
+OK
+OK
+OK
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: R. Varane
+Defender2: E. Dier
+Midfielder: J. Milner
+Striker: Joao Felix (CAPITAN)
+Total Points: 0.2
+Team Cost: 2492
+OK
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: R. Varane

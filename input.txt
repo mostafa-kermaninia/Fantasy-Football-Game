@@ -1,0 +1,51 @@
+POST signup ? team_name ali password 123
+POST logout
+POST signup ? team_name mehdi password 321
+POST logout
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST logout
+POST login ? team_name ali password 123
+POST buy_player ? name D. De Gea
+POST buy_player ? name R. Varane
+POST buy_player ? name E. Dier
+POST buy_player ? name J. Milner
+POST buy_player ? name Joao Felix
+POST set_captain ? name Joao Felix
+GET squad ? fantasy_team ali
+POST logout
+POST login ? team_name mehdi password 123
+POST login ? team_name mehdi password 321
+POST buy_player ? name Joao Felix
+POST buy_player ? name E. Dier
+POST buy_player ? name V. Van Dijk
+POST buy_player ? name Kepa
+POST buy_player ? name M. Odegaard
+POST buy_player ? name K. Havertz
+POST logout
+POST register_admin ? username admin password 123456
+POST pass_week
+POST logout
+POST login ? team_name ali password 123
+GET squad ? fantasy_team ali
+POST sell_player ? name E. Dier
+GET squad ? fantasy_team ali
+POST buy_player ? name E. Fernandez
+POST sell_player ? name R. Varane
+POST buy_player ? name V. Van Dijk
+POST buy_player ? name K. Koulibaly
+POST sell_player ? name D. De Gea
+GET squad ? fantasy_team ali
+GET squad ? fantasy_team mehdi
+POST logout
+POST register_admin ? username admin password 123456
+POST pass_week
+POST logout
+POST login ? team_name mehdi password 321
+GET squad ? fantasy_team ali
+POST sell_player ? name M. Odegaard
+POST buy_player ? name E. Fernandez
+GET squad ? fantasy_team mehdi
+POST logout
+POST register_admin ? username admin password 123456
+POST pass_week

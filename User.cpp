@@ -4,6 +4,7 @@ User::User(string _name, string _password)
 {
     team = new Team();
     last_week_team = new Team();
+    last_week_cap = nullptr;
     name = _name;
     password = _password;
     sell_coupons = 2;
@@ -79,10 +80,10 @@ void User::add_player(Player *selected_player)
         cout << "This player is not available for next week" << endl;
 }
 
-void User::set_capitan(string player_name)
+void User::set_captain(string player_name)
 {
     Player *new_capitan = find_player_in_team(player_name);
-    if (capitan == nullptr)
+    if (new_capitan == nullptr)
         throw runtime_error(NOT_FOUND_ER);
     else
         capitan = new_capitan;
@@ -92,6 +93,12 @@ void User::reset_coupons()
 {
     delete last_week_team;
     last_week_team = new Team(*team);
+    if (last_week_cap != nullptr)
+        delete last_week_cap;
+    if (capitan != nullptr)
+        last_week_cap = capitan->clone();
+    else
+        last_week_cap = nullptr;
     if (!complete_team && team->get_players().size() == 5)
         complete_team = true;
     sell_coupons = 2;
@@ -103,10 +110,10 @@ void User::update_score()
     if (team->get_players().size() == 5)
     {
         point += team->calculate_total_players_score();
-        if (capitan != nullptr && capitan->get_score() != 0)
+        if (last_week_cap != nullptr && last_week_cap->get_score() != 0)
         {
-            point -= capitan->get_score();
-            point += capitan->calculate_capitan_score();
+            point -= last_week_cap->get_score();
+            point += last_week_cap->calculate_capitan_score();
         }
     }
 }
@@ -148,7 +155,7 @@ void User::print_team_info()
 void User::print_player_name(string name)
 {
     cout << name;
-    if (capitan != nullptr && capitan->get_name() == name)
+    if (last_week_cap != nullptr && last_week_cap->get_name() == name)
         cout << " (CAPITAN)";
     cout << endl;
 }
@@ -164,7 +171,7 @@ bool User::player_post_is_not_full(Player *selected_player)
 
 vector<Player *> User::find_players_by_role(ROLE r)
 {
-    vector<Player *> target_players, sorce_players = team->get_players();
+    vector<Player *> target_players, sorce_players = last_week_team->get_players();
     for (auto sp : sorce_players)
         if (sp->get_role() == r)
             target_players.push_back(sp);

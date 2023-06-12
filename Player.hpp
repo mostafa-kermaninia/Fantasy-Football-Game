@@ -12,6 +12,7 @@ class Player
 
 public:
     Player(string name, string team_name, ROLE role);
+    Player() {}
 
     string get_name() { return name; }
     ROLE get_role() { return role; }
