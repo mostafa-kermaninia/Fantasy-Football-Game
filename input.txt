@@ -49,3 +49,4 @@ GET squad ? fantasy_team mehdi
 POST logout
 POST register_admin ? username admin password 123456
 POST pass_week
+GET players ? team_name

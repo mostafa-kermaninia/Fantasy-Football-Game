@@ -12,7 +12,6 @@ GoalKeeper::~GoalKeeper()
 GoalKeeper *GoalKeeper::clone()
 {
     return new GoalKeeper(*this);
-    // return  make_shared<GoalKeeper>(*this);
 }
 
 void GoalKeeper::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
@@ -45,5 +44,5 @@ void GoalKeeper::print_info(int player_num)
     cout << fixed;
     cout << player_num << ". name: " << name << OUTPUT_DELIMITER << "role: " << ROLES[role]
          << OUTPUT_DELIMITER << "score: " << setprecision(1) << calculate_avarage_score() << OUTPUT_DELIMITER
-         << "cost: " << price << OUTPUT_DELIMITER << "clean sheets: " << num_of_clean_sheets << endl;
+         << "cost: " << (int)price << OUTPUT_DELIMITER << "clean sheets: " << num_of_clean_sheets << endl;
 }

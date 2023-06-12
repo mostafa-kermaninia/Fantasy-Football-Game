@@ -17,6 +17,7 @@ Player::Player(string name_and_price, string team, ROLE _role)
 
 double Player::get_score()
 {
+    // cout << name << ":" << scores.size() << OUTPUT_DELIMITER << scores.back() << endl;
     if (scores.size() == 0)
         return 0;
     return scores.back();

@@ -54,7 +54,7 @@ const int WINNER_SCORE_INCREMENT = 3;
 const int EQUALIZED_SCORE_INCREMENT = 1;
 const int LOSER_SCORE_INCREMENT = 0;
 
-const int INITIAL_BUDGET = 2500;
+const int INITIAL_BUDGET = 2600;
 
 const int INITIAL_GK_POINT = 3;
 const int INITIAL_DF_POINT = 1;

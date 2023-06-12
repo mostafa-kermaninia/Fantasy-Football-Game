@@ -1,0 +1,95 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+Empty
+OK
+Permission Denied
+OK
+OK
+OK
+OK
+OK
+OK
+Bad Request
+OK
+OK
+OK
+OK
+OK
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: R. Varane
+Defender2: E. Dier
+Midfielder: J. Milner
+Striker: Joao Felix (CAPITAN)
+Total Points: 0.2
+Team Cost: 2492
+OK
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: R. Varane
+Defender2: E. Dier
+Midfielder: J. Milner
+Striker: Joao Felix (CAPITAN)
+Total Points: 0.2
+Team Cost: 1799
+Bad Request
+OK
+OK
+OK
+Permission Denied
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: R. Varane
+Defender2: E. Dier
+Midfielder: J. Milner
+Striker: Joao Felix (CAPITAN)
+Total Points: 0.2
+Team Cost: 2255
+fantasy_team: mehdi
+Goalkeeper: Kepa
+Defender1: V. Van Dijk
+Defender2: E. Dier
+Midfielder: M. Odegaard
+Striker: Joao Felix
+Total Points: 0
+Team Cost: 2113
+OK
+OK
+here
+OK
+OK
+OK
+fantasy_team: ali
+Goalkeeper: D. De Gea
+Defender1: V. Van Dijk
+Defender2: K. Koulibaly
+Midfielder: J. Milner
+Striker: Joao Felix (CAPITAN)
+Total Points: 4.4
+Team Cost: 2255
+OK
+OK
+fantasy_team: mehdi
+Goalkeeper: Kepa
+Defender1: V. Van Dijk
+Defender2: E. Dier
+Midfielder: M. Odegaard
+Striker: Joao Felix
+Total Points: 9.6
+Team Cost: 2323
+OK
+OK
+OK
+Bad Request

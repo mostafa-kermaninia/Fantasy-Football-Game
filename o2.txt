@@ -1,0 +1,60 @@
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+here
+OK
+list of players:
+1. name: Hugo Bueno | role: df | score: 7.3 | cost: 244 | goals: 1 | assists: 0 | clean sheets: 0
+2. name: A. Traore | role: fw | score: 6.6 | cost: 678 | goals: 1 | assists: 0
+3. name: M. Kilman | role: df | score: 6.6 | cost: 583 | goals: 0 | assists: 1 | clean sheets: 0
+4. name: N. Semedo | role: df | score: 6.6 | cost: 753 | goals: 1 | assists: 0 | clean sheets: 0
+5. name: Joao Moutinho | role: md | score: 6.2 | cost: 438 | goals: 1 | assists: 0 | clean sheets: 0
+6. name: Joseph Hodge | role: df | score: 6.2 | cost: 938 | goals: 0 | assists: 1 | clean sheets: 0
+7. name: Ruben Neves | role: md | score: 5.8 | cost: 393 | goals: 0 | assists: 1 | clean sheets: 0
+8. name: Chiquinho | role: fw | score: 5.4 | cost: 313 | goals: 0 | assists: 1
+9. name: Jose Sa | role: gk | score: 5.0 | cost: 685 | clean sheets: 0
+10. name: Matheus Nunes | role: md | score: 5.0 | cost: 972 | goals: 0 | assists: 0 | clean sheets: 0
+11. name: Pedro Neto | role: fw | score: 5.0 | cost: 175 | goals: 0 | assists: 0
+12. name: Boubacar Traore | role: md | score: 0.0 | cost: 246 | goals: 0 | assists: 0 | clean sheets: 0
+13. name: C. Dawson | role: df | score: 0.0 | cost: 493 | goals: 0 | assists: 0 | clean sheets: 0
+14. name: D. Bentley | role: gk | score: 0.0 | cost: 227 | clean sheets: 0
+15. name: D. Podence | role: fw | score: 0.0 | cost: 870 | goals: 0 | assists: 0
+16. name: Dexter Lembikisa | role: df | score: 0.0 | cost: 494 | goals: 0 | assists: 0 | clean sheets: 0
+17. name: Diego Costa | role: fw | score: 0.0 | cost: 894 | goals: 0 | assists: 0
+18. name: Harvey Griffiths | role: md | score: 0.0 | cost: 298 | goals: 0 | assists: 0 | clean sheets: 0
+19. name: Hee-Chan Hwang | role: fw | score: 0.0 | cost: 599 | goals: 0 | assists: 0
+20. name: Joao Gomes | role: md | score: 0.0 | cost: 738 | goals: 0 | assists: 0 | clean sheets: 0
+21. name: Jonny | role: df | score: 0.0 | cost: 990 | goals: 0 | assists: 0 | clean sheets: 0
+22. name: Louie Moulden | role: gk | score: 0.0 | cost: 929 | clean sheets: 0
+23. name: M. Lemina | role: md | score: 0.0 | cost: 947 | goals: 0 | assists: 0 | clean sheets: 0
+24. name: Matheus Cunha | role: fw | score: 0.0 | cost: 932 | goals: 0 | assists: 0
+25. name: N. Collins | role: df | score: 0.0 | cost: 496 | goals: 0 | assists: 0 | clean sheets: 0
+26. name: Nathan Fraser | role: fw | score: 0.0 | cost: 307 | goals: 0 | assists: 0
+27. name: P. Sarabia | role: fw | score: 0.0 | cost: 564 | goals: 0 | assists: 0
+28. name: R. Ait-Nouri | role: df | score: 0.0 | cost: 543 | goals: 0 | assists: 0 | clean sheets: 0
+29. name: R. Jimenez | role: fw | score: 0.0 | cost: 660 | goals: 0 | assists: 0
+30. name: S. Kalajdzic | role: fw | score: 0.0 | cost: 934 | goals: 0 | assists: 0
+31. name: Toti Gomes | role: df | score: 0.0 | cost: 262 | goals: 0 | assists: 0 | clean sheets: 0
+OK
+OK
+fantasy_team: ali
+Goalkeeper: Jose Sa
+Defender1: M. Kilman
+Defender2: Hugo Bueno (CAPITAN)
+Midfielder: Ruben Neves
+Striker: A. Traore
+Total Points: 32.8
+Team Cost: 2583

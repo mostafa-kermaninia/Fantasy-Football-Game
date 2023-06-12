@@ -1,0 +1,21 @@
+POST signup ? team_name ali password 123
+POST logout
+POST signup ? team_name mehdi password 321
+POST logout
+POST register_admin ? username admin password 123456
+POST open_transfer_window
+POST logout
+POST login ? team_name ali password 123
+POST buy_player ? name A. Traore
+POST buy_player ? name Hugo Bueno
+POST buy_player ? name M. Kilman
+POST buy_player ? name Ruben Neves
+POST buy_player ? name Jose Sa
+POST set_captain ? name Hugo Bueno
+POST logout
+POST register_admin ? username admin password 123456
+POST pass_week
+GET players ? team_name Wolves ranks
+POST logout
+POST login ? team_name ali password 123
+GET squad ? fantasy_team ali

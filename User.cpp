@@ -110,10 +110,11 @@ void User::update_score()
     if (team->get_players().size() == 5)
     {
         point += team->calculate_total_players_score();
-        if (last_week_cap != nullptr && last_week_cap->get_score() != 0)
+        if (capitan != nullptr && capitan->get_score() != 0)
         {
-            point -= last_week_cap->get_score();
-            point += last_week_cap->calculate_capitan_score();
+            cout << "here" << endl;
+            point -= capitan->get_score();
+            point += capitan->calculate_capitan_score();
         }
     }
 }
