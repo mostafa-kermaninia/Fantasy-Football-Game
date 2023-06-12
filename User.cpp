@@ -157,7 +157,7 @@ void User::print_player_name(string name)
 {
     cout << name;
     if (last_week_cap != nullptr && last_week_cap->get_name() == name)
-        cout << " (CAPITAN)";
+        cout << " (CAPTAIN)";
     cout << endl;
 }
 
@@ -184,7 +184,7 @@ void User::sort_players_by_name(vector<Player *> &players)
 {
     for (int i = 0; i < players.size() - 1; i++)
         for (int j = i + 1; j < players.size(); j++)
-            if (players[i]->get_name() < players[j]->get_name())
+            if (players[i]->get_name() > players[j]->get_name())
             {
                 Player *swaping_player = players[i];
                 players[i] = players[j];

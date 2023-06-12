@@ -56,10 +56,10 @@ list of players:
 29. name: Tom Davies | role: md | score: 0.0 | cost: 866 | goals: 0 | assists: 0 | clean sheets: 0
 30. name: Y. Mina | role: df | score: 0.0 | cost: 401 | goals: 0 | assists: 0 | clean sheets: 0
 team of the week:
-GoalKeeper: A. Begovic | score: 8.9
+GoalKeeper: A. Begovic | score: 9.0
 Defender 1: Ben Chilwell | score: 8.8
 Defender 2: D. Amartey | score: 8.8
-Midfielder: B. Soumare | score: 8.1
+Midfielder: B. Soumare | score: 8.2
 Forward: A. Broja | score: 7.9
 list of players:
 1. name: Adrian | role: gk | score: 6.9 | cost: 516 | clean sheets: 0
@@ -89,14 +89,14 @@ OK
 OK
 fantasy_team: Sharks
 Goalkeeper: Harvey Davies
-Defender1: V. Van Dijk (CAPITAN)
-Defender2: Ruben Dias
+Defender1: Ruben Dias
+Defender2: V. Van Dijk (CAPTAIN)
 Midfielder: J. Milner
 Striker: J. Grealish
-Total Points: 20.5
+Total Points: 20.7
 Team Cost: 2015
 Not Found
-1. team_name: Sharks | point: 20.5
+1. team_name: Sharks | point: 20.7
 OK
 OK
 OK
@@ -104,11 +104,11 @@ OK
 OK
 Bad Request
 Bad Request
-1. team_name: Sharks | point: 20.5
+1. team_name: Sharks | point: 20.7
 OK
 OK
 OK
-1. team_name: Sharks | point: 52.7
+1. team_name: Sharks | point: 53.0
 OK
 OK
 OK
@@ -136,4 +136,4 @@ league standings:
 OK
 OK
 OK
-1. team_name: Sharks | point: 70.9
+1. team_name: Sharks | point: 71.4

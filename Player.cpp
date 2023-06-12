@@ -84,5 +84,5 @@ double Player::round_to(double value)
 
 double Player::calculate_final_score(double score)
 {
-    return round_to(10 / (exp(-score / 6) + 1));
+    return (10 / (exp(-score / 6) + 1));
 }
