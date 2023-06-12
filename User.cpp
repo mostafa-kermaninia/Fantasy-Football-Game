@@ -149,8 +149,9 @@ void User::print_team_info()
     print_player_name(midfielder[0]->get_name());
     cout << "Striker: ";
     print_player_name(striker[0]->get_name());
-    cout << "Total Points: " << point << endl;
-    cout << "Team Cost: " << team->calculate_cost() << endl;
+    cout << fixed;
+    cout << "Total Points: " << setprecision(1) << point << endl;
+    cout << "Team Cost: " << last_week_team->calculate_cost() << endl;
 }
 
 void User::print_player_name(string name)

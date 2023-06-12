@@ -17,7 +17,7 @@ Forward *Forward::clone()
 void Forward::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters,
                                   vector<Player *> goal_scorers, MATCH_RESULT result)
 {
-    raw_point = INITIAL_MD_POINT;
+    raw_point = INITIAL_FW_POINT;
     raw_point += result;
     int scored_goals = 0;
     for (auto p : own_goalers)

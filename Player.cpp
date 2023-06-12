@@ -75,7 +75,7 @@ void Player::reset_for_new_week()
 
 double Player::round_to(double value)
 {
-    return floor(value * 10) / 10;
+    return round(value * 10) / 10;
 }
 
 double Player::calculate_final_score(double score)

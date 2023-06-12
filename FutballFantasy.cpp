@@ -39,9 +39,9 @@ void FutballFantasy::read_cur_week_file(string folder_path, int cur_week_num)
     string cur_week_file_path = folder_path + "week_" + to_string(cur_week_num) + ".csv";
     vector<string> cur_week_info = read_file(cur_week_file_path);
 
-    vector<Player *> own_goalers, assisters, goal_scorers;
     for (int i = 0; i < cur_week_info.size() / WEEK_FILE_HEADERS_COUNT; i++)
     {
+        vector<Player *> own_goalers, assisters, goal_scorers;
         update_matches_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1]);
         update_teams_vec(cur_week_info[WEEK_FILE_HEADERS_COUNT * i], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 1],
                          cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 6], cur_week_info[WEEK_FILE_HEADERS_COUNT * i + 7]);

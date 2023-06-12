@@ -14,7 +14,8 @@ Defender *Defender::clone()
     return new Defender(*this);
 }
 
-void Defender::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
+void Defender::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters,
+                                   vector<Player *> goal_scorers, MATCH_RESULT result)
 {
     raw_point = INITIAL_DF_POINT;
     raw_point += result;

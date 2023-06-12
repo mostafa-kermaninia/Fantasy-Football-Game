@@ -14,7 +14,8 @@ Midfielder *Midfielder::clone()
     return new Midfielder(*this);
 }
 
-void Midfielder::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters, vector<Player *> goal_scorers, MATCH_RESULT result)
+void Midfielder::calculate_raw_score(vector<Player *> own_goalers, vector<Player *> assisters,
+                                     vector<Player *> goal_scorers, MATCH_RESULT result)
 {
     raw_point = INITIAL_MD_POINT;
     raw_point += result;
