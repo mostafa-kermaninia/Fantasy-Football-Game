@@ -102,4 +102,5 @@ private:
     void check_request_validity(string request, vector<string> command_words);
     void check_buysell_request_validity(string &player_name, vector<string> command_words);
     void check_command_words_count(int words_count, vector<string> command_words);
+    double round_to(double num);
 };

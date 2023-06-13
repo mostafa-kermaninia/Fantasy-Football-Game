@@ -1,0 +1,139 @@
+OK
+Bad Request
+2500
+OK
+1978
+OK
+1569
+OK
+905
+Bad Request
+905
+Bad Request
+905
+OK
+761
+OK
+485
+OK
+OK
+OK
+OK
+OK
+Empty
+OK
+OK
+OK
+list of players:
+1. name: A. Lonergan | role: gk | score: 5.0 | cost: 627 | clean sheets: 0
+2. name: B. Godfrey | role: df | score: 5.0 | cost: 345 | goals: 0 | assists: 0 | clean sheets: 0
+3. name: Nathan Patterson | role: df | score: 5.0 | cost: 274 | goals: 0 | assists: 0 | clean sheets: 0
+4. name: A. Onana | role: md | score: 4.5 | cost: 240 | goals: 0 | assists: 0 | clean sheets: 0
+5. name: I. Gueye | role: md | score: 4.5 | cost: 129 | goals: 0 | assists: 0 | clean sheets: 0
+6. name: Tom Davies | role: md | score: 4.5 | cost: 866 | goals: 0 | assists: 0 | clean sheets: 0
+7. name: D. McNeil | role: fw | score: 4.1 | cost: 729 | goals: 0 | assists: 0
+8. name: Dominic Calvert-Lewin | role: fw | score: 4.1 | cost: 956 | goals: 0 | assists: 0
+9. name: E. Simms | role: fw | score: 4.1 | cost: 583 | goals: 0 | assists: 0
+10. name: Ishe Samuels | role: df | score: 4.1 | cost: 124 | goals: 0 | assists: 0 | clean sheets: 0
+11. name: Reece Welch | role: df | score: 4.1 | cost: 615 | goals: 0 | assists: 0 | clean sheets: 0
+12. name: A. Begovic | role: gk | score: 0.0 | cost: 852 | clean sheets: 0
+13. name: A. Doucoure | role: md | score: 0.0 | cost: 528 | goals: 0 | assists: 0 | clean sheets: 0
+14. name: Alex Iwobi | role: md | score: 0.0 | cost: 960 | goals: 0 | assists: 0 | clean sheets: 0
+15. name: Andros Townsend | role: fw | score: 0.0 | cost: 134 | goals: 0 | assists: 0
+16. name: C. Coady | role: df | score: 0.0 | cost: 194 | goals: 0 | assists: 0 | clean sheets: 0
+17. name: Demarai Gray | role: fw | score: 0.0 | cost: 954 | goals: 0 | assists: 0
+18. name: Isaac Price | role: md | score: 0.0 | cost: 387 | goals: 0 | assists: 0 | clean sheets: 0
+19. name: J. Tarkowski | role: df | score: 0.0 | cost: 259 | goals: 0 | assists: 0 | clean sheets: 0
+20. name: James Garner | role: md | score: 0.0 | cost: 462 | goals: 0 | assists: 0 | clean sheets: 0
+21. name: Jordan Pickford | role: gk | score: 0.0 | cost: 576 | clean sheets: 0
+22. name: Kyle John | role: md | score: 0.0 | cost: 455 | goals: 0 | assists: 0 | clean sheets: 0
+23. name: M. Keane | role: df | score: 0.0 | cost: 956 | goals: 0 | assists: 0 | clean sheets: 0
+24. name: Mason Holgate | role: df | score: 0.0 | cost: 679 | goals: 0 | assists: 0 | clean sheets: 0
+25. name: N. Maupay | role: fw | score: 0.0 | cost: 997 | goals: 0 | assists: 0
+26. name: Ruben Vinagre | role: df | score: 0.0 | cost: 286 | goals: 0 | assists: 0 | clean sheets: 0
+27. name: Seamus Coleman | role: df | score: 0.0 | cost: 723 | goals: 0 | assists: 0 | clean sheets: 0
+28. name: Stanley Mills | role: md | score: 0.0 | cost: 492 | goals: 0 | assists: 0 | clean sheets: 0
+29. name: V. Mykolenko | role: df | score: 0.0 | cost: 728 | goals: 0 | assists: 0 | clean sheets: 0
+30. name: Y. Mina | role: df | score: 0.0 | cost: 401 | goals: 0 | assists: 0 | clean sheets: 0
+team of the week: 
+GoalKeeper: B. Leno | score: 8.9
+Defender 1: C. Chambers | score: 8.6
+Defender 2: Cedric Soares | score: 8.6
+Midfielder: J. Ramsey | score: 7.9
+Forward: A. Semenyo | score: 6.9
+list of players:
+1. name: Adrian | role: gk | score: 0.0 | cost: 516 | clean sheets: 0
+2. name: Alisson | role: gk | score: 0.0 | cost: 481 | clean sheets: 0
+3. name: Caoimhin Kelleher | role: gk | score: 0.0 | cost: 442 | clean sheets: 0
+4. name: Harvey Davies | role: gk | score: 4.5 | cost: 664 | clean sheets: 0
+Bad Request
+AFC Bournemouth 5 | Wolves 2
+Arsenal FC 5 | West Ham United 3
+Aston Villa 5 | Tottenham Hotspur 0
+Brentford FC 4 | Southampton FC 3
+Brighton FC 3 | Nottingham Forest 3
+Chelsea FC 0 | Newcastle United 2
+Crystal Palace 2 | Manchester United 1
+Everton FC 0 | Man. City 2
+Fulham FC 3 | Liverpool FC 0
+Leeds United 2 | Leicester City 5
+OK
+list of players:
+1. name: Andros Townsend | role: fw | score: 5.0 | cost: 134 | goals: 0 | assists: 0
+2. name: Demarai Gray | role: fw | score: 5.0 | cost: 954 | goals: 0 | assists: 0
+3. name: Dominic Calvert-Lewin | role: fw | score: 4.5 | cost: 956 | goals: 0 | assists: 0
+4. name: D. McNeil | role: fw | score: 4.1 | cost: 729 | goals: 0 | assists: 0
+5. name: E. Simms | role: fw | score: 4.1 | cost: 583 | goals: 0 | assists: 0
+6. name: N. Maupay | role: fw | score: 0.0 | cost: 997 | goals: 0 | assists: 0
+OK
+OK
+fantasy_team: Sharks
+Goalkeeper: Harvey Davies
+Defender1: Ruben Dias
+Defender2: V. Van Dijk (CAPTAIN)
+Midfielder: J. Milner
+Striker: J. Grealish
+Total Points: 30.0
+Team Cost: 2015
+Not Found
+1. team_name: Sharks | point: 30.0
+OK
+OK
+OK
+OK
+OK
+Bad Request
+Bad Request
+1. team_name: Sharks | point: 30.0
+OK
+OK
+OK
+1. team_name: Sharks | point: 45.1
+OK
+OK
+OK
+league standings:
+1. Man. City: score: 9 | GF: 11 | GA: 4
+2. Crystal Palace: score: 9 | GF: 9 | GA: 3
+3. Fulham FC: score: 9 | GF: 10 | GA: 5
+4. AFC Bournemouth: score: 7 | GF: 12 | GA: 4
+5. Aston Villa: score: 7 | GF: 8 | GA: 2
+6. Southampton FC: score: 6 | GF: 12 | GA: 5
+7. Arsenal FC: score: 6 | GF: 9 | GA: 9
+8. Wolves: score: 6 | GF: 4 | GA: 5
+9. Brentford FC: score: 6 | GF: 9 | GA: 11
+10. Brighton FC: score: 4 | GF: 8 | GA: 8
+11. Leicester City: score: 4 | GF: 6 | GA: 8
+12. Chelsea FC: score: 3 | GF: 8 | GA: 6
+13. Newcastle United: score: 3 | GF: 6 | GA: 7
+14. Liverpool FC: score: 3 | GF: 5 | GA: 9
+15. Nottingham Forest: score: 2 | GF: 5 | GA: 6
+16. Everton FC: score: 1 | GF: 2 | GA: 5
+17. West Ham United: score: 1 | GF: 5 | GA: 11
+18. Manchester United: score: 0 | GF: 3 | GA: 6
+19. Leeds United: score: 0 | GF: 6 | GA: 13
+20. Tottenham Hotspur: score: 0 | GF: 0 | GA: 11
+OK
+OK
+OK
+1. team_name: Sharks | point: 55.1

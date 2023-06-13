@@ -1,0 +1,39 @@
+POST register_admin ? username admin password 123456
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks
+POST pass_week
+GET players ? team_name Everton_FC gk ranks

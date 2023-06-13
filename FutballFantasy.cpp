@@ -281,6 +281,11 @@ void FutballFantasy::check_command_words_count(int words_count, vector<string> c
         throw runtime_error(BAD_REQUEST_ER);
 }
 
+double FutballFantasy::round_to(double value)
+{
+    return floor(value * 10) / 10;
+}
+
 void FutballFantasy::handle_get_requests(vector<string> &command_words)
 {
     if (cur_user)
@@ -505,11 +510,11 @@ void FutballFantasy::print_week_team(int week_number)
     vector<Player *> week_team_players = week_teams[week_number - 1]->get_players();
     cout << "team of the week:" << endl;
     cout << fixed;
-    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[0]->get_score() << endl;
-    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[1]->get_score() << endl;
-    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[2]->get_score() << endl;
-    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[3]->get_score() << endl;
-    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << week_team_players[4]->get_score() << endl;
+    cout << "GoalKeeper: " << week_team_players[0]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(week_team_players[0]->get_score()) << endl;
+    cout << "Defender 1: " << week_team_players[1]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(week_team_players[1]->get_score()) << endl;
+    cout << "Defender 2: " << week_team_players[2]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(week_team_players[2]->get_score()) << endl;
+    cout << "Midfielder: " << week_team_players[3]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(week_team_players[3]->get_score()) << endl;
+    cout << "Forward: " << week_team_players[4]->get_name() << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(week_team_players[4]->get_score()) << endl;
 }
 
 void FutballFantasy::print_week_matches(int week_number)
