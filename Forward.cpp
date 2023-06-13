@@ -46,7 +46,7 @@ void Forward::print_info(int player_num)
 {
     cout << fixed;
     cout << player_num << ". name: " << name << OUTPUT_DELIMITER << "role: " << ROLES[role]
-         << OUTPUT_DELIMITER << "score: " << setprecision(1) << calculate_avarage_score()
+         << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(calculate_avarage_score())
          << OUTPUT_DELIMITER << "cost: " << (int)price << OUTPUT_DELIMITER
          << "goals: " << num_of_scored_goals << OUTPUT_DELIMITER
          << "assists: " << num_of_assists << endl;

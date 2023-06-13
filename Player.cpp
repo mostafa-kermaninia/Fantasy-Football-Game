@@ -17,7 +17,6 @@ Player::Player(string name_and_price, string team, ROLE _role)
 
 double Player::get_score()
 {
-    // cout << name << ":" << scores.size() << OUTPUT_DELIMITER << scores.back() << endl;
     if (scores.size() == 0)
         return 0;
     return scores.back();
@@ -42,7 +41,7 @@ double Player::calculate_avarage_score()
     }
     if (played_match_num == 0)
         return 0;
-    return round_to(score_sum / played_match_num);
+    return score_sum / played_match_num;
 }
 
 double Player::calculate_capitan_score()

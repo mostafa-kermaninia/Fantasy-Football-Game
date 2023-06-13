@@ -44,6 +44,6 @@ void GoalKeeper::print_info(int player_num)
 {
     cout << fixed;
     cout << player_num << ". name: " << name << OUTPUT_DELIMITER << "role: " << ROLES[role]
-         << OUTPUT_DELIMITER << "score: " << setprecision(1) << calculate_avarage_score() << OUTPUT_DELIMITER
+         << OUTPUT_DELIMITER << "score: " << setprecision(1) << round_to(calculate_avarage_score()) << OUTPUT_DELIMITER
          << "cost: " << (int)price << OUTPUT_DELIMITER << "clean sheets: " << num_of_clean_sheets << endl;
 }
